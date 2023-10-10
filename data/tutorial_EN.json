@@ -1,0 +1,30 @@
+{
+	"TUTO_1": "Introduction",
+	"TUTO_2": "Welcome to the tutorial of Eurostat's Energy monthly visualisation tool. This guided tour will show you the main ways of interacting with the tool.",
+	"TUTO_3": "Chart",
+	"TUTO_4": "Click on any point of the time-line chart to access in chart options, it is possible to further disaggregate them into sub-categories or to explore some other statistics such as time graphs, pie charts or bar charts to compare the different consumption levels for the selected country.",
+	"TUTO_5": "Zoom",
+	"TUTO_6": "without release the mouse you can select a time period to see in detail.",
+	"TUTO_7": "Menu",
+	"TUTO_8": "In addition to the time-line chart options, the tool contains a menu for additional features. Click on the menu icon to customize the chart. Click next to learn about the menu options.",
+	"TUTO_9": "Table feature",
+	"TUTO_10": "Use this option to change the chart to table.",	
+	"TUTO_11": "Info",
+	"TUTO_12": "Use this menu to access the tutorial or metadata or send some feedback",
+	"TUTO_13": "Download options",
+	"TUTO_14": "Click here to download a picture or data.",
+	"TUTO_15": "Embebbed",
+	"TUTO_16": "use this button to embebed the chart in other tools",
+	"TUTO_17": "Change language",
+	"TUTO_18": "Use this option to change the language of the tool, it supports English, French or German.",
+	"TUTO_19": "That is it for our tour.",
+	"TUTO_20": "If you find this visualisation tool useful, please show your support by sharing it with others on Twitter, Facebook, email and LinkedIn. Thank you!",
+
+	"PROMO_TUTO_1": "Tutorial",
+	"PROMO_TUTO_2": "Welcome to Eurostat's energy monthly tool. For a guided tour of features <a href='#' onclick='StartMainTour();'>click here and a tour will start!</a>."
+}
+
+
+
+
+

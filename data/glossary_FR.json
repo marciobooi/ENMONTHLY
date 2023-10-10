@@ -1,0 +1,21 @@
+{
+	"inftitle" : "ENERGY DATA",
+	
+	"TABTITLE1" : "ENERGY DATA",
+	"TAB1" : "The domain ‘Energy' covers a broad spectrum of data that are presented in main tables and in database tables. The main tables section presents data in a predefined format for the most frequent requests. The database tables allow a much larger customised selection of countries, time periods, products, flows and units of the full energy balance and related indicators.",
+	
+	"TABTITLE2" : "Energy quantities",
+	"TAB2" : "annual data on crude oil, oil products, natural gas, electricity, derived heat, solid fossil fuels, renewables and wastes covering the full spectrum of the energy balance positions from supply through transformation to final energy consumption by sector and fuel type. Data for annual nuclear statistics are also available. Monthly data on crude oil, oil products, natural gas, electricity and solid fuels, are covering mainly the supply side.",
+
+	"TABTITLE3" : "Energy prices",
+	"TAB3" : "Half-yearly and yearly data on electricity and natural gas prices provided for both final non-households as well as for households customers and for different consumption bands. Half-yearly prices are provided without taxes, with VAT and with all taxes included. Yearly data consist of more disaggregated prices on the energy cost, the network cost and the taxes. In addition, it also include national average prices for each of these disaggregated sub-components.",
+	
+	"TABTITLE4" : "Energy indicators",
+	"TAB4" : "some selected energy indicators covering the major European policy areas (for example: the share of energy from renewable sources).",
+
+	"TABTITLE5" : "MONTHLY DATA ON ENERGY",
+	"TAB5" : "Eurostat collects and publishes monthly energy data on supply and to a limited extent consumption of various fuels; this data currently covers the coals / solid fossil fuels, natural gas, oil and petroleum products and electricity. The following tables and graphs show a summary of the data collected, for the period starting in January 2019 up to the latest reference month for which data is available for all four energy products mentioned above."
+	
+	
+
+}

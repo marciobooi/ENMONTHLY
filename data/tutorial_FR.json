@@ -1,0 +1,26 @@
+﻿{
+    "TUTO_1": "Introduction",
+    "TUTO_2": "Bienvenue dans le tutoriel de l'outil de visualisation mensuelle de la consommation d'énergie d'Eurostat. Cette visite guidée vous montrera les principales façons d'interagir avec l'outil.",
+    "TUTO_3": "Graphique",
+    "TUTO_4": "Cliquez sur n'importe quel point du graphique chronologique pour accéder aux options du graphique. Il est possible de les désagréger davantage en sous-catégories ou d'explorer d'autres statistiques telles que des graphiques chronologiques, des diagrammes circulaires ou des histogrammes pour comparer les différents niveaux de consommation pour le pays sélectionné.",
+    "TUTO_5": "Zoom",
+    "TUTO_6": "sans relâcher la souris, vous pouvez sélectionner une période pour voir en détail.",
+    "TUTO_7": "Menu",
+    "TUTO_8": "En plus des options du graphique chronologique, l'outil contient un menu pour des fonctionnalités supplémentaires. Cliquez sur l'icône du menu pour personnaliser le graphique. Cliquez à côté pour en savoir plus sur les options du menu.",
+    "TUTO_9": "Fonction Tableau",
+    "TUTO_10": "Utilisez cette option pour changer le graphique en tableau.",
+    "TUTO_11": "Info",
+    "TUTO_12": "Utilisez ce menu pour accéder au tutoriel, aux métadonnées ou pour envoyer des commentaires.",
+    "TUTO_13": "Options de téléchargement",
+    "TUTO_14": "Cliquez ici pour télécharger une image ou des données.",
+    "TUTO_15": "Intégré",
+    "TUTO_16": "utilisez ce bouton pour intégrer le graphique dans d'autres outils.",
+    "TUTO_17": "Changer de langue",
+    "TUTO_18": "Utilisez cette option pour changer la langue de l'outil. Il prend en charge l'anglais, le français ou l'allemand.",
+    "TUTO_19": "C'est tout pour notre visite.",
+    "TUTO_20": "Si vous trouvez cet outil de visualisation utile, veuillez montrer votre soutien en le partageant avec d'autres sur Twitter, Facebook, par e-mail et LinkedIn. Merci !",
+
+    "PROMO_TUTO_1": "Tutoriel",
+    "PROMO_TUTO_2": "Bienvenue dans l'outil de visualisation mensuelle de la consommation d'énergie d'Eurostat. Pour une visite guidée des fonctionnalités, <a href='#' onclick='StartMainTour();'>cliquez ici et une visite commencera !</a>."
+
+}

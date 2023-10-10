@@ -1,0 +1,26 @@
+﻿{
+    "TUTO_1": "Einführung",
+    "TUTO_2": "Willkommen beim Tutorial des monatlichen Energievisualisierungstools von Eurostat. Diese geführte Tour zeigt Ihnen die Hauptmöglichkeiten der Interaktion mit dem Tool.",
+    "TUTO_3": "Diagramm",
+    "TUTO_4": "Klicken Sie auf einen beliebigen Punkt des Zeitachsen-Diagramms, um auf Diagrammoptionen zuzugreifen. Es ist möglich, sie weiter in Unterkategorien zu unterteilen oder andere Statistiken wie Zeitdiagramme, Kreisdiagramme oder Balkendiagramme zu erkunden, um die verschiedenen Verbrauchsebenen für das ausgewählte Land zu vergleichen.",
+    "TUTO_5": "Zoom",
+    "TUTO_6": "ohne die Maustaste loszulassen, können Sie einen Zeitraum auswählen, um ihn im Detail anzuzeigen.",
+    "TUTO_7": "Menü",
+    "TUTO_8": "Zusätzlich zu den Diagrammoptionen des Zeitachsen-Diagramms enthält das Tool ein Menü für zusätzliche Funktionen. Klicken Sie auf das Menüsymbol, um das Diagramm anzupassen. Klicken Sie nebenan, um mehr über die Menüoptionen zu erfahren.",
+    "TUTO_9": "Tabellenfunktion",
+    "TUTO_10": "Verwenden Sie diese Option, um das Diagramm in eine Tabelle zu ändern.",
+    "TUTO_11": "Info",
+    "TUTO_12": "Verwenden Sie dieses Menü, um auf das Tutorial, Metadaten oder Feedback zuzugreifen.",
+    "TUTO_13": "Download-Optionen",
+    "TUTO_14": "Klicken Sie hier, um ein Bild oder Daten herunterzuladen.",
+    "TUTO_15": "Eingebettet",
+    "TUTO_16": "Verwenden Sie diese Schaltfläche, um das Diagramm in andere Tools einzubetten.",
+    "TUTO_17": "Sprache ändern",
+    "TUTO_18": "Verwenden Sie diese Option, um die Sprache des Tools zu ändern. Es unterstützt Englisch, Französisch oder Deutsch.",
+    "TUTO_19": "Das war es für unsere Tour.",
+    "TUTO_20": "Wenn Sie dieses Visualisierungstool nützlich finden, zeigen Sie bitte Ihre Unterstützung, indem Sie es auf Twitter, Facebook, per E-Mail und LinkedIn teilen. Vielen Dank!",
+
+    "PROMO_TUTO_1": "Tutorial",
+    "PROMO_TUTO_2": "Willkommen beim monatlichen Energie-Tool von Eurostat. Für eine geführte Tour der Funktionen <a href='#' onclick='StartMainTour();'>klicken Sie hier und eine Tour beginnt!</a>."
+
+}
