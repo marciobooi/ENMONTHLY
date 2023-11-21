@@ -75,5 +75,6 @@ class Navbar {
   addToDOM(targetElement) {
     const container = document.querySelector(targetElement);
     container.appendChild(this.navbar);
+    
   }
 }

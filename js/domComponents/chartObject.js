@@ -91,7 +91,7 @@ class Chart {
           }
       }
       }); // end of chart object
-
+      enableScreenREader()
     } // end of chart function
     
   }
