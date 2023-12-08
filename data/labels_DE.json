@@ -377,6 +377,10 @@
 	"SELECSIEC": "SIEC auswählen",
 	"tutBACK": "Zurück",
 	"tutNEXT": "Weiter",
-	"tutFINISH": "Schließen"
+	"tutFINISH": "Schließen",
+  
+  "twitter": "Auf Twitter teilen",
+  "linkedin": "Auf LinkedIn teilen",
+  "facebook": "Auf Facebook teilen"
  
 }
