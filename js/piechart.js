@@ -48,6 +48,10 @@ function createPieChart() {
       layout: 'horizontal'
   }
 
+  const tooltipFormatter = function() {
+    return chartNormalTooltip(this.point);
+  };
+
   const chartOptions = {
     containerId: "chart",
     type: "pie",
@@ -55,7 +59,7 @@ function createPieChart() {
     subtitle: null,
     xAxis: null,
     yAxisFormat: "",
-    tooltipFormatter: "",
+    tooltipFormatter: tooltipFormatter,
     creditsText: credits(),
     creditsHref: "",
     series: [

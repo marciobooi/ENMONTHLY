@@ -28,6 +28,7 @@ class Chart {
           plotBorderWidth: null,
           plotShadow: false,
           style: {
+            fontFamily: 'arial,sans-serif',
             animation: true,
             duration: 1000,
           },
@@ -54,8 +55,7 @@ class Chart {
           valueDecimals: 4,
           shared: true,
           useHTML: true,         
-          padding: 5,
-          backgroundColor: "rgba(255,255,255,0.9)",   
+          padding: 0, 
         },
         credits: {
           text: this.creditsText,

@@ -188,6 +188,35 @@ function sortArrayByProtocolOrder(arr) {
 
 
 function chartNormalTooltip(points) {
+
+if(REF.chartId == "pieChart") {
+
+    const title = points.options.name
+    const value = Highcharts.numberFormat(points.options.y, 4);
+    const unit = `${languageNameSpace.labels[REF.unit]}`;
+
+    let html = "";
+      
+    html += `<table id="tooltipTable" class="table tooltipTable"> 
+    <thead class="">
+      <tr>
+          <th class="tooltipTableHead" scope="cols" colspan="2">${title}</th>                
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tooltipTableTd">
+          <td><b>${value}</b> ${unit}</td>
+      </tr>
+    </tbody>
+    </table>`;
+
+
+
+    return html
+
+ 
+
+} else {
   const value = Highcharts.numberFormat(points[0].y, 4);
   const unit = `${languageNameSpace.labels[REF.unit]}`;
   const na = languageNameSpace.labels['FLAG_NA'];
@@ -200,8 +229,8 @@ function chartNormalTooltip(points) {
   
     html += `<table id="tooltipTable" class="table tooltipTable"> 
     <thead class="tooltipTableHead">
-      <tr class="tooltipTableTr">
-          <th scope="cols" colspan="2">${title}</th>                
+      <tr >
+          <th class="tooltipTableTr" scope="cols" colspan="2">${title}</th>                
       </tr>
     </thead>
     <tbody>
@@ -214,6 +243,7 @@ function chartNormalTooltip(points) {
 
   
     return html
+}
 
 
 
@@ -229,8 +259,7 @@ function tooltipTable(points) {
     html += `<table id="tooltipTable" class="table">                
                 <thead>
                   <tr>
-                    <th scope="cols">${points[0].x}</th>                    
-                    <th scope="cols"></th>                    
+                    <th class="tooltipTableTr" scope="cols" colspan="2">${points[0].x}</th>                                  
                   </tr>
                 </thead>`
       points.forEach(element => {
@@ -258,8 +287,7 @@ function tooltipTable(points) {
   html += `<table id="tooltipTable" class="table">                
                 <thead>
                   <tr>
-                    <th scope="cols">${sortedPoints[0].key}</th>                    
-                    <th scope="cols"></th>                    
+                    <th class="tooltipTableTr" scope="cols" colspan="2">${sortedPoints[0].key}</th>                                   
                   </tr>
                 </thead>`;
   sortedPoints.forEach(function (point) {
