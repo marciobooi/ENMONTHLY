@@ -15,9 +15,11 @@ class HighchartsChart {
           zoomType: "x",
           resetZoomButton: {
             theme: {
-                style: {
-                    color: 'white',                     
-                  },
+              style: {
+                fontFamily: 'arial,sans-serif',
+                animation: true,
+                duration: 1000,
+              },
                 fill: "#0A328E",                              
                 stroke: "#0A328E",
                 strokeWidth: 1,
@@ -84,46 +86,65 @@ class HighchartsChart {
       
           tooltip: {
             useHTML: true,
-            formatter: function (e) {
-              var points = this.points,i,result = "";
-              
-              function formatPoint(p, low, high) {        
-                return (
-                  '<span>' + (p.point && p.point.name ? p.point.name : '') + '</span><br>'
-                  + '<span class="tooltiTopValue"><i style="color: #007bff" class="fas fa-arrow-up"></i>' + languageNameSpace.labels["high"] + ': ' + (high ? Highcharts.numberFormat(high, 2, ".") : '') + ' </span><br>'
-                  + '<span class="tooltipMainValue">' + p.series.name + ': ' + (p.point && p.point.y ? Highcharts.numberFormat(p.point.y, 2, ".") : '') + ' - ' + (languageNameSpace.labels[REF.unit] ? languageNameSpace.labels[REF.unit] : '') + '</span><br>'
-                  + '<span class="tooltiLowValue"><i style="color:red" class="fas fa-arrow-down"></i>' + languageNameSpace.labels["low"] + ': ' + (low ? Highcharts.numberFormat(low, 2, ".") : '') + '</span><br>'
-                );
-              }
-              
-              var points = this.points;
-              var result = "";
-              
-              // Check if 'points' array exists and has at least two elements
-              if (Array.isArray(points) && points.length >= 2) {
-                for (var i = 0; i < points.length; i += 2) {
-                  const currentPoint = points[i];
-                  const nextPoint = points[i + 1];
-              
-                  // Check if both currentPoint and nextPoint have the 'point' property
-                  if (currentPoint.point && nextPoint.point) {
-                    result += formatPoint(
-                      currentPoint,
-                      nextPoint.point.low,
-                      nextPoint.point.high
+            formatter: function () {
+                var points = this.points;
+                var tableContent = '';
+        
+                // Helper function to create a table row
+                function createTableRow(label, value, iconColor) {
+                    return (
+                        '<tr>' +
+                        '<td class="tooltipTd">' + label + '</td>' +
+                        '<td class="tooltipTd"style="color:' + iconColor + '">' + value + '</td>' +
+                        '</tr>'
                     );
-                  }
                 }
-              } else {
-                result = languageNameSpace.labels['NODATA']; // Set a default message when 'points' is undefined or doesn't have enough elements
-              }
-              
-              return result;
-              
-            },     
+        
+                // Check if 'points' array exists and has at least two elements
+                if (Array.isArray(points) && points.length >= 2) {
+                    // Add title row with the key
+                    tableContent += '<tr><th class="tooltipTableHead" colspan="2">' +
+                        (points[0].key ? points[0].key : '') + " - " + languageNameSpace.labels[REF.unit] +
+                        '</th></tr>';
+        
+                
+        
+                    for (var i = 0; i < points.length; i += 2) {
+                        const currentPoint = points[i];
+                        const nextPoint = points[i + 1];
+        
+                        // Check if both currentPoint and nextPoint have the 'point' property
+                        if (currentPoint.point && nextPoint.point) {
+                            tableContent += createTableRow(
+                                languageNameSpace.labels["high"],
+                                nextPoint.point.high ? Highcharts.numberFormat(nextPoint.point.high, 2, ".") : '',
+                                '#007bff' // Blue color for high value
+                            );
+                            tableContent += createTableRow(
+                              REF.dataset === "nrg_cb_pem_RW" ? currentPoint.series.name : languageNameSpace.labels["values"],
+                                currentPoint.point.y ? Highcharts.numberFormat(currentPoint.point.y, 2, ".") : '',
+                                'black'
+                            );
+                            tableContent += createTableRow(
+                                languageNameSpace.labels["low"],
+                                nextPoint.point.low ? Highcharts.numberFormat(nextPoint.point.low, 2, ".") : '',
+                                'red' // Red color for low value
+                            );
+                        }
+                    }
+                } else {
+                    // Set a default message when 'points' is undefined or doesn't have enough elements
+                    tableContent = '<tr><td colspan="2">' + languageNameSpace.labels['NODATA'] + '</td></tr>';
+                }
+        
+                // Wrap the content in a table
+                return '<table>' + tableContent + '</table>';
+            },
+            padding: 0,
             crosshairs: true,
-            shared: true, 
-          },
+            shared: true,
+        },
+        
       
           legend: {
             enabled: REF.dataset == "nrg_cb_pem_RW" ? true: false,

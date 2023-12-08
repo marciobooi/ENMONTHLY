@@ -48,3 +48,19 @@ tbody, td, tfoot, th, thead, tr {
 .table > :not(caption) > * > * {
     padding: 0.2rem 0.2rem;
 }
+
+
+.tooltipTableHead {
+    background-color: #515560;
+    font-size: 14px;
+    padding: 8px 4px;
+    text-align: center;
+    color: white;
+}
+
+.tooltipTd {
+    padding: 4px;
+}
+.tooltipTd:last-child {
+    padding-left: 20px;
+}

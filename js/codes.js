@@ -114,7 +114,7 @@ codesDataset = {
 		"defaultUnit": ["TJ_GCV"], 
 	},
 	"nrg_cb_em": {		
-		"nrg_bal": ["IMP","EXP","TI_EHG_EPS","DL","AIM"], 
+		"nrg_bal": ["IMP","EXP","Net_imp","DL","AIM"], 
 		"siec": ["E7000"], 
 		"defaultSiec": ["E7000"], 
 		"defaultNrg_bal": ["IMP"], 
