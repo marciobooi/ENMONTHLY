@@ -32,7 +32,7 @@ function populateIncicator() {
         checkIcon.removeClass('invisible');
 
         const selectedText = target.find('span').text();
-        $('#selectIndicator').text(selectedText).append('<i class="fas fa-caret-down"></i>');
+        $('#selectIndicator').text(selectedText).append('<i class="fas fa-angle-down"></i>');
 
         REF.dataset = target.attr('data-indicator')
         REF.nrg_bal = codesDataset[REF.dataset].defaultNrg_bal.toString()
@@ -55,12 +55,12 @@ function populateIncicator() {
     $('#selectIndicator').hover(
         function() {
           $(this).data('prevText', $(this).text());
-          $(this).html(`${languageNameSpace.labels['SELECTINDICATOR']} <i class="fas fa-caret-down"></i>`);
+          $(this).html(`${languageNameSpace.labels['SELECTINDICATOR']} <i class="fas fa-angle-down"></i>`);
         },
         function() {
           const dropdownIndicatorList = $('#dropdown-indicator-list');
           const prevText = dropdownIndicatorList.find('.dropdown-item.active span').text();
-          $(this).html(`${prevText} <i class="fas fa-caret-down"></i>`);
+          $(this).html(`${prevText} <i class="fas fa-angle-down"></i>`);
         }
       );
 

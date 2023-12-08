@@ -38,7 +38,7 @@ function populateFlow() {
         checkIcon.removeClass('invisible');
 
         const selectedText = target.find('span').text();
-        $('#selectFlow').text(selectedText).append('<i class="fas fa-caret-down"></i>');
+        $('#selectFlow').text(selectedText).append('<i class="fas fa-angle-down"></i>');
 
         REF.nrg_bal = target.attr('data-flow')       
        
@@ -51,12 +51,12 @@ function populateFlow() {
     $('#selectFlow').hover(
         function() {
           $(this).data('prevText', $(this).text());
-          $(this).html(`${languageNameSpace.labels['SELECTFLOW']} <i class="fas fa-caret-down"></i>`);
+          $(this).html(`${languageNameSpace.labels['SELECTFLOW']} <i class="fas fa-angle-down"></i>`);
         },
         function() {
           const dropdownFlowList = $('#dropdown-flow-list');
           const prevText = dropdownFlowList.find('.dropdown-item.active span').text();
-          $(this).html(`${prevText} <i class="fas fa-caret-down"></i>`);
+          $(this).html(`${prevText} <i class="fas fa-angle-down"></i>`);
         }
       );
 
