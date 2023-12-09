@@ -526,19 +526,34 @@ function toggleBtns() {
 }
 
 
-function enableScreenREader(params) {
-	const titleElement = document.querySelector("text.highcharts-title")
-	if (titleElement) {
-	  titleElement.setAttribute('aria-hidden', 'false');
-	}
+  function enableScreenREader(params) {
+    const titleElement = document.querySelector("text.highcharts-title")
+    if (titleElement) {
+      titleElement.setAttribute('aria-hidden', 'false');
+    }
+    
+    // Find and update the subtitle element
+    const subtitleElement = document.querySelector('text.highcharts-subtitle');
+    if (subtitleElement) {
+      subtitleElement.setAttribute('aria-hidden', 'false');
+    }
   
-	// Find and update the subtitle element
-	const subtitleElement = document.querySelector('text.highcharts-subtitle');
-	if (subtitleElement) {
-	  subtitleElement.setAttribute('aria-hidden', 'false');
-	}
-
-	const container = document.querySelector(".highcharts-root")
-
-	container.removeAttribute('aria-hidden');
-  }
+    const container = document.querySelector(".highcharts-root")
+  
+    container.removeAttribute('aria-hidden');
+  
+  
+  
+  
+      // Select all <i> elements with the Font Awesome class
+      var fontAwesomeIcons = document.querySelectorAll('i.fas');
+  
+      // Loop through each icon and add the aria-hidden attribute
+      fontAwesomeIcons.forEach(function(icon) {
+          icon.setAttribute('aria-hidden', 'true');
+      });
+  
+  
+  
+  
+    }

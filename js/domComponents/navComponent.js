@@ -13,7 +13,7 @@ class Navbar {
     this.navbar.innerHTML = `
     <div class="container-fluid">
 
-      <div class="col-6 col-lg-9">
+      <div class="col-6 col-lg-8">
         <div id="header-title">
           <h1 id="header-title-label"></h1>
         </div>

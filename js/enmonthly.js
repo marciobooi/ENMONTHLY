@@ -115,7 +115,11 @@ function enmonthly(d = null) {
   chart.setOptions({
     credits: {
       text: credits(),
-      href: "",            
+      href: "",   
+      position: {
+        align: 'center',
+        y: .2
+    }         
     },
     title: {
       text: getTitle(),

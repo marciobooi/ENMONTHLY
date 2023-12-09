@@ -50,6 +50,10 @@
   padding: 0;
 }
 
+#menu {
+  color: white;
+}
+
 .subNavOne {
   background-color: #0e47cb;
   display: flex;

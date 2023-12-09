@@ -59,10 +59,10 @@ class FloatingChartControls {
 
     const self = this; 
 
-		const percentageButton = new Button("tb-togle-percentage", ["btn", "btn-primary", "min-with--nav"], "Toggle percentage", "", "true");		
-		const tableButton = new Button("tb-togle-table", ["btn", "btn-primary", "min-with--nav"], "Toggle table", "", "true");
-		const detailsButton = new Button("tb-togle-details", ["btn", "btn-primary", "min-with--nav"], "Toggle details", "", "true");    
-		const renewButton = new Button("tb-togle-renew", ["btn", "btn-primary", "min-with--nav"], "Change fuels", "", "true");
+		const percentageButton = new Button("tb-togle-percentage", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle percentage", "", "true");		
+		const tableButton = new Button("tb-togle-table", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle table", "", "true");
+		const detailsButton = new Button("tb-togle-details", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle details", "", "true");    
+		const renewButton = new Button("tb-togle-renew", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Change fuels", "", "true");
 
     percentageButton.setInnerHtml('<i id="percentage-icon" class="fas fa-percentage"></i>');
     tableButton.setInnerHtml('<i id="table-icon" class="fas fa-table"></i><i id="chart-icon" class="fas fa-chart-bar" style="display: none;"></i>');

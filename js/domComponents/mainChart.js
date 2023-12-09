@@ -277,6 +277,11 @@ class HighchartsChart {
                   }, 
                   credits:{
                     enabled: true,
+                    position: {
+                      align: 'center',
+                      x: 15
+                  }
+              
                   },
                   scrollbar: {
                     enabled: false,
