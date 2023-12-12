@@ -7,14 +7,14 @@ function openVizTable() {
       chart.viewData();
 
       // Change the text of table highcharts-data-table-0 header summary to "Data Table"
-      $("table").removeAttr("summary");
+      $(".highcharts-data-table > table").removeAttr("summary");
     }
   }, 100);
 }
 
 function closeTable() {
-  $("table").hide();
+  $(".highcharts-data-table > table").hide();
   $("#chart").show();
    
-  $("table").parent().css('display', 'none')
+  $(".highcharts-data-table > table").parent().css('display', 'none')
 }
