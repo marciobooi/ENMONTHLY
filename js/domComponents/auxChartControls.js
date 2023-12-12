@@ -17,23 +17,23 @@ class ChartControls {
 			  </div>
 			  <div class="menu">
 				<ul id="chartBtns" role="menubar" aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
-					<div class=groupOne>
+					<div class="groupOne">
 						<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
 						<li class="nav-item button px-1" id="togglePieChart" role="none"></li>
-					</div>
-					<div class=groupTwo>
+					</div>  
+					<div class="groupTwo">
 						<li class="nav-item px-1" id="togglePercentage" role="none"></li>
 						<li class="nav-item px-1" id="toggleRenuewbles" role="none"></li>
 						<li class="nav-item px-1" id="toggleDetails" role="none"></li>
 						<li class="nav-item px-1" id="toggleTable" role="none"></li>
 					</div>  
-					<div class=groupTree>
+					<div class="groupTree">
 						<li class="nav-item button px-1" id="printChart" role="none"></li>
 						<li class="nav-item dropdown px-1" id="downloadChart" role="none"></li>
 						<li class="nav-item button px-1" id="downloadExcel" role="none"></li>
 						<li class="nav-item button px-1" id="embebedChart" role="none"></li>
 						<li class="nav-item button px-1" id="closeChart" role="none"></li>
-					</div>   
+					</div>  
 				</ul>
 			  </div>
 			</div>
@@ -102,9 +102,9 @@ class ChartControls {
 	  }
 	
 	  toggleIcons() {
-		const tableIcon = this.chartControls.querySelector('#table-icon');
-		const chartIcon = this.chartControls.querySelector('#chart-icon');
-		const toggleButton = this.chartControls.querySelector('#tb-togle-table');
+		const tableIcon = this.controls.querySelector('#table-icon');
+		const chartIcon = this.controls.querySelector('#chart-icon');
+		const toggleButton = this.controls.querySelector('#tb-togle-table');
 	  
 	  
 		tableIcon.style.display = tableIcon.style.display === 'none' ? '' : 'none';
@@ -125,6 +125,7 @@ class ChartControls {
 	  $("#menuToolbar").toggle();	
 	  const container = document.querySelector(targetElement);
 	  container.insertBefore(this.controls, container.firstChild);
+
 	  const showHideValue = REF.chartOption === 1 ? '' : 'none';
 
       const self = this; 

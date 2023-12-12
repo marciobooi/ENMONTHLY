@@ -10,20 +10,21 @@ class SubNavbar {
 
       const notMobileContent = `<div class="container-fluid">
             <div class="col-1">              
-            <button id="menu" class="btnGroup" type="button" aria-label="${languageNameSpace.labels["MAINMENU"]}" title="${languageNameSpace.labels["MAINMENU"]}" aria-haspopup="true">
-            <i class="fas fa-bars"></i>
-            <span>Menu</span>             
-          </button>
+              <button id="menu" class="btnGroup" type="button" aria-label="${languageNameSpace.labels["MAINMENU"]}" title="${languageNameSpace.labels["MAINMENU"]}" aria-haspopup="true">
+                <i class="fas fa-bars"></i>
+                <span>Menu</span>             
+              </button>
             </div>
             <div class="col-8">
               <div class="text-group">
                 <h2 id="title" class="title"></h2>
-                <h6 id="subtitle" class="subtitle"></h6>      
+                <h2 id="subtitle" class="subtitle"></h2>      
               </div>
             </div>
             <div class="col-3">
             <ul id="chartBtns" role="menubar" aria-label="Options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
-              <li class="nav-item dropdown px-1" id="infoBtnChart" role="none">
+                
+                <li class="nav-item dropdown px-1" id="infoBtnChart" role="none">
                   <button class="btn btn-primary min-with--nav round-btn" type="button" aria-label="InfoBtn" data-bs-toggle="dropdown" role="menuitem" title="Info" aria-haspopup="true" aria-expanded="true" id="infoBtn">
                     <i class="fas fa-info"></i>
                   </button>

@@ -4,16 +4,12 @@ class FloatingChartControls {
     this.chartControls.className = 'menuSwitch';
     this.chartControls.id = 'menuSwitch';
 
-    this.chartControls.innerHTML = `      
-      <fieldset>      
-        <ul id="floatingMenu">   
-          <!-- <li class="nav-item px-1" id="togglePercentage" role="none" style="display:${REF.chartOption == 1 ? "" : "none"}"></li> -->
+    this.chartControls.innerHTML = ` 
           <li class="nav-item px-1" id="togglePercentage" role="none"></li>
           <li class="nav-item px-1" id="toggleRenuewbles" role="none"></li>
           <li class="nav-item px-1" id="toggleDetails" role="none"></li>
-          <li class="nav-item px-1" id="toggleTable" role="none"></li>
-        </ul>
-      </fieldset>`;
+          <li class="nav-item px-1 iconSpacer" id="toggleTable" role="none"></li>
+       `;
     
   }
 
@@ -54,7 +50,12 @@ class FloatingChartControls {
   
   addToDOM(targetElement) {
     const container = document.querySelector(targetElement);
-    container.appendChild(this.chartControls);
+
+    const referenceElement = container.firstChild; 
+    
+    container.insertBefore(this.chartControls, referenceElement);
+
+    
     const showHideValue = REF.chartOption === 1 ? '' : 'none';
 
     const self = this; 

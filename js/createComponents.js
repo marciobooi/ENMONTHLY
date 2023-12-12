@@ -32,7 +32,7 @@ function buildComponents() {
     { instance: new SubNavbar(), target: '#subnavbar-container' },
     { instance: new Footer(), target: '#componentFooter' },
     { instance: new Navbar(), target: '#navbar-container' },
-    { instance: new FloatingChartControls(), target: '#componentFooter' },
+    { instance: new FloatingChartControls(), target: '#chartBtns' },
   ];
 
   components.forEach(({ instance, target }) => {

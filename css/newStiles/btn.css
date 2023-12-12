@@ -159,13 +159,13 @@ span.agregates.fa-stack.fa-rotate-180 {
     padding-right: 2rem;
 }
 
-#tb-togle-details:hover > span > i:nth-child(2) {
+#tb-togle-details:hover > span > i:nth-child(2), #tb-togle-details:focus > span > i:nth-child(2) {
     color: #F8AE21 !important;
 }
-#tb-togle-details:hover > span > i:nth-child(5) {
+#tb-togle-details:hover > span > i:nth-child(5), #tb-togle-details:focus > span > i:nth-child(5) {
     color: #F8AE21 !important;
 }
-#tb-togle-details:hover > span > i:nth-child(8) {
+#tb-togle-details:hover > span > i:nth-child(8), #tb-togle-details:focus > span > i:nth-child(8) {
     color: #F8AE21 !important;
 }
 
