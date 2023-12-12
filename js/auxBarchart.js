@@ -89,7 +89,7 @@ barMean.push(values);
 
   // const xAxis = REF.chartOption == 1 ? { reversedStacks: true, categories: categoriesAndStacks.map((e) => e.x) } : { categories: auxBarCateg };
   const series = REF.chartOption == 1 ?  bardata : [{ name: "Total", data: auxBarTotals }];
-  const catColors = REF.chartOption == 1 ? colors : ["#32afaf"];
+  const catColors = REF.chartOption == 1 ? colors : ["#0E47CB"];
   const legend = REF.chartOption == 1 ? {enabled:true} : {enabled:false};
 
   const chartOptions = {

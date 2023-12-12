@@ -178,7 +178,7 @@ function sortArrayByProtocolOrder(arr) {
       barcateg.push(languageNameSpace.labels[geop]);
 
       const languageLabel = languageNameSpace.labels[geop];
-      const color = geop == "EU27_2020" ? '#14375a' : (geop == "EA" ? '#800000' : "#32afaf");
+      const color = geop == "EU27_2020" ? '#CCA300' : (geop == "EA" ? '#208486' : "#0E47CB");
 
       barproto.push({ name: languageLabel, y: taxValue, color });
     });
