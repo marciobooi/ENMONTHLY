@@ -17,14 +17,23 @@ class ChartControls {
 			  </div>
 			  <div class="menu">
 				<ul id="chartBtns" role="menubar" aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
-				  <li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
-				  <li class="nav-item button px-1" id="togglePieChart" role="none"></li>
-				  <li class="nav-item button px-1" id="toggleLineChart" role="none"></li>
-				  <li class="nav-item button px-1" id="printChart" role="none"></li>
-				  <li class="nav-item dropdown px-1" id="downloadChart" role="none"></li>
-				  <li class="nav-item button px-1" id="downloadExcel" role="none"></li>
-				  <li class="nav-item button px-1" id="embebedChart" role="none"></li>
-				  <li class="nav-item button px-1" id="closeChart" role="none"></li>
+					<div class=groupOne>
+						<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
+						<li class="nav-item button px-1" id="togglePieChart" role="none"></li>
+					</div>
+					<div class=groupTwo>
+						<li class="nav-item px-1" id="togglePercentage" role="none"></li>
+						<li class="nav-item px-1" id="toggleRenuewbles" role="none"></li>
+						<li class="nav-item px-1" id="toggleDetails" role="none"></li>
+						<li class="nav-item px-1" id="toggleTable" role="none"></li>
+					</div>  
+					<div class=groupTree>
+						<li class="nav-item button px-1" id="printChart" role="none"></li>
+						<li class="nav-item dropdown px-1" id="downloadChart" role="none"></li>
+						<li class="nav-item button px-1" id="downloadExcel" role="none"></li>
+						<li class="nav-item button px-1" id="embebedChart" role="none"></li>
+						<li class="nav-item button px-1" id="closeChart" role="none"></li>
+					</div>   
 				</ul>
 			  </div>
 			</div>
@@ -40,9 +49,16 @@ class ChartControls {
 			</button>
 			<div class="menu d-none">
 			  <ul id="chartBtns" role="menubar" aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
-				<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
+				
+			 	<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
 				<li class="nav-item button px-1" id="togglePieChart" role="none"></li>
-				<li class="nav-item button px-1" id="toggleLineChart" role="none"></li>
+
+
+				<li class="nav-item px-1" id="togglePercentage" role="none"></li>
+				<li class="nav-item px-1" id="toggleRenuewbles" role="none"></li>
+				<li class="nav-item px-1" id="toggleDetails" role="none"></li>
+				<li class="nav-item px-1" id="toggleTable" role="none"></li>
+				
 				<li class="nav-item button px-1" id="printChart" role="none"></li>
 				<li class="nav-item dropdown px-1" id="downloadChart" role="none"></li>
 				<li class="nav-item button px-1" id="downloadExcel" role="none"></li>
@@ -71,33 +87,75 @@ class ChartControls {
 		});
 	  } else {
 		this.controls.innerHTML = notMobileContent;
-	  }
+	  }	  
 	}
+
+	
+	toggleChartPercentage() {
+		REF.percentage = REF.percentage == 0 ? 1 : 0;
+		auxiliarBarGraph()
+	  }
+	
+	  toggleChartDetails() {
+		REF.chartOption = REF.chartOption == 0 ? 1 : 0;
+		auxiliarBarGraph()
+	  }
+	
+	  toggleIcons() {
+		const tableIcon = this.chartControls.querySelector('#table-icon');
+		const chartIcon = this.chartControls.querySelector('#chart-icon');
+		const toggleButton = this.chartControls.querySelector('#tb-togle-table');
+	  
+	  
+		tableIcon.style.display = tableIcon.style.display === 'none' ? '' : 'none';
+		chartIcon.style.display = chartIcon.style.display === 'none' ? '' : 'none';
+	  
+		if (tableIcon.style.display === 'none') {
+		  toggleButton.setAttribute('aria-label', 'Toggle chart');
+		  toggleButton.title = 'Toggle chart';
+		  openVizTable()
+		} else {
+		  toggleButton.setAttribute('aria-label', 'Toggle table');
+		  toggleButton.title = 'Toggle table';      
+		  closeTable()
+		}
+	  }
   
 	addToDOM(targetElement) {
 	  $("#menuToolbar").toggle();	
 	  const container = document.querySelector(targetElement);
 	  container.insertBefore(this.controls, container.firstChild);
+	  const showHideValue = REF.chartOption === 1 ? '' : 'none';
+
+      const self = this; 
 
 	    // Create the button instances
 		const barChart = new Button("barChart", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle bar Chart", "barChart", "true");
 		const pieChart = new Button("pieChart", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle pie Chart", "pieChart", "false");
-		const lineChart = new Button("lineChart", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle line Chart", "lineChart", "false");
+		// const lineChart = new Button("lineChart", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle line Chart", "lineChart", "false");
 		const createprintChart = new Button("printBtn", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Print chart", "false");
 		const downloadChart = new Button("downloadBtn", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Download chart image", "false");
 		const downloadExcel = new Button("excelBtn", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Download chart data", "false");
 		const embebedeChart = new Button("embebedBtn", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Embebed chart iframe", "false");
 		const closeChart = new Button("btnCloseModalChart", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Close", "false");
+		const percentageButton = new Button("tb-togle-percentage", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle percentage", "", "true");		
+		const tableButton = new Button("tb-togle-table", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle table", "", "true");
+		const detailsButton = new Button("tb-togle-details", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Toggle details", "", "true");    
+		const renewButton = new Button("tb-togle-renew", ["btn", "btn-primary", "min-with--nav", "round-btn"], "Change fuels", "", "true");
 	
 		// Set inner HTML content for each button
 		barChart.setInnerHtml('<i class="fas fa-chart-bar"></i>');
 		pieChart.setInnerHtml('<i class="fas fa-chart-pie"></i>');
-		lineChart.setInnerHtml('<i class="fas fa-chart-line"></i>');
+		// lineChart.setInnerHtml('<i class="fas fa-chart-line"></i>');
 		createprintChart.setInnerHtml('<i class="fas fa-print"></i>');
 		downloadChart.setInnerHtml('<i class="fas fa-download"></i>');
 		downloadExcel.setInnerHtml('<i class="fas fa-file-excel"></i>');
 		embebedeChart.setInnerHtml('<i class="fas fa-code"></i>');
 		closeChart.setInnerHtml('<i class="fas fa-times"></i>');
+		percentageButton.setInnerHtml('<i id="percentage-icon" class="fas fa-percentage"></i>');
+		tableButton.setInnerHtml('<i id="table-icon" class="fas fa-table"></i><i id="chart-icon" class="fas fa-chart-bar" style="display: none;"></i>');
+		detailsButton.setInnerHtml(agregateIcon());
+		renewButton.setInnerHtml('<i class="fas fa-industry"></i>');
 	
 		// Set click handlers for each button
 		barChart.setClickHandler(function() {
@@ -109,10 +167,10 @@ class ChartControls {
 		  disableChatOptionsBtn(this.value);
 		  createPieChart();
 		});
-		lineChart.setClickHandler(function() {
-		  disableChatOptionsBtn(this.value);
-		  createLineChart();
-		});
+		// lineChart.setClickHandler(function() {
+		//   disableChatOptionsBtn(this.value);
+		//   createLineChart();
+		// });
 		createprintChart.setClickHandler(function() {
 		  printChart();
 		});
@@ -129,15 +187,55 @@ class ChartControls {
 		  removeAuxiliarBarGraphOptions();
 		});
 
+		renewButton.setClickHandler(function() {
+			REF.siecsToLoad === "rw" ? REF.siecsToLoad = "Nrw" : REF.siecsToLoad = "rw";
+	  
+			const renewBtnElement = document.getElementById("tb-togle-renew");
+			REF.siecsToLoad === "rw"
+			  ? (renewBtnElement.innerHTML = '<i class="fas fa-industry"></i>')
+			  : (renewBtnElement.innerHTML = '<i class="fas fa-wind"></i>');
+			  
+			auxiliarBarGraph();
+		  });
+	  
+		  percentageButton.setClickHandler(function() {
+			self.toggleChartPercentage(); // Call the class method using the stored reference
+		  });
+	  
+		  detailsButton.setClickHandler(function() {      
+	  
+			REF.chartOption === 1 ? REF.chartOption = 0 : REF.chartOption = 1;    
+			
+			if(REF.chartOption === 1) {
+			  $("#togglePercentage").css('display', "initial")
+			  $("#toggleRenuewbles").css('display', "initial")
+			  document.getElementById("tb-togle-details").innerHTML = nonagregateIcon();
+			} else {
+			  REF.percentage = 0
+			  $("#togglePercentage").css('display', "none")
+			  $("#toggleRenuewbles").css('display', "none")
+			  document.getElementById("tb-togle-details").innerHTML = agregateIcon();
+			}      
+			auxiliarBarGraph();
+		  });
+	  
+		  tableButton.setClickHandler(function() {
+			self.toggleIcons(); // Call the class method using the stored reference
+		  });
+
 	  	  // Create the button elements
 			const barChartElement = barChart.createButton();
 			const pieChartElement = pieChart.createButton();
-			const lineChartElement = lineChart.createButton();
+			// const lineChartElement = lineChart.createButton();
 			const printChartElement = createprintChart.createButton();
 			const downloadChartElement = downloadChart.createButton();
 			const downloadExcelElement = downloadExcel.createButton();
 			const embebedeChartElement = embebedeChart.createButton();
 			const closeChartElement = closeChart.createButton();
+			const percentageElement = percentageButton.createButton();
+			const tableElement = tableButton.createButton();
+			const detailsElement = detailsButton.createButton();
+			const renewElement = renewButton.createButton();    
 
 		
 			// Append the button elements to the document
@@ -149,6 +247,15 @@ class ChartControls {
 			document.getElementById("downloadExcel").appendChild(downloadExcelElement);
 			document.getElementById("embebedChart").appendChild(embebedeChartElement);
 			document.getElementById("closeChart").appendChild(closeChartElement);
+
+			document.getElementById("togglePercentage").appendChild(percentageElement);
+			document.getElementById("toggleTable").appendChild(tableElement);
+			document.getElementById("toggleDetails").appendChild(detailsElement);
+			document.getElementById("toggleRenuewbles").appendChild(renewElement);
+
+			document.getElementById("togglePercentage").style.display = showHideValue;
+			document.getElementById("toggleDetails").style.display = showHideValue;
+			document.getElementById("toggleRenuewbles").style.display = showHideValue;
 
 			barChart.setDisabled(true);
 	}

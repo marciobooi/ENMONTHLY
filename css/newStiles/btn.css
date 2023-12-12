@@ -104,10 +104,10 @@ ul.dropdown-menu.dropdown-menu-end.show {
 /* #menu:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 } */
-.min-with--nav:hover {
-    box-shadow: 0 0 0 0.15rem rgb(204 163 0 / 30%);
-    background-color: #cca300 !important;
-    border-color: #b292145e !important;
+.min-with--nav:hover, .min-with--nav:focus {
+    box-shadow: 0 0 0 0.15rem rgb(248 174 33 / 30%);
+    background-color: #F8AE21 !important;
+    border-color: rgb(248 174 33 / 30%) !important;
 }
 
 .form-switch.form-check-reverse {
@@ -122,8 +122,8 @@ dl, ol, ul {
 
 span.agregates.fa-stack.fa-rotate-180 {
     font-size: .9rem;
+    top: 19px !important;
 }
-
 .round-btn {
     border-radius: 50%;
 }
@@ -148,3 +148,26 @@ span.agregates.fa-stack.fa-rotate-180 {
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
 }
+
+
+.groupOne, .groupTwo, .groupTree {
+    display: flex;
+}
+
+.groupOne, .groupTwo {
+    display: flex;
+    padding-right: 2rem;
+}
+
+#tb-togle-details:hover > span > i:nth-child(2) {
+    color: #F8AE21 !important;
+}
+#tb-togle-details:hover > span > i:nth-child(5) {
+    color: #F8AE21 !important;
+}
+#tb-togle-details:hover > span > i:nth-child(8) {
+    color: #F8AE21 !important;
+}
+
+
+/* document.querySelector("#tb-togle-details > span > i:nth-child(2)") */
