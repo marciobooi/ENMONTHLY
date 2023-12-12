@@ -6,6 +6,17 @@ function openVizTable() {
     if (chart) {
       chart.viewData();
 
+      const highchartsNumberElements = document.querySelectorAll('table .highcharts-number');
+
+highchartsNumberElements.forEach(element => {
+  const originalValue = parseFloat(element.textContent);
+
+  if (!isNaN(originalValue)) {
+    const formattedValue = originalValue.toFixed(2);
+    element.textContent = formattedValue;
+  }
+});
+
       // Change the text of table highcharts-data-table-0 header summary to "Data Table"
       $(".highcharts-data-table > table").removeAttr("summary");
     }
