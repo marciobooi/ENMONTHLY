@@ -95,9 +95,21 @@ function addAuxiliarBarGraphOptions() {
 }
 function removeAuxiliarBarGraphOptions() {
   const auxiliarBarGraphOptions = new ChartControls();
-  auxiliarBarGraphOptions.removeFromDOM(); 
-  hideAuxChartBtns()
-  enmonthly()
+  auxiliarBarGraphOptions.removeFromDOM();
+  hideAuxChartBtns();
+
+  const table = document.getElementsByClassName("highcharts-data-table")[0]; // Assuming you want the first element with the specified class
+  const chart = document.getElementById("chart");
+
+  if (table) {
+    table.style.display = table.style.display === "none" ? "block" : "none";
+  }
+
+  if (chart) {
+    chart.style.display = chart.style.display === "none" ? "block" : "none";
+  }
+
+  enmonthly();
 }
 function showAuxChartBtns() {
 	// document.getElementById("togglePercentage").style.display = showHideValue;
