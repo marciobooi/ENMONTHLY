@@ -102,7 +102,7 @@ codesDataset = {
 		"defaultUnit": ["THS_T"], 
 	},
 	"nrg_cb_oilm": {		
-		"nrg_bal": ["TO_RPI_RO ","IMP","EXP","Net_imp","GID_CAL",], 
+		"nrg_bal": ["TO_RPI_RO", "IMP", "EXP", "GID_CAL"], 
 		"siec": ["O4640", "O4652", "O4661", "O4671","O4630","O4680"], 
 		"unit": ["THS_T"], 
 		"defaultSiec": ["O4640"], 

@@ -51,7 +51,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 90%;
+  max-width: 80%;
 }
 .dropdownBtnGroup button:focus {
   border-color: #0e47cb;

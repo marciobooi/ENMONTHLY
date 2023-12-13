@@ -101,13 +101,11 @@ function removeAuxiliarBarGraphOptions() {
   const table = document.getElementsByClassName("highcharts-data-table")[0]; // Assuming you want the first element with the specified class
   const chart = document.getElementById("chart");
 
-  if (table) {
+  if(table){
     table.style.display = table.style.display === "none" ? "block" : "none";
-  }
+  }    
+    chart.style.display === "block"
 
-  if (chart) {
-    chart.style.display = chart.style.display === "none" ? "block" : "none";
-  }
 
   enmonthly();
 }
@@ -363,27 +361,27 @@ function getTitle() {
   let chartTitle = "";
   switch (REF.chartId) {
     case "lineChart":
-      chartTitle = `${dataset}<br><span style="font-size:10px; padding-top:5px">${geoLabel} - ${consoms}</span>`;
+      chartTitle = `${dataset}<br><span style="font-size:10px; padding-top:5px"><b>${country}</b> - ${consoms}</span>`;
       title = `${dataset}`;
-      subtitle = `<span style="font-size:12px; padding-top:5px">${geoLabel} - ${consoms}</span>`;
+      subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${consoms}</span>`;
       break;
     case "pieChart":
-      chartTitle = `${country} - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal} - ${country}</span>`;
+      chartTitle = `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal} - <b>${country}</b></span>`;
       title = `${dataset}`;
-      subtitle = `<span style="font-size:12px; padding-top:5px">${country} - ${time} - ${nrg_bal}</span>`;
+      subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${time} - ${nrg_bal}</span>`;
       break;
     case "barChart":
-      chartTitle = `${dataset}<br><span style="font-size:12px; padding-top:5px">${country} - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
+      chartTitle = `${dataset}<br><span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
       title = `${dataset}`;
-      subtitle = `<span style="font-size:12px; padding-top:5px">${country} - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
+      subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
       break;
     default:    
-    chartTitle = `${country} - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal} - ${languageNameSpace.labels['rwTitle']}</span>`;
-    title = `${country} - ${dataset}`;
+    chartTitle = `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal} - ${languageNameSpace.labels['rwTitle']}</span>`;
+    title = `<b>${country}</b> - ${dataset}`;
     if(REF.dataset == "nrg_cb_pem_RW") {
       subtitle = `${nrg_bal} - ${languageNameSpace.labels['rwTitle']}`;   
     } else {
-      subtitle = `${nrg_bal} - ${time}`;   
+      subtitle = `${nrg_bal}`;   
     }
     
   }

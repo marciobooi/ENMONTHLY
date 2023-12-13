@@ -28,6 +28,7 @@ font-family: Arial, sans-serif;
 
 body {  
 color: #333;
+font-family: Arial, sans-serif;
 }
 
 #page {
@@ -65,4 +66,7 @@ color: #333;
 
 .iconSpacer {
   padding-right: 2rem !important;
+}
+.highcharts-button {
+  display: block !important;
 }
