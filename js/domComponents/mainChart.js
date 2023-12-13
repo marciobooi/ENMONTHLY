@@ -14,18 +14,35 @@ class HighchartsChart {
           // type: 'areasplinerange',
           zoomType: "x",
           resetZoomButton: {
+            theme: {
+            
+                fill: "#0A328E",                              
+                stroke: "#0A328E",
+                strokeWidth: 1,
+                r: 4,
+                states: {
+                    hover: {
+                        fill: '#0A328E',
+                        stroke: "#0A328E",
+                        strokeWidth: 1,
+                        r: 1,
+                        style: {
+                            color: 'white',
+                        }             
+                    }
+                },
+              },
+
             position: {
-                // align: 'right', // by default
-                // verticalAlign: 'top', // by default
-                x: 0,
-                y: -30
-            }
-        }, 
+              align: 'center',
+              verticalAlign: 'top',
+            },
+          },
           style: {
             fontFamily: 'arial,sans-serif',
             animation: true,
             duration: 1000,
-          },       
+          },
           panning: true,
           panKey: "shift",
           pinchType: "x",
@@ -48,18 +65,18 @@ class HighchartsChart {
           },
           scrollbar: {
             enabled: true,
-            barBackgroundColor: "lightgray",
-            barWidth: 20,
-            barBorderRadius: 7,
-            barBorderWidth: 0,
-            buttonBackgroundColor: "transparent",
-            buttonBorderWidth: 0,
-            buttonBorderRadius: 7,
-            trackBackgroundColor: "none",
-            trackBorderWidth: 1,
-            trackBorderRadius: 8,
-            trackBorderColor: "#CCC",
-            trackHeight: 5,
+            // barBackgroundColor: "lightgray",
+            // barWidth: 20,
+            // barBorderRadius: 7,
+            // barBorderWidth: 0,
+            // buttonBackgroundColor: "transparent",
+            // buttonBorderWidth: 0,
+            // buttonBorderRadius: 7,
+            // trackBackgroundColor: "none",
+            // trackBorderWidth: 1,
+            // trackBorderRadius: 8,
+            // trackBorderColor: "#CCC",
+            // trackHeight: 5,
           },      
           yAxis: {
             title: {
@@ -391,16 +408,13 @@ class HighchartsChart {
       this.options = { ...this.options, ...customOptions };
     }
   
-  
+
   
     // Method to create and display the chart
     render() {
         Highcharts.chart(this.containerId, this.options, (chart) => {
             // After the chart is rendered, add a custom class to the Reset Zoom button
             const resetButton = chart.toolbar && chart.toolbar.resetZoomButton;
-            if (!$('.highcharts-button').length) {
-              chart.showResetZoom();
-          }
             if (resetButton && resetButton.element) {
               resetButton.element.classList.add("custom-reset-zoom-button");
             }
