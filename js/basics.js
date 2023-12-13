@@ -358,6 +358,8 @@ function getTitle() {
   let title = ""
   let subtitle = ""
 
+
+
   let chartTitle = "";
   switch (REF.chartId) {
     case "lineChart":
@@ -386,8 +388,13 @@ function getTitle() {
     
   }
 
+log(title, subtitle)
+
   $("#title").html(title);
   $("#subtitle").html(subtitle);
+
+  $("#auxChartTitle h2#title").html(title);
+  $("#auxChartTitle h6").html(subtitle);
 
   return chartTitle;
 }

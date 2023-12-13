@@ -1,6 +1,6 @@
 class HighchartsChart {
     constructor(containerId, val, seriesOne, valrw, seriesTwo, languageNameSpace, REF) {
-      this.containerId = containerId;
+      this.containerId = "chart";
       this.val = val;
       this.seriesOne = seriesOne;
       this.valrw = valrw;
@@ -12,41 +12,12 @@ class HighchartsChart {
       this.options = {
         chart: {
           // type: 'areasplinerange',
-          zoomType: "x",
-          resetZoomButton: {
-            theme: {
-            
-                fill: "#0A328E",                              
-                stroke: "#0A328E",
-                strokeWidth: 1,
-                r: 4,
-                states: {
-                    hover: {
-                        fill: '#0A328E',
-                        stroke: "#0A328E",
-                        strokeWidth: 1,
-                        r: 1,
-                        style: {
-                            color: 'white',
-                        }             
-                    }
-                },
-              },
-
-            position: {
-              align: 'center',
-              verticalAlign: 'top',
-            },
-          },
-          style: {
-            fontFamily: 'arial,sans-serif',
-            animation: true,
-            duration: 1000,
-          },
+          zoomType: "x",          
           panning: true,
           panKey: "shift",
           pinchType: "x",
           style: {
+            fontFamily: 'arial,sans-serif',
             animation: true,
             duration: 1000,
           },
@@ -62,22 +33,7 @@ class HighchartsChart {
                 REF.end = e.max
               }
             }
-          },
-          scrollbar: {
-            enabled: true,
-            // barBackgroundColor: "lightgray",
-            // barWidth: 20,
-            // barBorderRadius: 7,
-            // barBorderWidth: 0,
-            // buttonBackgroundColor: "transparent",
-            // buttonBorderWidth: 0,
-            // buttonBorderRadius: 7,
-            // trackBackgroundColor: "none",
-            // trackBorderWidth: 1,
-            // trackBorderRadius: 8,
-            // trackBorderColor: "#CCC",
-            // trackHeight: 5,
-          },      
+          },  
           yAxis: {
             title: {
               text: languageNameSpace.labels[REF.unit],
@@ -407,12 +363,19 @@ class HighchartsChart {
     setOptions(customOptions) {
       this.options = { ...this.options, ...customOptions };
     }
-  
+    
+    destroy() {
+      const existingChart = Highcharts.charts.find(chart => chart.renderTo.id === this.containerId);
+      if (existingChart) {
+          existingChart.destroy();
+      }
+  }
 
   
     // Method to create and display the chart
-    render() {
+    render() {        
         Highcharts.chart(this.containerId, this.options, (chart) => {
+          enableScreenREader()
             // After the chart is rendered, add a custom class to the Reset Zoom button
             const resetButton = chart.toolbar && chart.toolbar.resetZoomButton;
             if (resetButton && resetButton.element) {

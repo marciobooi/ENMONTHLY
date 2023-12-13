@@ -54,7 +54,7 @@ function createPieChart() {
 
   const chartOptions = {
     containerId: "chart",
-    type: "pie",
+    type: 'pie',
     title: chartTitle,
     subtitle: null,
     xAxis: null,
@@ -76,8 +76,8 @@ function createPieChart() {
   
   };
   
-  const chart = new Chart(chartOptions);
-  chart.createChart();
+  const piechart = new Chart(chartOptions);
+  piechart.createChart();
   disableChatOptionsBtn(REF.chartId)
   stopLoadingAnimation()
 

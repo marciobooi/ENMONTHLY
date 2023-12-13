@@ -51,7 +51,17 @@
 }
 
 #menu {
-  color: white;
+  position: initial;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0.6rem !important;
+  margin-left: 2rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: initial;
+  margin-left: 1rem !important;
 }
 
 .subNavOne {
@@ -167,6 +177,7 @@ button.dropdown-item:last-child {
 .dropdownBtnGroup button:not(.min-with--geo) {
   width: 90vw;
   height: 2rem;
+  max-width: 100vw;
 }
 
 i.fas.fa-caret-down {

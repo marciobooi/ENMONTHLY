@@ -21,7 +21,7 @@ class Chart {
 
 
     createChart() {
-      Highcharts.chart(this.containerId, {
+      Highcharts.chart("chart", {
         chart: {
           type: this.type,
           plotBackgroundColor: null,

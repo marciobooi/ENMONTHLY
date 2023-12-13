@@ -134,9 +134,12 @@ stopLoadingAnimation()
 
 }
 
-function auxChartIni() {  
-  addAuxiliarBarGraphOptions()
+function auxChartIni() { 
+  $('#chart').remove();
+  $("#enmonthly > div > div").append('<div id="chart">')
   createPieChart()
+  addAuxiliarBarGraphOptions()
+ 
 }
 
 
