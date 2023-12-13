@@ -195,7 +195,8 @@ class SubNavbar {
           this.chartMenuOpen = this.subNavbar.querySelector('#menu');
   
           this.menuButton.addEventListener('click', () => {
-            this.toggleChartOptionsMenu();
+            this.toggleChartOptionsMenu();    
+            // $('#menu').css({"background-color": "#f3f6fc", "color": "#0e47cb"});    
             trapTab()
           });
   

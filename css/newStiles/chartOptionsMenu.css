@@ -1,10 +1,15 @@
+
+.dropdown-grid > .row {
+  max-width: 75vw;
+}
+
 #chartOptionsMenu {
   position: absolute;
-  top: 4rem;
-  left: 2.7rem;
+  top: 3.5rem;
+  left: 2rem;
   z-index: 999999999;
   background-color: #f3f6fc;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgb(50 50 93 / 25%) 8px 5px 12px -2px, rgb(0 0 0 / 30%) 4px 8px 7px -3px;
   width: 95vw;
   /* height: 18vh; */
   padding: 0.5rem;
