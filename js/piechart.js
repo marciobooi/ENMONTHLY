@@ -80,6 +80,9 @@ function createPieChart() {
   piechart.createChart();
   disableChatOptionsBtn(REF.chartId)
   stopLoadingAnimation()
+  setTimeout(() => {
+    getTitle()
+  }, 200);
 
 }
 

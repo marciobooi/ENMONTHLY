@@ -12,8 +12,8 @@ class ChartControls {
 		  <nav aria-label="Chart controls" id="chartControls" class="navbar navbar-expand-sm navbar-light bg-light navChartControls">
 			<div class="container-fluid">
 			  <div id="auxChartTitle">
-				<h2 id="title" class="title">title</h2>
-				<h6 id="subtitle" class="subtitle">subtitle</h6>
+				<h2 id="title" class="title auxTitle"></h2>
+				<h6 id="subtitle" class="subtitle auxSubtitle"></h6>
 			  </div>
 			  <div class="menu">
 				<ul id="chartBtns" role="menubar" aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
@@ -69,8 +69,8 @@ class ChartControls {
 		  </div>
 		  <div class="col-12 subNavTwo">
 			<div id="auxChartTitle">
-			  <h2 id="title" class="title">title</h2>
-			  <h6 id="subtitle" class="subtitle">subtitle</h6>
+			<h2 id="title" class="title auxTitle"></h2>
+				<h6 id="subtitle" class="subtitle auxSubtitle"></h6>
 			</div>
 		  </div>
 		</div>`;	

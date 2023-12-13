@@ -388,13 +388,13 @@ function getTitle() {
     
   }
 
-log(title, subtitle)
-
   $("#title").html(title);
   $("#subtitle").html(subtitle);
 
-  $("#auxChartTitle h2#title").html(title);
-  $("#auxChartTitle h6").html(subtitle);
+  $(".auxTitle").html(title);
+  $(".auxSubtitle").html(subtitle);
+
+
 
   return chartTitle;
 }
