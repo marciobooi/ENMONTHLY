@@ -258,7 +258,7 @@ class ChartControls {
 			document.getElementById("toggleDetails").style.display = showHideValue;
 			document.getElementById("toggleRenuewbles").style.display = showHideValue;
 
-			barChart.setDisabled(true);
+			pieChart.setDisabled(true);
 	}
   
 	removeFromDOM() {
