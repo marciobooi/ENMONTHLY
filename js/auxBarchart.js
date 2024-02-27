@@ -52,15 +52,6 @@ barMean.push(values);
     };
     bardata.push(barobj);
   }
-
-
-
-
-
-
-
-
-
     
   } else {
     // val2 = years.map((year, yIdx) => {

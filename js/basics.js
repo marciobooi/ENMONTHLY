@@ -207,14 +207,14 @@ if(REF.chartId == "pieChart") {
 
     let html = "";
       
-    html += `<table id="tooltipTable" class="table tooltipTable"> 
+    html += `<table class="table_component"> 
     <thead class="">
       <tr>
-          <th class="tooltipTableHead" scope="cols" colspan="2">${title}</th>                
+          <th scope="cols" colspan="2">${title}</th>                
       </tr>
     </thead>
     <tbody>
-      <tr class="tooltipTableTd">
+      <tr>
           <td><b>${value}</b> ${unit}</td>
       </tr>
     </tbody>
@@ -237,14 +237,14 @@ if(REF.chartId == "pieChart") {
   
     let html = "";
   
-    html += `<table id="tooltipTable" class="table tooltipTable"> 
-    <thead class="tooltipTableHead">
+    html += `<table class="table_component" > 
+    <thead">
       <tr >
-          <th class="tooltipTableTr" scope="cols" colspan="2">${title}</th>                
+          <th scope="cols" colspan="2">${title}</th>                
       </tr>
     </thead>
     <tbody>
-      <tr class="tooltipTableTd">
+      <tr>
           <td><b>${toolValue}</b> ${unit}</td>
       </tr>
     </tbody>
@@ -254,22 +254,16 @@ if(REF.chartId == "pieChart") {
   
     return html
 }
-
-
-
-
-
-
-
 }
 
 function tooltipTable(points) {
+  log('here')
   if(REF.percentage == 1 ){
     let html = "";
-    html += `<table id="tooltipTable" class="table">                
+    html += `<table  class="table_component">                
                 <thead>
                   <tr>
-                    <th class="tooltipTableTr" scope="cols" colspan="2">${points[0].x}</th>                                  
+                    <th scope="cols" colspan="2">${points[0].x}</th>                                  
                   </tr>
                 </thead>`
       points.forEach(element => {
@@ -294,10 +288,10 @@ function tooltipTable(points) {
     if (b.series.name == languageNameSpace.labels['TOTAL']) return -1;
     return 0;
   });
-  html += `<table id="tooltipTable" class="table">                
+  html += `<table class="table_component">                
                 <thead>
                   <tr>
-                    <th class="tooltipTableTr" scope="cols" colspan="2">${sortedPoints[0].key}</th>                                   
+                    <th scope="cols" colspan="2">${sortedPoints[0].key}</th>                                   
                   </tr>
                 </thead>`;
   sortedPoints.forEach(function (point) {

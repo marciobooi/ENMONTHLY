@@ -101,7 +101,7 @@ function initenprices(d = null) {
   + "</div>"
 
  
-
+  ECL.autoInit();
 
 }
 

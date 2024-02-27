@@ -1,10 +1,19 @@
 function exportIframe() {
 
-    $('.modal-title').html(languageNameSpace.labels['sharemodaltitle'])
+    $('.ecl-modal__header-content').html(languageNameSpace.labels['sharemodaltitle'])
     $('.targetUrl').html(window.location.href) 
     
-    $('#iframeModal').modal('show');
+    const modal = document.getElementById('iframeModal');
 
+    // Open the modal
+    modal.showModal();
+
+    ECL.autoInit();
+
+}
+
+function closeModalUrl(params) {
+    REF.share = false
 }
 
 

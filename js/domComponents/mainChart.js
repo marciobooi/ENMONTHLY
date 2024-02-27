@@ -50,8 +50,8 @@ class HighchartsChart {
                 function createTableRow(label, value, iconColor) {
                     return (
                         '<tr>' +
-                        '<td class="tooltipTd">' + label + '</td>' +
-                        '<td class="tooltipTd"style="color:' + iconColor + '">' + value + '</td>' +
+                        '<td class="">' + label + '</td>' +
+                        '<td class=""style="color:' + iconColor + '">' + value + '</td>' +
                         '</tr>'
                     );
                 }
@@ -59,7 +59,7 @@ class HighchartsChart {
                 // Check if 'points' array exists and has at least two elements
                 if (Array.isArray(points) && points.length >= 2) {
                     // Add title row with the key
-                    tableContent += '<tr><th class="tooltipTableHead" colspan="2">' +
+                    tableContent += '<tr><th class="" colspan="2">' +
                         (points[0].key ? points[0].key : '') + " - " + languageNameSpace.labels[REF.unit] +
                         '</th></tr>';
         
@@ -94,7 +94,7 @@ class HighchartsChart {
                 }
         
                 // Wrap the content in a table
-                return '<table>' + tableContent + '</table>';
+                return '<table  class="table_component">' + tableContent + '</table>';
             },
             padding: 0,
             crosshairs: true,

@@ -272,11 +272,11 @@
   "menu-chart-title": "Diagramm auswählen",
   "BOX_COUNTRY_TITLE": "Land auswählen",
   "menu-country-title": "Land auswählen",
-  "MENU_MORE": "Tutorial",
+  "MENU_MORE": "Anleitung",
   "BOX_CHART_TITLE": "Diagramm auswählen",
   "BOX_SIEC_TITLE": "Kraftstoff auswählen",
   "BOX_NRG_TITLE": "Fluss auswählen",
-  "BOX_MORE_TITLE": "Tutorial",
+  "BOX_MORE_TITLE": "Anleitung",
   "BOX_UNIT_TITLE": "Einheit auswählen",
   "sharemodaltitle": "Diagramm einbetten",
   "autocompare": "Durchschnittlich",
@@ -284,7 +284,7 @@
   "eurostat": "Source Eurostat",
   "total": "Alle Kraftstoffe",
   
-  "TUTORIAL": "Tutorial",
+  "TUTORIAL": "Anleitung",
   "sankey": "Energiebilanzfluss",
   "ENPRICES": "Energiepreis-Tool",
   "ENTRADE": "Energiehandelsinstrument",
@@ -330,6 +330,7 @@
   "COOKIES": "Cookies",
 	"PRIVACY": "Datenschutz",
 	"LEGAL": "Rechtlicher Hinweis",
+  "ACCESS": "Zugänglichkeit",
 
   
   "COOKIETEXT": "Im Interesse der Benutzerfreundlichkeit verwenden wir auf unseren Seiten Cookies. Erfahren Sie mehr \u00fcber <a href=\"//ec.europa.eu/cookies/index_de.htm\" target=\"_blank\">unsere Cookie-Politik.</a>",

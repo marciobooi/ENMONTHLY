@@ -1,67 +1,44 @@
 function trapTab() {
+  // Focus on the first focusable element within the chartOptionsMenu
+  var firstElement = $("#chartOptionsMenu select, #chartOptionsMenu button").first();
+  firstElement.focus();
 
-  var capture = $("#chartOptionsMenu").attr("tabindex", "-1").focus();
-
-  capture.keydown(function handleKeydown(event) {
+  $("#chartOptionsMenu").keydown(function handleKeydown(event) {
     if (event.key.toLowerCase() !== "tab") {
       return;
     }
 
-    var tabbable = $().add(capture.find("button"));
+    const selects = $("#chartOptionsMenu select");
+    const btns = $("#chartOptionsMenu button");
+    const focusableElements = selects.add(btns);
     var target = $(event.target);
 
     if (event.shiftKey) {
-      if (target.is(capture) || target.is(tabbable.first())) {
+      if (target.is(firstElement)) {
         event.preventDefault();
-        tabbable.last().focus();
+        focusableElements.last().focus();
       }
     } else {
-      if (target.is(tabbable.last())) {
+      if (target.is(focusableElements.last())) {
         event.preventDefault();
-        tabbable.first().focus();
+        firstElement.focus();
       }
     }
   });
 
-
-  // $(document).mouseup(function (e) {
-  //   e.stopPropagation()
-  //   e.preventDefault()
-  //   var container = $("#chartOptionsMenu");
-  // log('here')
-  //   // Check if the click is outside the container or on the menu button
-  //   if (!container.is(e.target) && container.has(e.target).length === 0) {
-  //     container.addClass('toggleMenu');      
-  //     $( "#menu i" ).removeClass( 'fa-times' ).addClass( 'fa-bars' );    
-  //   }
-  // });
+  $(document).mouseup(function (e) {
+    var container = $("#chartOptionsMenu");
+    var menuButton = $("#menu");
   
-  // // Handle click on the menu button
-  // $("#menu").click(function() {
-  //   var container = $("#chartOptionsMenu");
-  //   container.toggleClass('toggleMenu');
-  // });
+    // Check if the click is outside the container or on the menu button
+    if (!container.is(e.target) && container.has(e.target).length === 0 && !menuButton.is(e.target)) {
+      container.addClass('toggleMenu');
+    }
+  });
   
-
-  // let popup = document.querySelector('#chartOptionsMenu');
-  
-
-  // window.onclick = e => {
-  //   if (e.target !== popup ) {
-  //     log(true)
-  //     // popup.classList.add('toggleMenu')
-  //     if(!$(e.target).hasClass( "toggleMenu" )) {
-  //       log(true)
-  //         $("#chartOptionsMenu").toggleClass( 'toggleMenu' )
-  //     } else {
-  //       return
-  //     }
-  //   }
-  // }
-
-
-
-
-
-
+  // Handle click on the menu button
+  $("#menu").click(function() {
+    var container = $("#chartOptionsMenu");
+    container.toggleClass('toggleMenu');
+  });
 }

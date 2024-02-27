@@ -56,6 +56,6 @@ function populateDropdownData() {
   populateFlow(); 
   populateFuel();
   populateUnit();
-
   populateUnit();
+  ECL.autoInit();
 }

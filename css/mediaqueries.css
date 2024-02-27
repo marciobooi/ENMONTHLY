@@ -18,7 +18,7 @@
 
   #lang-section {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-content: space-around;
   }
   select#lang-selection {
@@ -219,7 +219,7 @@ i.fas.fa-caret-down {
   left: 0;
   width: 100vw;
   background-color: #f3f6fc;
-  height: 4rem;
+  height: 5rem;
   z-index: 9;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -246,6 +246,24 @@ button:focus, .input:focus {
   align-content: center;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#tools {
+  position: initial;
+  top: 0;
+  left: 0;
+  /* height: 100%; */
+  padding: 0.6rem !important;
+  margin-left: 2rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: initial;
+  margin-left: 1rem !important;
 }
 
 #menuSwitch {
@@ -276,13 +294,36 @@ span.agregates.fa-stack.fa-rotate-180 {
   font-size: 0.67rem;
 }
 
+#chart {
+  height: 50vh !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
 #footer {
   margin-top: 0.8rem;
 }
 
 
+.ecl-link {
+  font-size: .6em;
+}
 
+#footerCredits, #footer, .ecl-site-footer__list-item:first-of-type, .ecl-site-footer__list-item {
+  margin: 0rem;
+}
 
+.chartMenuMobile {
+  position: absolute;
+  top: 2.95rem;
+  left: 0;
+  width: 100vw;
+  background-color: #f3f6fc;
+  height: 4.8rem;
+  z-index: 9;
+}
 
 
 
@@ -524,29 +565,34 @@ span.iconText {
 #menu {
   margin-left: 0;
 }
+#menu:hover {
+  background-color: transparent;
+}
 
 .chartMenuMobile {
   position: absolute;
-  top: 3rem;
+  top: 2.95rem;
   left: 0;
   width: 100vw;
   background-color: #f3f6fc;
-  height: 4rem;
+  height: 4.8rem;
   z-index: 9;
 }
-
 #chartBtns {
   justify-content: center;
   flex-direction: row;
   align-items: center;
   align-content: center;
+  height: 80%;
 }
 
 ul.dropdown-menu.dropdown-menu-end.show {
   position: fixed;
-  left: -1px;
-  top: 13rem;
+  left: 0px;
+  top: 11rem;
   border: none;
+  background-color: initial;
+  box-shadow: 0 7px 8px rgb(9 49 142 / 0%), 0 0 22px rgb(9 49 142 / 0%), 0 12px 17px rgb(9 49 142 / 0%), 0 -4px 4px rgb(9 49 142 / 0%);
 }
 
 button.dropdown-item {
