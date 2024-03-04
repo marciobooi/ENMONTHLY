@@ -257,7 +257,6 @@ if(REF.chartId == "pieChart") {
 }
 
 function tooltipTable(points) {
-  log('here')
   if(REF.percentage == 1 ){
     let html = "";
     html += `<table  class="table_component">                
@@ -550,8 +549,11 @@ function toggleBtns() {
     }
   
     const container = document.querySelector(".highcharts-root")
+    if (container) {
+      container.removeAttribute('aria-hidden');
+    }
   
-    container.removeAttribute('aria-hidden');
+  
   
   
   

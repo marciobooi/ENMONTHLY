@@ -27,5 +27,5 @@ function closeTable() {
   $(".highcharts-data-table > table").hide();
   $("#chart").show();
 
-  $(".highcharts-data-table > table").parent().css('display', 'none')
+  $(".highcharts-data-table").css('display', 'none')
 }

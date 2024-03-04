@@ -213,7 +213,7 @@
   "info": "Afficher les informations",
   "totals": "Afficher les détails",
   "htotals": "Masquer les détails",
-  "close": "Fermer modal",
+  "close": "Fermer",
   "share": "Incorporer",
   "msg": "Texte copié dans le presse-papiers",
 
@@ -378,7 +378,28 @@
 	"tutBACK": "Retour",
 	"tutNEXT": "Suivant",
 	"tutFINISH": "Fermer",
-
+ 
+  "BTNBARCHART": "Cliquez pour afficher le diagramme en barres",
+  "BTNPIECHART": "Cliquez pour afficher le diagramme circulaire",
+  "BTNLINECHART": "Cliquez pour afficher le diagramme linéaire",
+  "BTNPRINTCHART": "Cliquez pour imprimer le diagramme",
+  "BTNDOWNLOADCHART": "Cliquez pour télécharger le diagramme",
+  "BTNEXCELCHART": "Cliquez pour exporter en fichier Excel",
+  "BTNBSHARECHART": "Cliquez pour partager ce diagramme",
+  "BTNCLOSECHART": "Cliquez pour revenir à la page principale",
+  "BTNINFICHART": "Cliquez pour ouvrir le menu d'information",
+  "BTNTABLECHART": "Cliquez pour afficher la table",
+  "BTNPERCENTAGECHART": "Cliquez pour passer en pourcentage",
+  "BTNAGREGATESCHART": "Cliquez pour afficher/masquer les agrégats",
+  "BTNATABLE": "Cliquez pour afficher/masquer la table",
+  "BTNCHANGECOUNTRY": "Cliquez pour changer de pays",
+  "BTNEXPAND": "Cliquez pour agrandir le graphique",
+  "BTNEDETAILS": "Cliquez pour afficher/masquer les détails",
+  "BTNRNW": "Basculer entre les énergies renouvelables et non renouvelables",
+  "RANGE": "Plage",
+  "LOW": "Bas",
+  "HIGH": "Haut",
+   
   "twitter": "Partager sur Twitter",
   "linkedin": "Partager sur linkedin",
   "facebook": "Partager sur facebook"

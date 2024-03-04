@@ -157,7 +157,7 @@ class HighchartsChart {
               },
             },
             {
-              name: "Range",
+              name: languageNameSpace.labels["RANGE"],
               data: seriesOne,
               type: "areasplinerange",
               lineWidth: 0,
@@ -201,7 +201,7 @@ class HighchartsChart {
               },
             },
             {
-              name: "Range",
+              name: languageNameSpace.labels["RANGE"],
               data: seriesTwo,
               type: "areasplinerange",
               lineWidth: 0,
@@ -269,90 +269,7 @@ class HighchartsChart {
             ],
           },
       
-          exporting: {
-            tableCaption: ''+languageNameSpace.labels[REF.dataset]+'<br>'+languageNameSpace.labels[REF.geo]+'<br>'+languageNameSpace.labels[REF.unit]+'<br>'+languageNameSpace.labels[REF.siec]+'<br>'+languageNameSpace.labels[REF.nrg_bal]+'<br>Source Eurostat',   
-      
-            chartOptions: {     
-              scale: 3, 
-                scrollbar: {
-                enabled: false
-              }, 
-              title: {
-                text: languageNameSpace.labels[REF.dataset],
-              },
-              subtitle: {
-                text: "<small>" + languageNameSpace.labels[REF.geo] + ' - ' + languageNameSpace.labels[REF.siec] + ' - ' + languageNameSpace.labels[REF.nrg_bal] +"</small>",   
-              },
-              chart: {
-                width: 1000,
-                events: {
-                  load: function () {
-                    this.renderer.image('https://ec.europa.eu/eurostat/statistics-explained/images/0/09/Logo_RGB-POS.png', 900, 10, 60, 25).add();
-                  },
-                },
-        },
-              exporting: {
-                tableDecimalPoint: ",", // "." or ","
-                tableDecimalValue: 2,
-              },
-            },
-            buttons: {
-              contextButton: {
-                enabled: false
-            },
-              // contextButton: {
-              //   menuItems: [
-              //     // "printChart",
-              //     // "separator",
-              //     "downloadPNG",
-              //     "downloadJPEG",
-              //     // "downloadPDF",
-              //     "downloadSVG",
-              //     "separator",
-              //     "downloadCSV",
-              //     "downloadXLS",
-              //     "viewData",
-              //     // "openInCloud"
-              //   ],
-              // },
-            },
-            menuItemDefinitions: {
-              // Custom definition
-              viewData: {
-                onclick: function () {
-                  if (!this.insertedTable) {
-                    var div = document.createElement('div');
-                    div.className = 'highcharts-data-table';
-                    // Insert after the chart container
-                    this.renderTo.parentNode.insertBefore(div, this.renderTo.nextSibling);
-                    div.innerHTML = this.getTable();
-                    this.insertedTable = true;
-                    var date_str = new Date().getTime().toString();
-                    var rand_str = Math.floor(Math.random() * (1000000)).toString();
-                    this.insertedTableID = 'div_' + date_str + rand_str
-                    div.id = this.insertedTableID;
-                    $('.highcharts-data-table').wrap("<div class='overlay'></div>");
-                    $('.highcharts-data-table').append('<a class="print" onclick="tablePrint()"><i class="fad fa-print"></i></a>')
-                    $('.highcharts-table-caption').html(
-                      languageNameSpace.labels[REF.dataset]
-                      + " <br> " + languageNameSpace.labels[REF.geo]
-                      + " <br> " + languageNameSpace.labels[REF.unit]
-                      + " - " + languageNameSpace.labels[REF.nrg_bal]
-                      + " - " + languageNameSpace.labels[REF.siec]
-                      )  
-                      const cells = document.querySelectorAll('td');
-                      cells.forEach(function(cell) {   
-                        cell.innerHTML = Highcharts.numberFormat(cell.innerHTML, 3)
-                      })
-                  } else {
-                    $('#' + this.insertedTableID).toggle();
-                    $('.highcharts-data-table').wrap("<div class='overlay'></div>");
-                    $('.highcharts-data-table').append('<a class="print" onclick="tablePrint()"><i class="fad fa-print"></i></a>')
-                  }
-                },
-              }
-            },
-          },
+       
       };
 
 
@@ -374,15 +291,20 @@ class HighchartsChart {
   
     // Method to create and display the chart
     render() {        
-        Highcharts.chart(this.containerId, this.options, (chart) => {
+      Highcharts.chart(this.containerId, this.options, (chart) => {
+          // Enable screen reader accessibility
           enableScreenREader()
-            // After the chart is rendered, add a custom class to the Reset Zoom button
-            const resetButton = chart.toolbar && chart.toolbar.resetZoomButton;
-            if (resetButton && resetButton.element) {
-              resetButton.element.classList.add("custom-reset-zoom-button");
-            }
-          });
-    }
+  
+          // Check if the chart toolbar and resetZoomButton are available
+          if (chart && chart.toolbar && chart.toolbar.resetZoomButton) {
+              // After the chart is rendered, add a custom class to the Reset Zoom button
+              const resetButton = chart.toolbar.resetZoomButton.element;
+              if (resetButton) {
+                  resetButton.classList.add("custom-reset-zoom-button");
+              }
+          }
+      });
+  }
   }
   
 

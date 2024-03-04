@@ -29,13 +29,13 @@ var languageNameSpace = {
       async: true
       });
 
-    const elementsId = [".pie", ".barchart", ".line", ".db", ".meta", 
+    const elements = [".pie", ".barchart", ".line", ".db", ".meta", 
     ".info", ".details", "#close", ".componentsShow", ".componentsHide",
     ".play", "#share", ".Modalshare", ".twitter", ".linkedin", ".facebook", ".chartMenu",
     "#vizualizationMenu", "#visualization-table", "#find-more-menu-icon", ".toggle-thumb", "#header-title-label"
     ]
 
-    elementsId.forEach(id => {
+    elements.forEach(id => {
       const element = $(id);
       const label = languageNameSpace.labels[id.substring(1)];
       element.attr({
@@ -45,6 +45,57 @@ var languageNameSpace = {
       });
       element.html(languageNameSpace.labels[id.substring(1)]);
     });
+
+
+
+    const elementsBtn = [ 
+    "barChart", 
+    "pieChart",  
+    "lineChart",  
+    "toggleAgregates",  
+    "tb-togle-percentage",  
+    "tb-togle-table",   
+    "printBtn",  
+    "downloadBtn",  
+    "excelBtn",  
+    "shareChart",  
+    "btnCloseModalChart", 
+    "infoBtn", 
+    "shareChart1",
+    "tb-togle-details",
+    "tb-togle-renew",
+    "embebedBtn"
+  ]
+
+    const elementsBtnTranslations = [
+      "BTNBARCHART", 
+      "BTNPIECHART", 
+      "BTNLINECHART", 
+      "BTNAGREGATESCHART", 
+      "BTNPERCENTAGECHART", 
+      "BTNATABLE", 
+      "BTNPRINTCHART", 
+      "BTNDOWNLOADCHART", 
+      "BTNEXCELCHART", 
+      "BTNBSHARECHART", 
+      "BTNCLOSECHART", 
+      "BTNINFICHART", 
+      "BTNBSHARECHART",
+      "BTNEDETAILS",
+      "BTNRNW",
+      "sharemodaltitle",
+    ]
+
+    elementsBtn.forEach((id, idx) => {
+      const element = document.getElementById(id);
+      if (!element) {
+          return; 
+      }
+      const label = languageNameSpace.labels[elementsBtnTranslations[idx]];
+      element.setAttribute('title', label);
+      element.setAttribute('data-original-title', label);
+      element.setAttribute('aria-label', label);
+  });
 
       $("#footer-cookies").html(languageNameSpace.labels["COOKIES"]);
       $("#footer-privacy").html(languageNameSpace.labels["PRIVACY"]);
@@ -60,7 +111,32 @@ var languageNameSpace = {
       $(".cck-actions > a[href=\'#close']").text(languageNameSpace.labels["COOKIECOMPLETEclose"]);
       $(".cck-actions > a[href=\'#close']").append('<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.538 15.205L13.32 11.99l3.199-3.194-1.332-1.332-3.2 3.193L8.812 7.48 7.48 8.812l3.177 3.177-3.195 3.199 1.334 1.333 3.193-3.2 3.217 3.217 1.333-1.333zm5.594-7.49a10.886 10.886 0 00-2.355-3.492 10.882 10.882 0 00-3.492-2.355A10.906 10.906 0 0012 1c-1.488 0-2.93.293-4.286.868a10.958 10.958 0 00-3.492 2.355 10.888 10.888 0 00-2.355 3.492A10.925 10.925 0 001 12a10.958 10.958 0 003.222 7.778 10.9 10.9 0 003.492 2.355C9.07 22.707 10.512 23 12 23a10.964 10.964 0 007.777-3.222 10.912 10.912 0 002.355-3.492A10.94 10.94 0 0023 12c0-1.487-.294-2.93-.868-4.285zM21.702 12a9.642 9.642 0 01-2.844 6.858A9.619 9.619 0 0112 21.703a9.635 9.635 0 01-6.859-2.844A9.617 9.617 0 012.298 12a9.619 9.619 0 012.843-6.859A9.615 9.615 0 0112 2.298a9.619 9.619 0 016.858 2.843A9.623 9.623 0 0121.703 12z"></path></svg>')
       $('.ecl-modal__header-content').html(languageNameSpace.labels["EMBED"]);
-  },
+  
+   
+      
+  
+      setTimeout(() => {
+        const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
+        thElements.forEach(element => {
+          const innerHTML = element.innerHTML.toLowerCase();
+          if (innerHTML.includes('low')) {
+            element.textContent = languageNameSpace.labels['LOW'];
+            element.style.color = 'red';
+          } else if (innerHTML.includes('high')) {
+            element.textContent = languageNameSpace.labels['HIGH'];
+            element.style.color = 'blue';
+          }
+        });   
+}, 200);  
+
+  
+  
+  
+  
+  
+  
+  
+    },
 
 
   ChangeLanguage: function (val) {
@@ -75,6 +151,26 @@ var languageNameSpace = {
       addAuxiliarBarGraphOptions()
     }
 
+    if ($('.highcharts-data-table').is(':visible')) {
+      closeTable();
+      setTimeout(() => {
+        const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
+        thElements.forEach(element => {
+          const innerHTML = element.innerHTML.toLowerCase();
+          if (innerHTML.includes('low')) {
+            element.textContent = languageNameSpace.labels['LOW'];
+            element.style.color = 'red';
+          } else if (innerHTML.includes('high')) {
+            element.textContent = languageNameSpace.labels['HIGH'];
+            element.style.color = 'blue';
+          }
+        });
+      }, 400);
+      openVizTable();
+      $('#tb-togle-table').focus();
+      $('#table-icon').css('display', 'none');
+      $('#chart-icon').css('display', '');
+    } 
 
   }
 };

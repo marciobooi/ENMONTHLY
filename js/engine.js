@@ -74,7 +74,9 @@ function initenprices(d = null) {
 		      downloadCSV: "Download CSV",
 		      downloadXLS: "Download Excel file",
 		      viewData: "View table",
-          noData: "No information to display"
+          noData: "No information to display",
+          rangeSelectorFrom: "Minimum",
+          rangeSelectorTo: "Maximum"
         }
       });
       break;

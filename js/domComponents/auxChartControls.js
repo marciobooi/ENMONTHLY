@@ -111,12 +111,25 @@ class ChartControls {
 		chartIcon.style.display = chartIcon.style.display === 'none' ? '' : 'none';
 	  
 		if (tableIcon.style.display === 'none') {
-		  toggleButton.setAttribute('aria-label', 'Toggle chart');
-		  toggleButton.title = 'Toggle chart';
+		  toggleButton.setAttribute('aria-label', languageNameSpace.labels['BTNATABLE']);
+		  toggleButton.title = languageNameSpace.labels['BTNATABLE'];
 		  openVizTable()
+		  setTimeout(() => {
+            const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
+            thElements.forEach(element => {
+              const innerHTML = element.innerHTML.toLowerCase();
+              if (innerHTML.includes('low')) {
+                element.textContent = languageNameSpace.labels['LOW'];
+                element.style.color = 'red';
+              } else if (innerHTML.includes('high')) {
+                element.textContent = languageNameSpace.labels['HIGH'];
+                element.style.color = 'blue';
+              }
+            });   
+    }, 200);  
 		} else {
-		  toggleButton.setAttribute('aria-label', 'Toggle table');
-		  toggleButton.title = 'Toggle table';      
+		  toggleButton.setAttribute('aria-label', languageNameSpace.labels['BTNATABLE']);
+		  toggleButton.title = languageNameSpace.labels['BTNATABLE'];      
 		  closeTable()
 		}
 	  }
@@ -129,20 +142,20 @@ class ChartControls {
 	  const showHideValue = REF.chartOption === 1 ? '' : 'none';
 
       const self = this; 
-
+	  
 	    // Create the button instances
-		const barChart = new Button("barChart", ["ecl-button", "ecl-button--primary", "round-btn"], "Toggle bar Chart", "barChart", "true");
-		const pieChart = new Button("pieChart", ["ecl-button", "ecl-button--primary", "round-btn"], "Toggle pie Chart", "pieChart", "false");
+		const barChart = new Button("barChart", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNBARCHART'], "barChart", "true");
+		const pieChart = new Button("pieChart", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNPIECHART'], "pieChart", "false");
 		// const lineChart = new Button("lineChart", ["ecl-button", "ecl-button--primary", "round-btn"], "Toggle line Chart", "lineChart", "false");
-		const createprintChart = new Button("printBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "Print chart", "false");
-		const downloadChart = new Button("downloadBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "Download chart image", "false");
-		const downloadExcel = new Button("excelBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "Download chart data", "false");
-		const embebedeChart = new Button("embebedBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "Embebed chart iframe", "false");
-		const closeChart = new Button("btnCloseModalChart", ["ecl-button", "ecl-button--primary", "round-btn"], "Close", "false");
-		const percentageButton = new Button("tb-togle-percentage", ["ecl-button", "ecl-button--primary", "round-btn"], "Toggle percentage", "", "true");		
-		const tableButton = new Button("tb-togle-table", ["ecl-button", "ecl-button--primary", "round-btn"], "Toggle table", "", "true");
-		const detailsButton = new Button("tb-togle-details", ["ecl-button", "ecl-button--primary", "round-btn"], "Toggle details", "", "true");    
-		const renewButton = new Button("tb-togle-renew", ["ecl-button", "ecl-button--primary", "round-btn"], "Change fuels", "", "true");
+		const createprintChart = new Button("printBtn", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNPRINTCHART'], "false");
+		const downloadChart = new Button("downloadBtn", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNDOWNLOADCHART'], "false");
+		const downloadExcel = new Button("excelBtn", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNEXCELCHART'], "false");
+		const embebedeChart = new Button("embebedBtn", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNBSHARECHART'], "false");
+		const closeChart = new Button("btnCloseModalChart", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['close'], "false");
+		const percentageButton = new Button("tb-togle-percentage", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNPERCENTAGECHART'], "", "true");		
+		const tableButton = new Button("tb-togle-table", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNATABLE'], "", "true");
+		const detailsButton = new Button("tb-togle-details", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNEDETAILS'], "", "true");    
+		const renewButton = new Button("tb-togle-renew", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNRNW'], "", "true");
 	
 		// Set inner HTML content for each button
 		barChart.setInnerHtml('<i class="fas fa-chart-bar"></i>');
@@ -204,19 +217,30 @@ class ChartControls {
 		  });
 	  
 		  detailsButton.setClickHandler(function() {      
+
+
 	  
 			REF.chartOption === 1 ? REF.chartOption = 0 : REF.chartOption = 1;    
 			
 			if(REF.chartOption === 1) {
 			  $("#togglePercentage").css('display', "initial")
-			  $("#toggleRenuewbles").css('display', "initial")
+			  log(REF.dataset)
+			  if(REF.dataset == "nrg_cb_pem_RW") {
+				$('#toggleRenuewbles').css('display', 'initial');
+			  } else {
+				$('#toggleRenuewbles').css('display', 'none');
+			  }
 			  document.getElementById("tb-togle-details").innerHTML = nonagregateIcon();
 			} else {
 			  REF.percentage = 0
 			  $("#togglePercentage").css('display', "none")
 			  $("#toggleRenuewbles").css('display', "none")
 			  document.getElementById("tb-togle-details").innerHTML = agregateIcon();
-			}      
+			}   
+			
+
+
+
 			auxiliarBarGraph();
 		  });
 	  
