@@ -164,11 +164,27 @@ codesDataset = {
 var Nrw = ["C0000","G3000","O4000XBIO","N9000"]
 var rw = ["RA100","RA200","RA300","RA400","RA500_5160"]
 
+
+
+
 defaultGeos = ["EU27_2020","BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR","IT","CY","LV","LT","LU","HU","MT","NL","AT","PL","PT","RO","SI","SK","FI","SE","IS","NO","ME","MK","AL","RS","TR","BA","XK","MD","UA","GE"]
-
-const allCountries = ["EU27_2020","BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR","IT","CY","LV","LT","LU","HU","MT","NL","AT","PL","PT","RO","SI","SK","FI","SE","IS","NO","ME","MK","AL","RS","TR","BA","XK","MD","UA","GE"]
-const countriesAgregates = ["EU27_2020"];
-const EU_MEMBER_COUNTRY_CODES = ['BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE'];
-const NON_MEMBER_COUNTRY_CODES = allCountries.filter(country => !EU_MEMBER_COUNTRY_CODES.includes(country) && !countriesAgregates.includes(country));
-
-
+ 
+  const AGGREGATES_COUNTRY_CODES = ["EU27_2020"];
+  
+  const EU_COUNTRY_CODES = [
+	"BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR","IT","CY","LV","LT",
+	"LU","HU","MT","NL","AT","PL","PT","RO","SI","SK","FI","SE"
+  ].sort();
+  
+  const EFTA_COUNTRY_CODES = [
+	"IS","NO"
+  ].sort();
+  
+  const ENLARGEMENT_COUNTRY_CODES = [
+	"ME","MK","AL","RS","TR","BA","XK"
+  ].sort();
+  
+  const OTHER_THIRD_COUNTRY_CODES = [
+	"MD","UA","GE"
+  ].sort();
+  
