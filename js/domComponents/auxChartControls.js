@@ -113,6 +113,7 @@ class ChartControls {
 		if (tableIcon.style.display === 'none') {
 		  toggleButton.setAttribute('aria-label', languageNameSpace.labels['BTNATABLE']);
 		  toggleButton.title = languageNameSpace.labels['BTNATABLE'];
+		  $('.ecl-button').not('button#tb-togle-table').not('#toggleTableBtn').not('#btnCloseModalChart').prop('disabled', true);		
 		  openVizTable()
 		  setTimeout(() => {
             const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
@@ -130,7 +131,9 @@ class ChartControls {
 		} else {
 		  toggleButton.setAttribute('aria-label', languageNameSpace.labels['BTNATABLE']);
 		  toggleButton.title = languageNameSpace.labels['BTNATABLE'];      
+		  $('.ecl-button').not('button#tb-togle-table').prop('disabled', false);
 		  closeTable()
+		  disableChatOptionsBtn(REF.chartId)
 		}
 	  }
   

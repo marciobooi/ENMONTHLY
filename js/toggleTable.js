@@ -17,6 +17,8 @@ function openVizTable() {
         }
       });
 
+      
+
       // Change the text of table highcharts-data-table-0 header summary to "Data Table"
       $(".highcharts-data-table > table").removeAttr("summary");
     }
