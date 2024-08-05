@@ -401,9 +401,9 @@
   "LOW": "Niedrig",
   "HIGH": "Hoch",
    
-  "twitter": "Auf Twitter teilen",
-  "linkedin": "Auf LinkedIn teilen",
-  "facebook": "Auf Facebook teilen",
+"twitter": "X",
+"linkedin": "LinkedIn",
+"facebook": "Facebook",
 
   "SELECTLANGUAGE": "Sprache auswählen",
   "OFFICIAL": "Amtssprachen der EU:",
