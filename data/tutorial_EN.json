@@ -14,11 +14,11 @@
 	"TUTO_13": "Download options",
 	"TUTO_14": "Click here to download a picture or data.",
 	"TUTO_15": "Embebbed",
-	"TUTO_16": "use this button to embebed the chart in other tools",
+	"TUTO_16": "Use this button to embebed the chart in other tools",
 	"TUTO_17": "Change language",
 	"TUTO_18": "Use this option to change the language of the tool, it supports English, French or German.",
 	"TUTO_19": "That is it for our tour.",
-	"TUTO_20": "If you find this visualisation tool useful, please show your support by sharing it with others on Twitter, Facebook, email and LinkedIn. Thank you!",
+	"TUTO_20": "If you find this visualization tool useful, please show your support by sharing it with others on X, Facebook, email, and LinkedIn. Thank you!",
 
 	"PROMO_TUTO_1": "Tutorial",
 	"PROMO_TUTO_2": "Welcome to Eurostat's energy monthly tool. For a guided tour of features <a href='#' onclick='StartMainTour();'>click here and a tour will start!</a>."
