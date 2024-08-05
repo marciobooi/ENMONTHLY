@@ -407,7 +407,15 @@
 
 "twitter": "Share on twitter",
 "linkedin": "Share on linkedin",
-"facebook": "Share on facebook"
+"facebook": "Share on facebook",
+
+"SELECTLANGUAGE": "Select language",
+"OFFICIAL": "Official EU languages:",
+"AGGREGATE": "Aggregates",
+"EUCTR": "EU countries",
+"EFTA": "EFTA countries",
+"ENLARGEMENT": "Enlargement countries",
+"OTHERCTR": "Other third countries"
 
 
 

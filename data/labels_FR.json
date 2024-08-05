@@ -402,7 +402,15 @@
    
   "twitter": "Partager sur Twitter",
   "linkedin": "Partager sur linkedin",
-  "facebook": "Partager sur facebook"
+  "facebook": "Partager sur facebook",
+
+  "SELECTLANGUAGE": "Sélectionner la langue",
+  "OFFICIAL": "Langues officielles de l'UE :",
+  "AGGREGATE": "Agrégats",
+  "EUCTR": "Pays de l'UE",
+  "EFTA": "Pays de l'AELE",
+  "ENLARGEMENT": "Pays en élargissement",
+  "OTHERCTR": "Autres pays tiers"
  
 
 
