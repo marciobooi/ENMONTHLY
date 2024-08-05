@@ -32,7 +32,7 @@ function createPieChart() {
       cursor: "pointer",
       dataLabels: {
         enabled: true,
-        format: "<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>value: {point.y:,.4f} " + languageNameSpace.labels[REF.unit],
+        format: "<b>{point.name}</b>:<br>{point.percentage:.1f} %<br>value: {point.y:,.0f} " + REF.unit,
       },
   } 
   
@@ -49,7 +49,7 @@ function createPieChart() {
   }
 
   const tooltipFormatter = function() {
-    return chartNormalTooltip(this.point);
+    return pieTolltip(this.point);
   };
 
   const chartOptions = {

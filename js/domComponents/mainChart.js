@@ -55,19 +55,20 @@ class HighchartsChart {
                 // Helper function to create a table row
                 function createTableRow(label, value, iconColor) {
                     return (
-                        '<tr>' +
-                        '<td class="">' + label + '</td>' +
-                        '<td class=""style="color:' + iconColor + '">' + value + '</td>' +
-                        '</tr>'
+                        `<tr>
+                        <td class="">${label}</td>
+                        <td class=""style="color:${iconColor}">${value}</td>
+                        </tr>`
                     );
                 }
         
                 // Check if 'points' array exists and has at least two elements
                 if (Array.isArray(points) && points.length >= 2) {
                     // Add title row with the key
-                    tableContent += '<tr><th class="" colspan="2">' +
-                        (points[0].key ? points[0].key : '') + " - " + languageNameSpace.labels[REF.unit] +
-                        '</th></tr>';
+                    tableContent += `<tr>
+                    <th class="" colspan="1">${points[0].key ? points[0].key : ''}</th>
+                    <th class="" colspan="1">${REF.unit}</th>
+                    </tr>`;
         
                 
         

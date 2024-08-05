@@ -256,13 +256,57 @@ if(REF.chartId == "pieChart") {
 }
 }
 
+function pieTolltip(point) {
+  // Assuming there is a variable 'unit' representing the unit you want to display
+  const unit = REF.unit; // Replace 'your_unit' with the actual unit
+  const na = languageNameSpace.labels['FLAG_NA'];
+
+  const total = point.series.data.reduce((acc, point) => acc + point.y, 0);
+  const percentage = (point.options.y / total) * 100;
+  const formattedPercentage = Highcharts.numberFormat(percentage, 1);
+  const formattedValue = Highcharts.numberFormat(point.y, 0, '', ' ');
+
+  const formatPointTooltip = function () {
+    return `
+    <tr class="tooltipTableRow">
+      <td><span style="color:${point.color}">\u25CF</span> ${formattedValue}</td>
+      <td> ${unit}</td>
+    </tr>
+    <tr class="tooltipTableRow">
+      <td><span style="color:${point.color}">\u25CF</span> ${formattedPercentage}</td>
+      <td> %</td>
+    </tr>
+    `;
+  };
+
+  // Construct the complete tooltip content
+  const tooltipRows = formatPointTooltip();
+
+  // Create the HTML table structure
+  const html = `<table id="tooltipTable" class="table_component"> 
+    <thead class="">
+      <tr class="">
+        <th scope="col" colspan="2">${point.name}</th>                
+      </tr>
+    </thead>
+    <tbody>
+      ${tooltipRows}
+    </tbody>
+  </table>`;
+
+  return html;   
+}
+
 function tooltipTable(points) {
+  const dec = 0
+
   if(REF.percentage == 1 ){
     let html = "";
-    html += `<table  class="table_component">                
+    html += `<table id="tooltipTable" class="table_component">                
                 <thead>
                   <tr>
-                    <th scope="cols" colspan="2">${points[0].x}</th>                                  
+                    <th scope="cols">${points[0].x}</th>                    
+                    <th scope="cols"></th>                    
                   </tr>
                 </thead>`
       points.forEach(element => {
@@ -277,66 +321,82 @@ function tooltipTable(points) {
     html += `</table>`;
     return `<div>${html}</div>`;
   } else {
-  let html = "";
-  let totalAdded = false; // Flag to track if total row has been added
-  let totalColor = "#7cb5ec"
-  
-  // Sort the points so that "Total" item is at the last place
-  const sortedPoints = points.slice().sort(function (a, b) {
-    if (a.series.name == languageNameSpace.labels['TOTAL']) return 1;
-    if (b.series.name == languageNameSpace.labels['TOTAL']) return -1;
-    return 0;
-  });
-  html += `<table class="table_component">                
-                <thead>
-                  <tr>
-                    <th scope="cols" colspan="2">${sortedPoints[0].key}</th>                                   
-                  </tr>
-                </thead>`;
-  sortedPoints.forEach(function (point) {
-    const color = point.series.color;
-    const value = point.y.toFixed(2); // Limit decimals to three places
-    const category = point.series.name;    
-    
-    html += `<tr>
-                <td><svg width="10" height="10" style="vertical-align: baseline;"><circle cx="5" cy="5" r="3" fill="${color}" /></svg> ${category}</td>
-                      <td>${value}</td>
-                  </tr>` 
-    
-    
-    
+    let html = "";
+    let totalAdded = false; // Flag to track if the total row has been added
+    let totalColor = "rgb(14, 71, 203)";
 
-
-    // Check if point is "Total" and set the flag if found
-    if (category == languageNameSpace.labels['TOTAL']) {
-      totalAdded = true;
-    }
-  });
-
-  // Add a row for the total if not already added
-  if (!totalAdded) {
-    // Calculate the total sum of all values
-    const totalSum = sortedPoints.reduce(function (sum, point) {
-      return sum + point.y;
-    }, 0);
-
-    // Format the total sum with three decimal places
-    const totalValue = totalSum.toFixed(2);
-
-    // Add a row for the total
-    html += `<tr>
-                      <td><svg width="10" height="10" style="vertical-align: baseline;"><circle cx="5" cy="5" r="3" fill="${totalColor}" /></svg> ${languageNameSpace.labels['TOTAL']}</td>
-                      <td>${totalValue}</td>
-  </tr>`
     
+    // Sort the points so that the "Total" item is at the last place
+    const sortedPoints = points.sort(function (a, b) {
+      if (a.series.name == languageNameSpace.labels['TOTAL']) return 1;
+      if (b.series.name == languageNameSpace.labels['TOTAL']) return -1;
+      return 0;
+    });
     
+    html += `<table id="tooltipTable" class="table_component">                
+      <thead>
+        <tr>
+          <th scope="cols">${sortedPoints[0].key}</th>                    
+          <th class="tooltipUnit" scope="cols">${REF.unit}</th>                    
+        </tr>
+      </thead>`;
     
+    sortedPoints.forEach(function (point) {
+      const color = point.series.color;
+      const value = point.y.toFixed(dec); // Limit decimals to three places
+      const category = point.series.name;    
+
+      if(REF.details != 0) {
+        html += `<tr>
+        <td><svg width="10" height="10" style="vertical-align: baseline;"><circle cx="5" cy="5" r="3" fill="${color}" /></svg> ${category}</td>
+        <td>${value}</td>
+      </tr>`;
+      }    
+      // Check if point is "Total" and set the flag if found
+      if (category == languageNameSpace.labels['total']) {
+        totalAdded = true;
+      }
+    });
+    
+    // Check if all values are zero and display a message if they are
+    const allValuesZero = sortedPoints.every(function (point) {
+      return point.y === 0;
+    });
    
-  }
+    if (allValuesZero) {
+      html = 
+    `<table id="tooltipTable" class="table_component">                
+    <thead>
+      <tr>
+        <th scope="cols">${sortedPoints[0].key}</th>                                    
+      </tr>
+    </thead><tr>      
+    <td>${languageNameSpace.labels["FLAG_NA"]}</td>
+  </tr></table>`;
 
-  html += `</table>`;
 
-  return `<div>${html}</div>`;
+    } else {
+      // Add a row for the total if not already added
+      if (!totalAdded) {
+        // Calculate the total sum of all values
+        const totalSum = sortedPoints.reduce(function (sum, point) {
+          return sum + point.y;
+        }, 0);
+    
+        // Format the total sum with three decimal places
+        const totalValue = totalSum.toFixed(dec);
+    
+        // Add a row for the total
+        html += `
+        <tr class="TOTAL">
+          <td class="TOTAL"> ${languageNameSpace.labels['TOTAL']}</td>
+          <td class="TOTAL">${totalValue}</td>
+        </tr>`;
+      }
+    }    
+    html += `</table>`; 
+    return `<div>${html}</div>`;
+    
   }
 }
 
