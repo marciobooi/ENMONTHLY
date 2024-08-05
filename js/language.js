@@ -83,7 +83,7 @@ var languageNameSpace = {
       "BTNBSHARECHART",
       "BTNEDETAILS",
       "BTNRNW",
-      "sharemodaltitle",
+      "BTNBSHARECHART",
     ]
 
     elementsBtn.forEach((id, idx) => {
