@@ -39,6 +39,11 @@ class HighchartsChart {
             title: {
               text: languageNameSpace.labels[REF.unit],
             },
+            labels: {
+              formatter: function() {
+                  return Highcharts.numberFormat(this.value, 0, '.', ' ');
+              }
+          }
           },
       
           tooltip: {

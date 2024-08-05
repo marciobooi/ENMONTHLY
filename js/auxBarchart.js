@@ -89,7 +89,7 @@ barMean.push(values);
     title: chartTitle,
     subtitle: null,
     xAxis: { categories: auxBarCateg },
-    yAxisFormat: "{value:.2f}",
+    yAxisFormat: "{value:,.0f}",
     tooltipFormatter: tooltipFormatter,
     creditsText: credits(),
     creditsHref: "",
