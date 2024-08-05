@@ -383,7 +383,7 @@
 
 "BTNATABLE": "Display table",
 "BTNINFICHART": "Show information",
-"BTNDOWNLOADCHART": "Download chart image",
+"BTNDOWNLOADCHART": "Download chart as image",
 "BTNBSHARECHART": "Share in social media",
 
 "BTNBARCHART": "Display bar chart",
@@ -391,14 +391,14 @@
 "BTNLINECHART": "Display line chart",
 "BTNTABLECHART": "Display table",
 "BTNCLOSECHART": "Close",
-"BTNPRINTCHART": "Download chart image",
+"BTNPRINTCHART": "Download chart as image",
 "BTNEXCELCHART": "Download chart data",
 
 "BTNPERCENTAGECHART": "Click to change to percentage",
-"BTNAGREGATESCHART": "Click to show/Hide aggregates",
+"BTNAGREGATESCHART": "Click to show/hide aggregates",
 "BTNCHANGECOUNTRY": "Click to change countries",
 "BTNEXPAND": "Click to expand chart",
-"BTNEDETAILS": "Click to show/Hide details",
+"BTNEDETAILS": "Click to show/side details",
 "BTNRNW": "Toggle renewables/non-renewables",
 "RANGE": "Range",
 "LOW": "Low",
