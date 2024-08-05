@@ -254,10 +254,10 @@
   "values": "Values",
 
 
-  "MIO_M3": "Million cubic metres",
-  "TJ_GCV": "Terajoule (gross calorific value - GCV)",
-  "THS_T": "Thousand tonnes",
-  "GWH": "Gigawatt-hour",
+  "MIO_M3": "Million cubic metres (MIO_M3)",
+  "TJ_GCV": "Terajoule (gross calorific value - GCV) (TJ_GCV)",
+  "THS_T": "Thousand tonnes (THS_T)",
+  "GWH": "Gigawatt-hour (GWH)",
 
   "high": "Highest value of this month",
   "low": "Lowest value of this month",

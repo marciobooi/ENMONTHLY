@@ -254,10 +254,10 @@
   "NEG": "Nettostromerzeugung nach Brennstoffart",
   "RVN": "Erneuerbare gegen nicht erneuerbare",
 
-  "MIO_M3": "Millionen Kubikmeter",
-  "TJ_GCV": "Terajoule (Brennwert - GCV)",
-  "THS_T": "Tausend Tonnen",
-  "GWH": "Gigawattstunde",
+"MIO_M3": "Million Kubikmeter (MIO_M3)",
+"TJ_GCV": "Terajoule (Bruttowärmeinhalt - GCV) (TJ_GCV)",
+"THS_T": "Tausend Tonnen (THS_T)",
+"GWH": "Gigawattstunde (GWH)",
 
   "nrg_cb_sffm": "Lieferung und Umwandlung fester fossiler Brennstoffe",
   "nrg_cb_oilm": "Lieferung und Umwandlung von Öl und Erdölprodukten",

@@ -254,10 +254,10 @@
   "NEG": "Production nette d'électricité",
   "RVN": "Renouvelable vs non renouvelable",
 
-  "MIO_M3": "Millions de mètres cubes",
-  "TJ_GCV": "Térajoule (pouvoir calorifique supérieur - GCV)",
-  "THS_T": "Mille tonnes",
-  "GWH": "Gigawatt-heure",
+"MIO_M3": "Million de mètres cubes (MIO_M3)",
+"TJ_GCV": "Térajoule (valeur calorifique brute - GCV) (TJ_GCV)",
+"THS_T": "Mille tonnes (THS_T)",
+"GWH": "Gigawatt-heure (GWH)",
 
   "nrg_cb_sffm": "Fourniture et transformation de combustibles fossiles solides",
   "nrg_cb_oilm": "Approvisionnement et transformation de pétrole et de produits pétroliers",
