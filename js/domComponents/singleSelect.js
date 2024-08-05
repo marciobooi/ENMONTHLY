@@ -20,7 +20,6 @@ class Singleselect {
     createSingleSelect() {
         let optionsHTML = '';   
 
-
         if (this.elementId === "selectCountry") {
             optionsHTML = `
                     <optgroup label="${languageNameSpace.labels['AGGREGATE']}">
@@ -38,10 +37,18 @@ class Singleselect {
                     <optgroup label="${languageNameSpace.labels['OTHERCTR']}">
                         ${OTHER_THIRD_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''}>${languageNameSpace.labels[ctr]}</option>`).join('')}
                     </optgroup>    
-        `;
+            `;
         } else {
-            // For other elementIds, create options based on the provided optionsArray
-            optionsHTML = this.optionsArray.map(option => `
+
+            // Sort optionsArray
+            const sortedOptionsArray = this.optionsArray.sort((a, b) => {
+                const labelA = languageNameSpace.labels[a] !== undefined ? languageNameSpace.labels[a] : a;
+                const labelB = languageNameSpace.labels[b] !== undefined ? languageNameSpace.labels[b] : b;
+                return labelA.localeCompare(labelB);
+            });
+
+            // For other elementIds, create options based on the provided sorted optionsArray
+            optionsHTML = sortedOptionsArray.map(option => `
                 <option value="${option}" ${this.activeElement === option ? 'selected' : ''}>
                     ${languageNameSpace.labels[option] !== undefined ? languageNameSpace.labels[option] : option}
                 </option>

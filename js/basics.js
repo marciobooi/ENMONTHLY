@@ -552,21 +552,13 @@ function toggleBtns() {
     if (container) {
       container.removeAttribute('aria-hidden');
     }
-  
-  
-  
-  
-  
-  
       // Select all <i> elements with the Font Awesome class
       var fontAwesomeIcons = document.querySelectorAll('i.fas');
   
       // Loop through each icon and add the aria-hidden attribute
       fontAwesomeIcons.forEach(function(icon) {
           icon.setAttribute('aria-hidden', 'true');
-      });
-  
-  
-  
+      }); 
   
     }
+
