@@ -169,8 +169,13 @@ var languageNameSpace = {
       openVizTable();
       $('#tb-togle-table').focus();
       $('#table-icon').css('display', 'none');
-      $('#chart-icon').css('display', '');
-    } 
+      $('#chart-icon').css('display', '');  } 
+      
+      $wt.render("euGlobanContainer", {
+        utility: "globan",
+        lang: REF.language.toLowerCase(),
+        theme: "dark",
+      });
 
   }
 };
