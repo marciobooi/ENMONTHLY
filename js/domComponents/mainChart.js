@@ -276,7 +276,7 @@ class HighchartsChart {
             ],
           },
           exporting: {      
-            enabled: true,
+            enabled: false,
             allowHTML: true,
             sourceWidth: 1200,
             sourceHeight: 800,

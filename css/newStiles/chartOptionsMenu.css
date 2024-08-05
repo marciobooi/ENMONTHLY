@@ -120,12 +120,11 @@ i.fas.fa-angle-down {
 
 ul.dropdown-menu {
   width: 20.3rem;
-  padding-bottom: calc(0.75rem - 1px);
-  padding-top: calc(0.75rem - 1px);
-  border: 1px solid #515560;
+  border: transparent;
   border-radius: 2px;
-  box-shadow: 0 7px 8px rgba(9,49,142,.08),0 0 22px rgba(9,49,142,.04),0 12px 17px rgba(9,49,142,.04),0 -4px 4px rgba(9,49,142,.04);
+  box-shadow: 0 7px 8px rgb(9 49 142 / 8%), 0 0 22px rgb(9 49 142 / 4%), 0 12px 17px rgb(9 49 142 / 4%), 0 -4px 4px rgb(9 49 142 / 4%);
   line-height: 1.15;
+  background-color: #f9f9f9;
 }
 
 
@@ -136,6 +135,10 @@ ul.dropdown-menu {
     border-bottom: 2px solid #c7c1c1;
 }
 
+.dropdown-item:not(:last-child) {
+  text-size-adjust: 100%;
+  border-bottom: 1px solid lightgray;
+}
 
 
 /* .dropdownBtnGroup .btn:focus-visible:not(.min-with--geo), .dropdownBtnGroup .btn.active:not(.min-with--geo), :not(.btn-check) + .btn:active:not(.min-with--geo), .dropdownBtnGroup .btn:hover:not(.min-with--geo), .dropdownBtnGroup .show:not(.min-with--geo) {
@@ -249,5 +252,18 @@ a.dropdown-item.selected {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
+.ecl-link {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-size: 16px;
+  color: initial;
+}
 
+.dropdown-menu.show {
+  padding: 12px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+}
 

@@ -7,17 +7,17 @@
 }
 
 #menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding: 0.6rem !important;
+    position: relative;
+    padding: 0.2rem !important;
     margin-left: 2rem;
+    width: 3rem;
     cursor: pointer;
     border: none;
-    color: #fff;
-    background-color: #0e47cb;
+    color: var(--tool-1);
+    background-color: transparent;
 }
+
+
 
 .menuOpen {
     background-color: #f3f6fc !important;
@@ -31,7 +31,7 @@
 
 #menu > span {
     padding-top: 2px;
-    font-size: .7em;
+    font-size: .8em;
 }
 
 .btnGroup {
