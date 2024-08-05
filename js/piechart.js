@@ -64,7 +64,10 @@ function createPieChart() {
     creditsHref: "",
     series: [
       {
-        data: piedata.sort((a, b) => b[1] - a[1]),
+        data: piedata
+          .filter(arr => arr[1] > 0) // Filter out zero or negative values
+          .sort((a, b) => b[1] - a[1]), // Sort by value in descending order
+          // .reverse(), // Reverse to arrange for clockwise direction
         name: "",
       },
     ],

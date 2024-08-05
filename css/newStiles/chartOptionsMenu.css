@@ -214,10 +214,10 @@ a.dropdown-item.selected {
 }
 
 
-.fa-times:before {
+/* .fa-times:before {
   content: "\f00d";
   -webkit-text-stroke: 1.8px #f3f6fc;
-}
+} */
 
 .close-chart-menu-btn:focus {
   outline: none;

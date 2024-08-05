@@ -93,7 +93,7 @@ barMean.push(values);
     tooltipFormatter: tooltipFormatter,
     creditsText: credits(),
     creditsHref: "",
-    series: series,
+    series: series.sort((a, b) => a.name.localeCompare(b.name)),
     colors:  catColors,
     legend: legend,
     columnOptions: {
