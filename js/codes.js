@@ -189,7 +189,7 @@ defaultGeos = ["EU27_2020","BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR
   ]
   
   const EFTA_COUNTRY_CODES = [
-	"IS","NO"
+	"IS", "LI", "NO"
   ]
   
   const ENLARGEMENT_COUNTRY_CODES = [
@@ -197,6 +197,6 @@ defaultGeos = ["EU27_2020","BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR
   ]
   
   const OTHER_THIRD_COUNTRY_CODES = [
-	"MD","UA","GE"
+	"UA", "MD", "GE"
   ]
   
