@@ -186,17 +186,17 @@ defaultGeos = ["EU27_2020","BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR
   const EU_COUNTRY_CODES = [
 	"BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR","IT","CY","LV","LT",
 	"LU","HU","MT","NL","AT","PL","PT","RO","SI","SK","FI","SE"
-  ].sort();
+  ]
   
   const EFTA_COUNTRY_CODES = [
 	"IS","NO"
-  ].sort();
+  ]
   
   const ENLARGEMENT_COUNTRY_CODES = [
 	"ME","MK","AL","RS","TR","BA","XK"
-  ].sort();
+  ]
   
   const OTHER_THIRD_COUNTRY_CODES = [
 	"MD","UA","GE"
-  ].sort();
+  ]
   
