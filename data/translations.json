@@ -421,7 +421,7 @@
   },
 "nrg_cb_oilm": {
     "EN": "Supply and transformation of oil and petroleum products",
-    "DE": "Versorgung und Umwandlung von Öl und Erdölerzeugnissen",
+    "DE": "Versorgung und Umwandlung von Öl und Mineralölerzeugnissen",
     "FR": "Approvisionnement et transformation du pétrole et des produits pétroliers"
   },
 "nrg_cb_cosm": {
@@ -456,17 +456,17 @@
   },
   "IPRD": {
     "EN": "Indigenous production",
-    "DE": "Indigene Produktion",
+    "DE": "Inlandsproduktion",
     "FR": "Production indigène"
   },
 "IMP": {
     "EN": "Imports",
-    "DE": "Importe",
+    "DE": "Einfuhren",
     "FR": "Importations"
   },
 "EXP": {
     "EN": "Exports",
-    "DE": "Exporte",
+    "DE": "Ausfuhren",
     "FR": "Exportations"
   },
 "PRD": {
@@ -476,17 +476,17 @@
   },
 "NETIMP": {
     "EN": "Net imports",
-    "DE": "Nettoimporte",
+    "DE": "Nettoeinfuhren",
     "FR": "Importations nettes"
   },
 "GID_CAL": {
     "EN": "Gross inland deliveries - calculated",
-    "DE": "Bruttoinlandsbelieferung - berechnet",
+    "DE": "Bruttoinlandslieferungen - berechnet",
     "FR": "Livraisons intérieures brutes - calculées"
   },
 "Net_imp": {
     "EN": "Net imports",
-    "DE": "Nettoimporte",
+    "DE": "Nettoeinfuhren",
     "FR": "Importations nettes"
   },
 "TO_RPI_RO": {
@@ -496,22 +496,22 @@
   },
 "STK_CHG_MG": {
     "EN": "Stock changes - as defined in MOS GAS",
-    "DE": "Lagerveränderungen - wie in MOS GAS definiert",
+    "DE": "Bestandsveränderungen - definiert wie in MOS GAS",
     "FR": "Variations de stocks - comme défini dans MOS GAS"
   },
 "IC_CAL_MG": {
     "EN": "Inland consumption - calculated as defined in MOS GAS",
-    "DE": "Inländischer Verbrauch - wie in MOS GAS berechnet",
+    "DE": "Inlandsverbrauch - berechnet wie im MOS GAS",
     "FR": "Consommation intérieure - calculée comme défini dans MOS GAS"
   },
 "DL": {
     "EN": "Distribution losses",
-    "DE": "Verteilungsverluste",
+    "DE": "Netzverluste",
     "FR": "Pertes de distribution"
   },
 "AIM": {
     "EN": "Available to internal market",
-    "DE": "Für den Binnenmarkt verfügbar",
+    "DE": "Verfügbar für den inländischen Markt",
     "FR": "Disponible pour le marché intérieur"
   },
 "noNrg": {
@@ -532,17 +532,17 @@
 "C0100": {
     "EN": "Hard coal",
     "DE": "Steinkohle",
-    "FR": "Charbon dur"
+    "FR": "Houille"
   },
 "C0200": {
     "EN": "Brown coal",
     "DE": "Braunkohle",
-    "FR": "Lignite"
+    "FR": "Charbon brun"
   },
 "C0311": {
     "EN": "Coke oven coke",
-    "DE": "Hüttenkoks",
-    "FR": "Coke de four"
+    "DE": "Kokereikoks",
+    "FR": "Coke de four à coke"
   },
 "P1100": {
     "EN": "Peat",
@@ -551,33 +551,33 @@
   },
 "S2000": {
     "EN": "Oil shale and oil sands",
-    "DE": "Ölschiefer und Ölsande",
+    "DE": "Ölschiefer und bituminöse Sande",
     "FR": "Schiste bitumineux et sables bitumineux"
   },
 "O4640": {
     "EN": "Naphtha",
-    "DE": "Naphtha",
-    "FR": "Naphte"
+    "DE": "Naphta",
+    "FR": "Naphta"
   },
 "O4652": {
     "EN": "Motor gasoline",
     "DE": "Motorenbenzin",
-    "FR": "Essence"
+    "FR": "Essence moteur"
   },
 "O4661": {
     "EN": "Kerosene-type jet fuel",
-    "DE": "Kerosinartiger Flugkraftstoff",
-    "FR": "Carburéacteur de type kérosène"
+    "DE": "Flugturbinenkraftstoff auf Petroleumbasis",
+    "FR": "Carburéacteur type kérosène"
   },
 "O4671": {
     "EN": "Gas oil and diesel oil",
-    "DE": "Gasöl und Dieselkraftstoff",
-    "FR": "Gazole et diesel"
+    "DE": "Gasöl und Dieselöl",
+    "FR": "Gazole et carburant diesel"
   },
 "O4630": {
     "EN": "Liquefied petroleum gases",
     "DE": "Flüssiggas",
-    "FR": "Gaz de pétrole liquéfié"
+    "FR": "Gaz de pétrole liquéfiés"
   },
 "O4680": {
     "EN": "Fuel oil",
@@ -596,57 +596,57 @@
   },
 "C0000": {
     "EN": "Coal and manufactured gases",
-    "DE": "Kohle und erzeugte Gase",
+    "DE": "Kohle und synthetische Gase",
     "FR": "Charbon et gaz manufacturés"
   },
 "O4000XBIO": {
     "EN": "Oil and petroleum products (excluding biofuel portion)",
-    "DE": "Öl und Erdölprodukte (ohne Biokraftstoffanteil)",
-    "FR": "Produits pétroliers (hors partie biocarburants)"
+    "DE": "Öl und Mineralölerzeugnisse (ohne Biokraftstoffanteil)",
+    "FR": "Pétrole et produits pétroliers (part de biocarburant non comprise)"
   },
 "N9000": {
     "EN": "Nuclear fuels and other fuels n.e.c.",
-    "DE": "Kernbrennstoffe und andere Brennstoffe n.a.n.",
-    "FR": "Combustibles nucléaires et autres combustibles n.d.a."
+    "DE": "Nukleare Brennstoffe und sonstige Brennstoffe a.n.g.",
+    "FR": "Combustibles nucléaires et autres combustibles n.c.a."
   },
 "RA100": {
     "EN": "Hydro",
-    "DE": "Wasserkraft",
-    "FR": "Hydroélectricité"
+    "DE": "Wasserenergie",
+    "FR": "Hydraulique"
   },
 "RA200": {
     "EN": "Geothermal",
     "DE": "Geothermie",
-    "FR": "Géothermie"
+    "FR": "Géothermique"
   },
 "RA300": {
     "EN": "Wind",
-    "DE": "Windenergie",
-    "FR": "Énergie éolienne"
+    "DE": "Wind",
+    "FR": "Éolien"
   },
 "RA400": {
     "EN": "Solar",
-    "DE": "Solarenergie",
-    "FR": "Énergie solaire"
+    "DE": "Solar",
+    "FR": "Solaire"
   },
 "RA500_5160": {
     "EN": "Other renewable energies",
-    "DE": "Andere erneuerbare Energien",
+    "DE": "Sonstige erneuerbare Energien",
     "FR": "Autres énergies renouvelables"
   },
 "O4000": {
     "EN": "Oil and petroleum products",
-    "DE": "Öl und Erdölprodukte",
-    "FR": "Produits pétroliers"
+    "DE": "Öl und Mineralölerzeugnisse",
+    "FR": "Pétrole et produits pétroliers"
   },
 "O4100_TOT_4200-4500": {
     "EN": "Crude oil, NGL, refinery feedstocks, additives and oxygenates and other hydrocarbons",
-    "DE": "Rohöl, NGL, Raffinerie-Rohstoffe, Additive und Sauerstoffverbindungen sowie andere Kohlenwasserstoffe",
-    "FR": "Pétrole brut, NGL, matières premières pour raffinerie, additifs et oxygénates et autres hydrocarbures"
+    "DE": "Rohöl, NGL, Einsatzmaterial und sonstige Kohlenwasserstoffe",
+    "FR": "Pétrole brut, LGN, produits d'alimentation et autres hydrocarbures"
   },
 "O4600": {
     "EN": "Oil products",
-    "DE": "Ölprodukte",
+    "DE": "Mineralölerzeugnisse",
     "FR": "Produits pétroliers"
   },
 "rw": {
@@ -666,22 +666,22 @@
   },
 "X9900": {
     "EN": "Other fuels n.e.c.",
-    "DE": "Andere Brennstoffe n.a.n.",
+    "DE": "Sonstige Brennstoffe n.a.g.",
     "FR": "Autres combustibles n.d.a."
   },
 "CF": {
     "EN": "Combustible fuels",
     "DE": "Brennbare Brennstoffe",
-    "FR": "Combustibles"
+    "FR": "Carburants combustibles"
   },
   "MIO_M3": {
     "EN": "Million cubic metres (MIO_M3)",
-    "DE": "Million Kubikmeter (MIO_M3)",
+    "DE": "Millionen Kubikmeter (MIO_M3)",
     "FR": "Million de mètres cubes (MIO_M3)"
   },
 "TJ_GCV": {
     "EN": "Terajoule (gross calorific value - GCV) (TJ_GCV)",
-    "DE": "Terajoule (Bruttobrennwert - GCV) (TJ_GCV)",
+    "DE": "Terajoule (Bruttoheizwert - GCV) (TJ_GCV)",
     "FR": "Térajoule (valeur calorifique brute - GCV) (TJ_GCV)"
   },
 "THS_T": {
@@ -692,7 +692,7 @@
 "GWH": {
     "EN": "Gigawatt-hour (GWH)",
     "DE": "Gigawattstunde (GWH)",
-    "FR": "Gigawatt-heure (GWH)"
+    "FR": "Gigawattheure (GWH)"
   },
   "SHOW_BAR_CHART": {
     "EN": "Show bar chart",
@@ -870,648 +870,5 @@
     "EN": "Next",
     "FR": "Suivant",
     "DE": "Weiter"
-  },
-
-
-
-
-
-
-
-
-  "MARCIO HERE": {
-
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "MENU_YEARS": {
-    "EN": "Select year",
-    "DE": "Jahr auswählen",
-    "FR": "Sélectionner l'année"
-  },
-
-  "ALLSELECTED": {
-    "EN": "All selected",
-    "DE": "Alle ausgewählt",
-    "FR": "Tous sélectionnés"
-  },
-  "SELITEN": {
-    "EN": "Select an item",
-    "DE": "Element auswählen",
-    "FR": "Sélectionner un élément"
-  },
-  "NORESULTS": {
-    "EN": "No results found",
-    "DE": "Keine Ergebnisse gefunden",
-    "FR": "Aucun résultat trouvé"
-  },
-  "SELALL": {
-    "EN": "Select all",
-    "DE": "Alle auswählen",
-    "FR": "Tout sélectionner"
-  },
-  "CLEAR": {
-    "EN": "Clear all",
-    "DE": "Alles löschen",
-    "FR": "Tout effacer"
-  },
-  "KEYWORD": {
-    "EN": "Enter keyword",
-    "DE": "Schlüsselwort eingeben",
-    "FR": "Entrez le mot-clé"
-  },
-  
-  "CONSUMER": {
-    "EN": "Consumer",
-    "DE": "Verbraucher",
-    "FR": "Consommateur"
-  },
-  "MENU_CONSUMER": {
-    "EN": "Select consumer",
-    "DE": "Verbraucher auswählen",
-    "FR": "Sélectionner un consommateur"
-  },
-  "HOUSEHOLD": {
-    "EN": "Household consumers",
-    "DE": "Haushaltsverbraucher",
-    "FR": "Consommateurs ménagers"
-  },
-  "N_HOUSEHOLD": {
-    "EN": "Non-household consumers",
-    "DE": "Nichthaushaltsverbraucher",
-    "FR": "Consommateurs non ménagers"
-  },
-  "CONSOM": {
-    "EN": "Consumption",
-    "DE": "Verbrauch",
-    "FR": "Consommation"
-  },
-  "MENU_CONSOM": {
-    "EN": "Select consumption level",
-    "DE": "Verbrauchsebene auswählen",
-    "FR": "Sélectionnez le niveau de consommation"
-  },
-
-  "4100": {
-    "EN": "Natural gas",
-    "DE": "Gas",
-    "FR": "Gaz naturel"
-  },
-  "6000": {
-    "EN": "Electricity",
-    "DE": "Elektrizität",
-    "FR": "Électricité"
-  },
-  "PRICE_4100": {
-    "EN": "Gas price",
-    "DE": "Gaspreise",
-    "FR": "Prix du gaz"
-  },
-  "PRICE_6000": {
-    "EN": "Electricity price",
-    "DE": "Strompreise",
-    "FR": "Prix de l'électricité"
-  },
-  "4141900": {
-    "EN": "All bands: Consumption of GJ",
-    "DE": "Alle Bänder: Der Verbrauch von GJ",
-    "FR": "Toutes bandes: Consommation de GJ"
-  },
-  "4141901": {
-    "EN": "Band D1: Consumption < 20 GJ",
-    "DE": "Band D1: Verbrauch < 20 GJ",
-    "FR": "Bande D1: Consommation < 20 GJ"
-  },
-  "4141902": {
-    "EN": "Band D2: 20 GJ < Consumption < 200 GJ",
-    "DE": "Band D2: 20 GJ < Verbrauch < 200 GJ",
-    "FR": "Bande D2: 20 GJ < Consommation < 200 GJ"
-  },
-  "4141903": {
-    "EN": "Band D3: Consumption > 200 GJ",
-    "DE": "Band D3: Verbrauch > 200 GJ",
-    "FR": "Bande D3: Consommation > 200 GJ"
-  },
-  "GJ_LT20": {
-    "EN": "Band D1: Consumption < 20 GJ",
-    "DE": "Band D1: Verbrauch < 20 GJ",
-    "FR": "Bande D1: Consommation < 20 GJ"
-  },
-  "GJ20-199": {
-    "EN": "Band D2: 20 GJ < Consumption < 200 GJ",
-    "DE": "Band D2: 20 GJ < Verbrauch < 200 GJ",
-    "FR": "Bande D2: 20 GJ < Consommation < 200 GJ"
-  },
-  "GJ_GE200": {
-    "EN": "Band D3: Consumption > 200 GJ",
-    "DE": "Band D3: Verbrauch > 200 GJ",
-    "FR": "Bande D3: Consommation > 200 GJ"
-  },
-  "4142900": {
-    "EN": "Bands I1-I5: Consumption +< 3 999 999 GJ",
-    "DE": "Bands I1-I5: Verbrauch +<3 999 999 GJ",
-    "FR": "Bands I1-I5: Consommation +< 3 999 999 GJ"
-  },
-  "4142901": {
-    "EN": "Band I1: Consumption < 1 000 GJ",
-    "DE": "Band I1: Verbrauch < 1 000 GJ",
-    "FR": "Bande I1: Consommation < 1 000 GJ"
-  },
-  "4142902": {
-    "EN": "Band I2: 1 000 GJ < Consumption < 10 000 GJ",
-    "DE": "Band I2: 1 000 GJ < Verbrauch < 10 000 GJ",
-    "FR": "Bande I2: 1 000 GJ < Consommation < 10 000 GJ"
-  },
-  "4142903": {
-    "EN": "Band I3: 10 000 GJ < Consumption < 100 000 GJ",
-    "DE": "Band I3: 10 000 GJ < Verbrauch < 100 000 GJ",
-    "FR": "Bande I3: 10 000 GJ < Consommation < 100 000 GJ"
-  },
-  "4142904": {
-    "EN": "Band I4: 100 000 GJ < Consumption < 1 000 000 GJ",
-    "DE": "Band I4: 100 000 GJ < Verbrauch < 1 000 000 GJ",
-    "FR": "Bande I4: 100 000 GJ < Consommation < 1 000 000 GJ"
-  },
-  "4142905": {
-    "EN": "Band I5: 1 000 000 GJ < Consumption < 4 000 000 GJ",
-    "DE": "Band I5: 1 000 000 GJ < Verbrauch < 4 000 000 GJ",
-    "FR": "Bande I5: 1 000 000 GJ < Consommation < 4 000 000 GJ"
-  },
-  "4142906": {
-    "EN": "Band I6: Consumption > 4 000 000 GJ",
-    "DE": "Band I6: Verbrauch > 4 000 000 GJ",
-    "FR": "Bande I6: Consommation > 4 000 000 GJ"
-  },
-  "4161900": {
-    "EN": "All bands: Consumption of kWh",
-    "DE": "Alle bands:  Der Verbrauch von kWh",
-    "FR": "Toutes bandes: Consommation de kWh"
-  },
-  "4161901": {
-    "EN": "Band DA: Consumption < 1 000 kWh",
-    "DE": "Band DA: Verbrauch < 1 000 kWh",
-    "FR": "Bande DA: Consommation < 1 000 kWh"
-  },
-  "4161902": {
-    "EN": "Band DB: 1 000 kWh < Consumption < 2 500 kWh",
-    "DE": "Band DB: 1 000 kWh < Verbrauch < 2 500 kWh",
-    "FR": "Bande DB: 1 000 kWh < Consommation < 2 500 kWh"
-  },
-  "4161903": {
-    "EN": "Band DC: 2 500 kWh < Consumption < 5 000 kWh",
-    "DE": "Band DC: 2 500 kWh < Verbrauch < 5 000 kWh",
-    "FR": "Bande DC: 2 500 kWh < Consommation < 5 000 kWh"
-  },
-  "4161904": {
-    "EN": "Band DD: 5 000 kWh < Consumption < 15 000 kWh",
-    "DE": "Band DD: 5 000 kWh < Verbrauch < 15 000 kWh",
-    "FR": "Bande DD: 5 000 kWh < Consommation < 15 000 kWh"
-  },
-  "4161905": {
-    "EN": "Band DE: Consumption > 15 000 kWh",
-    "DE": "Band DE: Verbrauch > 15 000 kWh",
-    "FR": "Bande DE: Consommation > 15 000 kWh"
-  },
-  "4162900": {
-    "EN": "Bands IA-IF: Consumption =< 149 999 MWh",
-    "DE": "Bands IA-IF: Verbrauch =< 149 999 MWh",
-    "FR": "Bands IA-IF: Consommation =< 149 999 MWh"
-  },
-  "4162901": {
-    "EN": "Band IA: Consumption < 20 MWh",
-    "DE": "Band IA: Verbrauch < 20 MWh",
-    "FR": "Bande IA: Consommation < 20 MWh"
-  },
-  "4162902": {
-    "EN": "Band IB: 20 MWh < Consumption < 500 MWh",
-    "DE": "Band IB: 20 MWh < Verbrauch < 500 MWh",
-    "FR": "Bande IB: 20 MWh < Consommation < 500 MWh"
-  },
-  "4162903": {
-    "EN": "Band IC: 500 MWh < Consumption < 2 000 MWh",
-    "DE": "Band IC: 500 MWh < Verbrauch < 2 000 MWh",
-    "FR": "Bande IC: 500 MWh < Consommation < 2 000 MWh"
-  },
-  "4162904": {
-    "EN": "Band ID: 2 000 MWh < Consumption < 20 000 MWh",
-    "DE": "Band ID: 2 000 MWh < Verbrauch < 20 000 MWh",
-    "FR": "Bande ID: 2 000 MWh < Consommation < 20 000 MWh"
-  },
-  "4162905": {
-    "EN": "Band IE: 20 000 MWh < Consumption < 70 000 MWh",
-    "DE": "Band IE: 20 000 MWh < Verbrauch < 70 000 MWh",
-    "FR": "Bande IE: 20 000 MWh < Consommation < 70 000 MWh"
-  },
-  "4162906": {
-    "EN": "Band IF: 70 000 MWh < Consumption < 150 000 MWh",
-    "DE": "Band IF: 70 000 MWh < Verbrauch < 150 000 MWh",
-    "FR": "Bande IF: 70 000 MWh < Consommation < 150 000 MWh"
-  },
-  "4162907": {
-    "EN": "Band IG: Consumption > 150 000 MWh",
-    "DE": "Band IG: Verbrauch > 150 000 MWh",
-    "FR": "Bande IG: Consommation > 150 000 MWh"
-  },
-  "KWH1000-2499": {
-    "EN": "Band DB: 1 000 kWh < Consumption < 2 500 kWh",
-    "DE": "Band DB: 1 000 kWh < Verbrauch <2 500 kWh",
-    "FR": "Bande DB: 1 000 kWh < Consommation <2 500 kWh"
-  },
-  "KWH2500-4999": {
-    "EN": "Band DC: 2 500 kWh < Consumption < 5 000 kWh",
-    "DE": "Band DC: 2 500 kWh < Verbrauch <5 000 kWh",
-    "FR": "Bande DC: 2 500 kWh < Consommation <5 000 kWh"
-  },
-  "KWH5000-14999": {
-    "EN": "Band DD: 5 000 kWh < Consumption < 15 000 kWh",
-    "DE": "Band DD: 5 000 kWh < Verbrauch <15 000 kWh",
-    "FR": "Bande DD: 5 000 kWh < Consommation <15 000 kWh"
-  },
-  "KWH_LE15000": {
-    "EN": "Band DE: Consumption > 15 000 kWh",
-    "DE": "Band DE: Verbrauch > 15 000 kWh",
-    "FR": "Bande DE: Consommation > 15 000 kWh"
-  },
-  "KWH_LT1000": {
-    "EN": "Band DA: Consumption < 1 000 kWh",
-    "DE": "Band DA: Verbrauch < 1 000 kWh",
-    "FR": "Bande DA: Consommation < 1 000 kWh"
-  },
-  "KWH_GE15000": {
-    "EN": "Band DE: Consumption for 15 000 kWh or over",
-    "DE": "Band DE: Verbrauch für 15 000 kWh oder mehr",
-    "FR": "Bande DE: Consommation de 15 000 kWh ou plus"
-  },
-  "TOT_KWH": {
-    "EN": "All bands: Consumption of kWh",
-    "DE": "Alle Bänder: Verbrauch von kWh",
-    "FR": "Toutes les bandes: Consommation de kWh"
-  },
-  "TOT_GJ": {
-    "EN": "All bands: Consumption of GJ",
-    "DE": "Alle Bänder: Verbrauch von GJ",
-    "FR": "Toutes les bandes: consommation de GJ"
-  },
-  "TOT_MWH": {
-    "EN": "Bands IA-IF: Consumption =< 149 999 MWh",
-    "DE": "Bänder IA-IF: Verbrauch =< 149 999 MWh",
-    "FR": "Bandes IA-IF: Consommation =< 149 999 MWh"
-  },
-  "MWH_LT20": {
-    "EN": "Band IA: Consumption < 20 MWh",
-    "DE": "Band IA: Verbrauch < 20 MWh",
-    "FR": "Bande IA: Consommation < 20 MWh"
-  },
-  "MWH20-499": {
-    "EN": "Band IB: 20 MWh < Consumption < 500 MWh",
-    "DE": "Band IB: 20 MWh < Verbrauch <500 MWh",
-    "FR": "Bande IB: 20 ​​MWh < Consommation <500 MWh"
-  },
-  "MWH500-1999": {
-    "EN": "Band IC: 500 MWh < Consumption < 2 000 MWh",
-    "DE": "Band IC: 500 MWh < Verbrauch <2 000 MWh",
-    "FR": "Bande IC: 500 MWh < Consommation <2 000 MWh"
-  },
-  "MWH2000-19999": {
-    "EN": "Band ID: 2 000 MWh < Consumption < 20 000 MWh",
-    "DE": "Band ID: 2 000 MWh < Verbrauch <20 000 MWh",
-    "FR": "Band ID: 2 000 MWh < Consommation <20 000 MWh"
-  },
-  "MWH20000-69999": {
-    "EN": "Band IE: 20 000 MWh < Consumption < 70 000 MWh",
-    "DE": "Band IE: 20 000 MWh < Verbrauch <70 000 MWh",
-    "FR": "Bande IE: 20 000 MWh < Consommation <70 000 MWh"
-  },
-  "MWH70000-149999": {
-    "EN": "Band IF: 70 000 MWh < Consumption < 150 000 MWh",
-    "DE": "Band IF: 70 000 MWh < Verbrauch <150 000 MWh",
-    "FR": "Bande IF: 70 000 MWh < Consommation <150 000 MWh"
-  },
-  "MWH_GE150000": {
-    "EN": "Band IG: Consumption > 150 000 MWh",
-    "DE": "Band IG: Verbrauch > 150 000 MWh",
-    "FR": "Bande IG: Consommation > 150 000 MWh"
-  },
-  "GJ_LT1000": {
-    "EN": "Band I1: Consumption < 1 000 GJ",
-    "DE": "Band I1: Verbrauch < 1000 GJ",
-    "FR": "Bande I1 : Consommation < 1 000 GJ"
-  },
-  "GJ1000-9999": {
-    "EN": "Band I2: 1,000 GJ < Consumption <10,000 GJ",
-    "DE": "Band I2: 1.000 GJ < Verbrauch <10.000 GJ",
-    "FR": "Bande I2: 1 000 GJ < Consommation < 10 000 GJ"
-  },
-  "GJ10000-99999": {
-    "EN": "Band I3: 10,000 GJ < Consumption <100,000 GJ",
-    "DE": "Band I3: 10.000 GJ < Verbrauch <100.000 GJ",
-    "FR": "Bande I3: 10 000 GJ < Consommation < 100 000 GJ"
-  },
-  "GJ100000-999999": {
-    "EN": "Band I4: 100,000 GJ < Consumption <1,000,000 GJ",
-    "DE": "Band I4: 100.000 GJ < Verbrauch <1.000.000 GJ",
-    "FR": "Bande I4: 100 000 GJ < Consommation < 1 000 000 GJ"
-  },
-  "GJ1000000-3999999": {
-    "EN": "Band I5: 1,000,000 GJ < Consumption <4,000,000 GJ",
-    "DE": "Band I5: 1.000.000 GJ < Verbrauch <4.000.000 GJ",
-    "FR": "Bande I5: 1 000 000 GJ < Consommation < 4 000 000 GJ"
-  },
-  "GJ_GE4000000": {
-    "EN": "Band I6: Consumption > 4,000,000 GJ",
-    "DE": "Band I6: Verbrauch > 4.000.000 GJ",
-    "FR": "Bande I6: Consommation > 4 000 000 GJ"
-  },
-  "GJ_GCV": {
-    "EN": "Gigajoules (gross calorific value = GCV)",
-    "DE": "Gigajoule (Bruttoheizwert = GCV)",
-    "FR": "Gigajoules (valeur calorifique brute = GCV)"
-  },
-  "S_GJ_GCV": {
-    "EN": "GJ GCV",
-    "DE": "GJ GCV",
-    "FR": "GJ GCV"
-  },
-  "KWH": {
-    "EN": "Kilowatt-hour (KWh)",
-    "DE": "Kilowattstunde (KWh)",
-    "FR": "Kilowattheure (KWh)"
-  },
-  "S_KWH": {
-    "EN": "kWh",
-    "DE": "kWh",
-    "FR": "kWh"
-  },
-  "MWH": {
-    "EN": "Megawatt-hour (MWh)",
-    "DE": "Megawattstunde (MWh)",
-    "FR": "Mégawattheure (MWh)"
-  },
-  "S_MWH": {
-    "EN": "MWh",
-    "DE": "MWh",
-    "FR": "MWh"
-  },
-  "EUR": {
-    "EN": "Euro",
-    "DE": "Euro",
-    "FR": "Euro"
-  },
-  "S_EUR": {
-    "EN": "\u20ac",
-    "DE": "\u20ac",
-    "FR": "\u20ac"
-  },
-  "PPS": {
-    "EN": "Purchasing Power Standard",
-    "DE": "Kaufkraftstandard",
-    "FR": "Standard de pouvoir d'achat"
-  },
-  "S_PPS": {
-    "EN": "PPS",
-    "DE": "KKS",
-    "FR": "PPA"
-  },
-  "NAT": {
-    "EN": "National currency",
-    "DE": "Landeswährung",
-    "FR": "Monnaie nationale"
-  },
-  "S_NAT": {
-    "EN": "NAT",
-    "DE": "NAT",
-    "FR": "NAT"
-  },
-
-
-  "BAR_CHART_TITLE_CONSOMS": {
-    "EN": "Consumption levels",
-    "DE": "Verbrauchsniveaus",
-    "FR": "Niveaux de consommation"
-  },
-  "DB": {
-    "EN": "Dataset",
-    "DE": "Datensatz",
-    "FR": "Jeu de données"
-  },
-  "X_TAX": {
-    "EN": "Price excluding taxes and levies",
-    "DE": "Preis ohne Steuern und Abgaben",
-    "FR": "Prix hors taxes et prélèvements"
-  },
-  "X_VAT": {
-    "EN": "VAT and other recoverable taxes and levies",
-    "DE": "MwSt und andere erstattungsfähige Steuern und Abgaben",
-    "FR": "TVA et autres taxes et prélèvements récupérables"
-  },
-  "I_TAX": {
-    "EN": "Rest of taxes and levies",
-    "DE": "Rest der Steuern und Abgaben",
-    "FR": "Reste des taxes et prélèvements"
-  },
-  "NRG_SUP": {
-    "EN": "Energy and supply",
-    "DE": "Energie und Versorgung",
-    "FR": "Énergie et approvisionnement"
-  },
-  "NETC": {
-    "EN": "Network costs",
-    "DE": "Netzkosten",
-    "FR": "Coûts du réseau"
-  },
-  "TAX_FEE_LEV_CHRG": {
-    "EN": "Taxes fees levies and charges",
-    "DE": "Steuern, Gebühren, Abgaben und Auflagen",
-    "FR": "Taxes, frais, prélèvements et charges"
-  },
-  "TAX_LEV_X_VAT": {
-    "EN": "Taxes and levies excluding VAT",
-    "DE": "Steuern und Abgaben ohne MwSt",
-    "FR": "Taxes et prélèvements hors TVA"
-  },
-  "VAT": {
-    "EN": "Value added tax - VAT",
-    "DE": "Mehrwertsteuer - MwSt",
-    "FR": "Taxe sur la valeur ajoutée - TVA"
-  },
-  "TAX_RNW": {
-    "EN": "Renewable taxes",
-    "DE": "Steuern auf erneuerbare Energien",
-    "FR": "Taxes sur les énergies renouvelables"
-  },
-  "TAX_CAP": {
-    "EN": "Capacity taxes",
-    "DE": "Kapazitätssteuern",
-    "FR": "Taxes sur la capacité"
-  },
-  "TAX_ENV": {
-    "EN": "Environmental taxes",
-    "DE": "Umweltsteuern",
-    "FR": "Taxes environnementales"
-  },
-  "TAX_NUC": {
-    "EN": "Nuclear taxes",
-    "DE": "Kernkraftsteuern",
-    "FR": "Taxes nucléaires"
-  },
-  "OTH": {
-    "EN": "Other",
-    "DE": "Sonstige",
-    "FR": "Autre"
-  },
-  "nrg_pc_202": {
-    "EN": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
-    "DE": "Gaspreise für Haushaltsverbraucher - halbjährliche Daten (ab 2007)",
-    "FR": "Prix du gaz pour les consommateurs résidentiels - données semestrielles (à partir de 2007)"
-  },
-  "nrg_pc_203": {
-    "EN": "Gas prices for non-household consumers - bi-annual data (from 2007 onwards)",
-    "DE": "Gaspreise für Nichthaushaltsverbraucher - halbjährliche Daten (ab 2007)",
-    "FR": "Prix du gaz pour les consommateurs non résidentiels - données semestrielles (à partir de 2007)"
-  },
-  "nrg_pc_204": {
-    "EN": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
-    "DE": "Strompreise für Haushaltsverbraucher - halbjährliche Daten (ab 2007)",
-    "FR": "Prix de l'électricité pour les consommateurs résidentiels - données semestrielles (à partir de 2007)"
-  },
-  "nrg_pc_205": {
-    "EN": "Electricity prices for non-household consumers - bi-annual data (from 2007 onwards)",
-    "DE": "Strompreise für Nichthaushaltsverbraucher - halbjährliche Daten (ab 2007)",
-    "FR": "Prix de l'électricité pour les consommateurs non résidentiels - données semestrielles (à partir de 2007)"
-  },
-  "nrg_pc_202_c": {
-    "EN": "Gas prices components for household consumers - annual data (from 2007 onwards)",
-    "DE": "Gaspreisbestandteile für Haushaltsverbraucher - Jahresdaten (ab 2007)",
-    "FR": "Composantes des prix du gaz pour les consommateurs résidentiels - données annuelles (à partir de 2007)"
-  },
-  "nrg_pc_203_c": {
-    "EN": "Gas prices components for non-household consumers - annual data (from 2007 onwards)",
-    "DE": "Gaspreisbestandteile für Nichthaushaltsverbraucher - Jahresdaten (ab 2007)",
-    "FR": "Composantes des prix du gaz pour les consommateurs non résidentiels - données annuelles (à partir de 2007)"
-  },
-  "nrg_pc_204_c": {
-    "EN": "Electricity components for prices for household consumers - annual data (from 2007 onwards)",
-    "DE": "Strompreisbestandteile für Haushaltsverbraucher - Jahresdaten (ab 2007)",
-    "FR": "Composantes des prix de l'électricité pour les consommateurs résidentiels - données annuelles (à partir de 2007)"
-  },
-  "nrg_pc_205_c": {
-    "EN": "Electricity components for prices for non-household consumers - annual data (from 2007 onwards)",
-    "DE": "Strompreisbestandteile für Nichthaushaltsverbraucher - Jahresdaten (ab 2007)",
-    "FR": "Composantes des prix de l'électricité pour les consommateurs non résidentiels - données annuelles (à partir de 2007)"
-  },
-  "SORT_PROTOCOL": {
-    "EN": "Protocol country order",
-    "DE": "Protokoll Länderreihenfolge",
-    "FR": "Ordre des pays selon le protocole"
-  },
-  "SORT_ALPHABETICAL": {
-    "EN": "Alphabetically country order",
-    "DE": "Alphabetische Länderreihenfolge",
-    "FR": "Ordre alphabétique des pays"
-  },
-  "SORT_ASC": {
-    "EN": "Ascending data values",
-    "DE": "Aufsteigende Datenwerte",
-    "FR": "Valeurs de données croissantes"
-  },
-  "SORT_DESC": {
-    "EN": "Descending data values",
-    "DE": "Absteigende Datenwerte",
-    "FR": "Valeurs de données décroissantes"
-  },
-  "PROTO": {
-    "EN": "Protocol country order",
-    "DE": "Protokoll Länderreihenfolge",
-    "FR": "Ordre des pays selon le protocole"
-  },
-  "ALPHA": {
-    "EN": "Alphabetically country order",
-    "DE": "Alphabetische Länderreihenfolge",
-    "FR": "Ordre alphabétique des pays"
-  },
-  "ASC": {
-    "EN": "Ascending data values",
-    "DE": "Aufsteigende Datenwerte",
-    "FR": "Valeurs de données croissantes"
-  },
-  "DESC": {
-    "EN": "Descending data values",
-    "DE": "Absteigende Datenwerte",
-    "FR": "Valeurs de données décroissantes"
-  },
-  "%": {
-    "EN": "in percentages",
-    "DE": "in Prozent",
-    "FR": "en pourcentages"
-  },
-
-
-
-
-
-  "TAX": {
-    "EN": "Tax",
-    "FR": "Taxe",
-    "DE": "Steuer"
-  },
-  "MSG_BROWSER": {
-    "EN": "Browser does not support HTML5.",
-    "FR": "Le navigateur ne prend pas en charge HTML5.",
-    "DE": "Browser unterstützt HTML5 nicht."
-  },
-  "MSG_LOADING": {
-    "EN": "Loading",
-    "FR": "Chargement",
-    "DE": "Laden"
-  },
-
-  "OPTIONS": {
-    "EN": "Options",
-    "DE": "Optionen",
-    "FR": "Options"
-  },
-  "OPTIONS_GRAPH_TOOLBOX": {
-    "EN": "Options graph toolbox",
-    "DE": "Optionswerkzeugkasten für Grafiken",
-    "FR": "Boîte à outils des options de graphique"
   }
-
 }
