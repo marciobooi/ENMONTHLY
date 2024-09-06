@@ -72,9 +72,9 @@
     const target = document.querySelector("#containerIndicator");
     const elementId = 'selectIndicator';
     const optionsArray = Object.keys(selectChart);
-    const labelDescription = languageNameSpace.labels["INDICATOR"];
+    const labelDescription = "INDICATOR";
     const activeElement = REF.dataset;
-    const textChange = languageNameSpace.labels["SELECTINDICATOR"];
+    const textChange = "MENU_INDICATOR";
 
     const existingSingleSelect = document.getElementById(elementId);
     if (existingSingleSelect) {

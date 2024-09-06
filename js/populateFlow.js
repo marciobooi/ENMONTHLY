@@ -70,9 +70,9 @@
     const target = document.querySelector("#containerFlow");
     const elementId = 'selectFlow';
     const optionsArray = flowList;
-    const labelDescription = languageNameSpace.labels["FLOW"];
+    const labelDescription = "FLOW";
     const activeElement = REF.nrg_bal;
-    const textChange = languageNameSpace.labels["BOX_NRG_TITLE"];
+    const textChange = "MENU_FLOW";
 
     const existingSingleSelect = document.getElementById(elementId);
     if (existingSingleSelect) {

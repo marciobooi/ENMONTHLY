@@ -23,19 +23,19 @@ class Singleselect {
         if (this.elementId === "selectCountry") {
             optionsHTML = `
                     <optgroup label="${languageNameSpace.labels['AGGREGATE']}">
-                        ${AGGREGATES_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''}>${languageNameSpace.labels[ctr]}</option>`).join('')}
+                        ${AGGREGATES_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
                     </optgroup>            
                     <optgroup label="${languageNameSpace.labels['EUCTR']}">
-                        ${EU_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''}>${languageNameSpace.labels[ctr]}</option>`).join('')}
+                        ${EU_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
                     </optgroup>
                     <optgroup label="${languageNameSpace.labels['EFTA']}">
-                        ${EFTA_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''}>${languageNameSpace.labels[ctr]}</option>`).join('')}
+                        ${EFTA_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
                     </optgroup>
                     <optgroup label="${languageNameSpace.labels['ENLARGEMENT']}">
-                        ${ENLARGEMENT_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''}>${languageNameSpace.labels[ctr]}</option>`).join('')}
+                        ${ENLARGEMENT_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
                     </optgroup>
                     <optgroup label="${languageNameSpace.labels['OTHERCTR']}">
-                        ${OTHER_THIRD_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''}>${languageNameSpace.labels[ctr]}</option>`).join('')}
+                        ${OTHER_THIRD_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
                     </optgroup>    
             `;
         } else {
@@ -47,10 +47,11 @@ class Singleselect {
                 return labelA.localeCompare(labelB);
             });
 
+            log(sortedOptionsArray)
+
             // For other elementIds, create options based on the provided sorted optionsArray
-            optionsHTML = sortedOptionsArray.map(option => `
-                <option value="${option}" ${this.activeElement === option ? 'selected' : ''}>
-                    ${languageNameSpace.labels[option] !== undefined ? languageNameSpace.labels[option] : option}
+             optionsHTML = sortedOptionsArray.map(option => `
+                <option value="${option}" ${this.activeElement === option ? 'selected' : ''} data-i18n="${option}">
                 </option>
             `).join('');
         }
@@ -58,7 +59,7 @@ class Singleselect {
         // Generate the full HTML for the single select element
         const singleSelectHTML = `
             <div class="ecl-form-group" role="application">
-            <label for="${this.elementId}" class="ecl-form-label">${this.labelDescription}</label>        
+            <label for="${this.elementId}" class="ecl-form-label" data-i18n=${this.labelDescription}></label>        
                 <div class="ecl-select__container ecl-select__container--l">
                     <select class="ecl-select" id="${this.elementId}" name="country" required="">
                         ${optionsHTML}
@@ -77,13 +78,17 @@ class Singleselect {
         // Attach event listeners for mouseenter and mouseleave events to show/hide textChange
         const labelElement = document.querySelector(`label[for="${this.elementId}"]`);
         const selectElement = document.getElementById(this.elementId);
-
+    
+        if (!labelElement || !selectElement) return; // Check if elements exist
+    
         selectElement.addEventListener('mouseenter', () => {
-            labelElement.textContent = this.textChange;
+            const translatedText = languageNameSpace.labels[this.textChange] || this.textChange;
+            labelElement.textContent = translatedText;
         });
-
+    
         selectElement.addEventListener('mouseleave', () => {
-            labelElement.textContent = this.labelDescription;
+            const translatedText = languageNameSpace.labels[this.labelDescription] || this.labelDescription;
+            labelElement.textContent = translatedText;
         });
     }
 }

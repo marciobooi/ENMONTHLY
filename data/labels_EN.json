@@ -273,7 +273,6 @@
   "nrg_cb_em": "Supply, transformation and consumption of electricity",
   "nrg_cb_pem": "Net electricity generation by type of fuel",
   "nrg_cb_pem_RW": "Net electricity generation Renewable vs non-renewable electricity",
-
   "nrg_cb_cosm_Fuel": "Crude oil",
 
   "menu-chart-title": "Select chart",
@@ -399,7 +398,7 @@
 "BTNCHANGECOUNTRY": "Click to change countries",
 "BTNEXPAND": "Click to expand chart",
 "BTNEDETAILS": "Click to show/side details",
-"BTNRNW": "Toggle renewables/non-renewables",
+"BTNRNW": "show renewables/non-renewables",
 "RANGE": "Range",
 "LOW": "Low",
 "HIGH": "High",

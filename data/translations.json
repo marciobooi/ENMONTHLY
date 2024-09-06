@@ -299,7 +299,6 @@
     "DE": "Excel-Datei herunterladen",
     "FR": "Télécharger le fichier Excel"
   },
-
   "SHARE": {
     "EN": "Share",
     "DE": "Teilen",
@@ -330,6 +329,437 @@
     "DE": "Werkzeuge",
     "FR": "Outils"
   },
+  "COPY": {
+    "EN": "Copy",
+    "DE": "Kopieren",
+    "FR": "Copier"
+  },
+  "COPYURL": {
+    "EN": "Copy the URL",
+    "DE": "URL kopieren",
+    "FR": "Copier l'URL"
+  },
+  "CTR": {
+    "EN": "Countries",
+    "DE": "Länder",
+    "FR": "Pays"
+  },
+  "MENU_COUNTRY": {
+    "EN": "Select countries",
+    "DE": "Länder auswählen",
+    "FR": "Sélectionner les pays"
+  },
+  "FLOW": {
+    "EN": "Flow",
+    "DE": "Fluss",
+    "FR": "Flux"
+  },
+"MENU_FLOW": {
+    "EN": "Select flow",
+    "DE": "Fluss auswählen",
+    "FR": "Sélectionner le flux"
+  },
+  "FUEL": {
+    "EN": "Fuel",
+    "DE": "Kraftstoff",
+    "FR": "Carburant"
+  },
+  "MENU_FUEL": {
+    "EN": "Select fuel",
+    "DE": "Kraftstoff auswählen",
+    "FR": "Sélectionner le carburant"
+  },
+  "INDICATOR": {
+    "EN": "Indicator",
+    "DE": "Indikator",
+    "FR": "Indicateur"
+  },
+"MENU_INDICATOR": {
+    "EN": "Select indicator",
+    "DE": "Indikator auswählen",
+    "FR": "Sélectionner l'indicateur"
+  },
+  "UNIT": {
+    "EN": "Unit",
+    "DE": "Einheit",
+    "FR": "Unité"
+  },
+  "MENU_UNIT": {
+    "EN": "Select unit",
+    "DE": "Einheit auswählen",
+    "FR": "Sélectionner l'unité"
+  },
+  "AGGREGATE": {
+    "EN": "Aggregates",
+    "DE": "Aggregate",
+    "FR": "Agrégats"
+  },
+  "EUCTR": {
+    "EN": "EU countries",
+    "DE": "EU-Länder",
+    "FR": "Pays de l'UE"
+  },
+  "EFTA": {
+    "EN": "EFTA countries",
+    "DE": "EFTA-Länder",
+    "FR": "Pays de l'AELE"
+  },
+  "ENLARGEMENT": {
+    "EN": "Enlargement countries",
+    "DE": "Erweiterungsländer",
+    "FR": "Pays en élargissement"
+  },
+  "OTHERCTR": {
+    "EN": "Other third countries",
+    "DE": "Andere Drittländer",
+    "FR": "Autres pays tiers"
+  },
+  "nrg_cb_sffm": {
+    "EN": "Supply and transformation of solid fossil fuels",
+    "DE": "Versorgung und Umwandlung fester fossiler Brennstoffe",
+    "FR": "Approvisionnement et transformation des combustibles fossiles solides"
+  },
+"nrg_cb_oilm": {
+    "EN": "Supply and transformation of oil and petroleum products",
+    "DE": "Versorgung und Umwandlung von Öl und Erdölerzeugnissen",
+    "FR": "Approvisionnement et transformation du pétrole et des produits pétroliers"
+  },
+"nrg_cb_cosm": {
+    "EN": "Crude oil supply",
+    "DE": "Versorgung mit Rohöl",
+    "FR": "Approvisionnement en pétrole brut"
+  },
+"nrg_cb_gasm": {
+    "EN": "Supply, transformation and consumption of gas",
+    "DE": "Versorgung, Umwandlung und Verbrauch von Gas",
+    "FR": "Approvisionnement, transformation et consommation de gaz"
+  },
+"nrg_cb_em": {
+    "EN": "Supply, transformation and consumption of electricity",
+    "DE": "Versorgung, Umwandlung und Verbrauch von Strom",
+    "FR": "Approvisionnement, transformation et consommation d'électricité"
+  },
+"nrg_cb_pem": {
+    "EN": "Net electricity generation by type of fuel",
+    "DE": "Nettostromerzeugung nach Brennstoffart",
+    "FR": "Production nette d'électricité par type de combustible"
+  },
+"nrg_cb_pem_RW": {
+    "EN": "Net electricity generation Renewable vs non-renewable electricity",
+    "DE": "Nettostromerzeugung Erneuerbar vs. nicht erneuerbar",
+    "FR": "Production nette d'électricité Renouvelable vs non renouvelable"
+  },
+"nrg_cb_cosm_Fuel": {
+    "EN": "Crude oil",
+    "DE": "Rohöl",
+    "FR": "Pétrole brut"
+  },
+  "IPRD": {
+    "EN": "Indigenous production",
+    "DE": "Indigene Produktion",
+    "FR": "Production indigène"
+  },
+"IMP": {
+    "EN": "Imports",
+    "DE": "Importe",
+    "FR": "Importations"
+  },
+"EXP": {
+    "EN": "Exports",
+    "DE": "Exporte",
+    "FR": "Exportations"
+  },
+"PRD": {
+    "EN": "Production",
+    "DE": "Produktion",
+    "FR": "Production"
+  },
+"NETIMP": {
+    "EN": "Net imports",
+    "DE": "Nettoimporte",
+    "FR": "Importations nettes"
+  },
+"GID_CAL": {
+    "EN": "Gross inland deliveries - calculated",
+    "DE": "Bruttoinlandsbelieferung - berechnet",
+    "FR": "Livraisons intérieures brutes - calculées"
+  },
+"Net_imp": {
+    "EN": "Net imports",
+    "DE": "Nettoimporte",
+    "FR": "Importations nettes"
+  },
+"TO_RPI_RO": {
+    "EN": "Refinery output",
+    "DE": "Raffinerieausstoß",
+    "FR": "Production des raffineries"
+  },
+"STK_CHG_MG": {
+    "EN": "Stock changes - as defined in MOS GAS",
+    "DE": "Lagerveränderungen - wie in MOS GAS definiert",
+    "FR": "Variations de stocks - comme défini dans MOS GAS"
+  },
+"IC_CAL_MG": {
+    "EN": "Inland consumption - calculated as defined in MOS GAS",
+    "DE": "Inländischer Verbrauch - wie in MOS GAS berechnet",
+    "FR": "Consommation intérieure - calculée comme défini dans MOS GAS"
+  },
+"DL": {
+    "EN": "Distribution losses",
+    "DE": "Verteilungsverluste",
+    "FR": "Pertes de distribution"
+  },
+"AIM": {
+    "EN": "Available to internal market",
+    "DE": "Für den Binnenmarkt verfügbar",
+    "FR": "Disponible pour le marché intérieur"
+  },
+"noNrg": {
+    "EN": "No NRG inside dataset",
+    "DE": "Keine NRG im Datensatz",
+    "FR": "Pas de NRG dans l'ensemble de données"
+  },
+"NEG": {
+    "EN": "Net electricity generation",
+    "DE": "Netto-Stromerzeugung",
+    "FR": "Production nette d'électricité"
+  },
+"RVN": {
+    "EN": "Renewable vs non-renewable",
+    "DE": "Erneuerbare vs nicht erneuerbare",
+    "FR": "Renouvelable vs non renouvelable"
+  },
+"C0100": {
+    "EN": "Hard coal",
+    "DE": "Steinkohle",
+    "FR": "Charbon dur"
+  },
+"C0200": {
+    "EN": "Brown coal",
+    "DE": "Braunkohle",
+    "FR": "Lignite"
+  },
+"C0311": {
+    "EN": "Coke oven coke",
+    "DE": "Hüttenkoks",
+    "FR": "Coke de four"
+  },
+"P1100": {
+    "EN": "Peat",
+    "DE": "Torf",
+    "FR": "Tourbe"
+  },
+"S2000": {
+    "EN": "Oil shale and oil sands",
+    "DE": "Ölschiefer und Ölsande",
+    "FR": "Schiste bitumineux et sables bitumineux"
+  },
+"O4640": {
+    "EN": "Naphtha",
+    "DE": "Naphtha",
+    "FR": "Naphte"
+  },
+"O4652": {
+    "EN": "Motor gasoline",
+    "DE": "Motorenbenzin",
+    "FR": "Essence"
+  },
+"O4661": {
+    "EN": "Kerosene-type jet fuel",
+    "DE": "Kerosinartiger Flugkraftstoff",
+    "FR": "Carburéacteur de type kérosène"
+  },
+"O4671": {
+    "EN": "Gas oil and diesel oil",
+    "DE": "Gasöl und Dieselkraftstoff",
+    "FR": "Gazole et diesel"
+  },
+"O4630": {
+    "EN": "Liquefied petroleum gases",
+    "DE": "Flüssiggas",
+    "FR": "Gaz de pétrole liquéfié"
+  },
+"O4680": {
+    "EN": "Fuel oil",
+    "DE": "Heizöl",
+    "FR": "Fioul"
+  },
+"G3000": {
+    "EN": "Natural gas",
+    "DE": "Erdgas",
+    "FR": "Gaz naturel"
+  },
+"E7000": {
+    "EN": "Electricity",
+    "DE": "Elektrizität",
+    "FR": "Électricité"
+  },
+"C0000": {
+    "EN": "Coal and manufactured gases",
+    "DE": "Kohle und erzeugte Gase",
+    "FR": "Charbon et gaz manufacturés"
+  },
+"O4000XBIO": {
+    "EN": "Oil and petroleum products (excluding biofuel portion)",
+    "DE": "Öl und Erdölprodukte (ohne Biokraftstoffanteil)",
+    "FR": "Produits pétroliers (hors partie biocarburants)"
+  },
+"N9000": {
+    "EN": "Nuclear fuels and other fuels n.e.c.",
+    "DE": "Kernbrennstoffe und andere Brennstoffe n.a.n.",
+    "FR": "Combustibles nucléaires et autres combustibles n.d.a."
+  },
+"RA100": {
+    "EN": "Hydro",
+    "DE": "Wasserkraft",
+    "FR": "Hydroélectricité"
+  },
+"RA200": {
+    "EN": "Geothermal",
+    "DE": "Geothermie",
+    "FR": "Géothermie"
+  },
+"RA300": {
+    "EN": "Wind",
+    "DE": "Windenergie",
+    "FR": "Énergie éolienne"
+  },
+"RA400": {
+    "EN": "Solar",
+    "DE": "Solarenergie",
+    "FR": "Énergie solaire"
+  },
+"RA500_5160": {
+    "EN": "Other renewable energies",
+    "DE": "Andere erneuerbare Energien",
+    "FR": "Autres énergies renouvelables"
+  },
+"O4000": {
+    "EN": "Oil and petroleum products",
+    "DE": "Öl und Erdölprodukte",
+    "FR": "Produits pétroliers"
+  },
+"O4100_TOT_4200-4500": {
+    "EN": "Crude oil, NGL, refinery feedstocks, additives and oxygenates and other hydrocarbons",
+    "DE": "Rohöl, NGL, Raffinerie-Rohstoffe, Additive und Sauerstoffverbindungen sowie andere Kohlenwasserstoffe",
+    "FR": "Pétrole brut, NGL, matières premières pour raffinerie, additifs et oxygénates et autres hydrocarbures"
+  },
+"O4600": {
+    "EN": "Oil products",
+    "DE": "Ölprodukte",
+    "FR": "Produits pétroliers"
+  },
+"rw": {
+    "EN": "Renewables",
+    "DE": "Erneuerbare Energien",
+    "FR": "Énergies renouvelables"
+  },
+"Nrw": {
+    "EN": "Non-renewables",
+    "DE": "Nicht erneuerbare Energien",
+    "FR": "Énergies non renouvelables"
+  },
+"nrw": {
+    "EN": "Non-renewables",
+    "DE": "Nicht erneuerbare Energien",
+    "FR": "Énergies non renouvelables"
+  },
+"TOTAL": {
+    "EN": "Total",
+    "DE": "Gesamt",
+    "FR": "Total"
+  },
+"X9900": {
+    "EN": "Other fuels n.e.c.",
+    "DE": "Andere Brennstoffe n.a.n.",
+    "FR": "Autres combustibles n.d.a."
+  },
+"CF": {
+    "EN": "Combustible fuels",
+    "DE": "Brennbare Brennstoffe",
+    "FR": "Combustibles"
+  },
+  "MIO_M3": {
+    "EN": "Million cubic metres (MIO_M3)",
+    "DE": "Million Kubikmeter (MIO_M3)",
+    "FR": "Million de mètres cubes (MIO_M3)"
+  },
+"TJ_GCV": {
+    "EN": "Terajoule (gross calorific value - GCV) (TJ_GCV)",
+    "DE": "Terajoule (Bruttobrennwert - GCV) (TJ_GCV)",
+    "FR": "Térajoule (valeur calorifique brute - GCV) (TJ_GCV)"
+  },
+"THS_T": {
+    "EN": "Thousand tonnes (THS_T)",
+    "DE": "Tausend Tonnen (THS_T)",
+    "FR": "Mille tonnes (THS_T)"
+  },
+"GWH": {
+    "EN": "Gigawatt-hour (GWH)",
+    "DE": "Gigawattstunde (GWH)",
+    "FR": "Gigawatt-heure (GWH)"
+  },
+  "SHOW_BAR_CHART": {
+    "EN": "Show bar chart",
+    "FR": "Afficher le graphique en barres",
+    "DE": "Balkendiagramm anzeigen"
+  },
+  "SHOW_PIE_CHART": {
+    "EN": "Show pie chart",
+    "FR": "Afficher le graphique en secteurs",
+    "DE": "Kreisdiagramm anzeigen"
+  },
+  "PRINT_CHART": {
+    "EN": "Print chart",
+    "FR": "Imprimer le graphique",
+    "DE": "Diagramm drucken"
+  },
+  "SHOW_PERCENTAGE": {
+    "EN": "Show percentage view",
+    "FR": "Afficher la vue en pourcentage",
+    "DE": "Prozentansicht anzeigen"
+  },
+  "DETAILS": {
+    "EN": "Show details",
+    "DE": "Details anzeigen",
+    "FR": "Afficher les détails"
+  },
+  "RENEW": {
+    "EN": "Show renewables/non-renewables",
+    "DE": "Erneuerbare/nicht erneuerbare Energien anzeigen",
+    "FR": "Afficher renouvelables/non-renouvelables"
+  },
+
+
+
+
+
+
+
+
+  "HIDE_DETAILS": {
+    "EN": "Hide details",
+    "DE": "Details verbergen",
+    "FR": "Masquer les détails"
+  },
+
+  "SELECT_ORDER_OF_CHART": {
+    "EN": "Select the order of the chart",
+    "FR": "Sélectionnez l'ordre du graphique",
+    "DE": "Wählen Sie die Reihenfolge des Diagramms"
+  },
+
+  "SHOW_AGGREGATES": {
+    "EN": "Show aggregates",
+    "FR": "Afficher les agrégats",
+    "DE": "Aggregate anzeigen"
+  },
+ 
+
+
+
+
+
 
 
   "MARCIO HERE": {
@@ -371,46 +801,18 @@
 
 
 
-  "OPTIONS": {
-    "EN": "Options",
-    "DE": "Optionen",
-    "FR": "Options"
-  },
-  "OPTIONS_GRAPH_TOOLBOX": {
-    "EN": "Options graph toolbox",
-    "DE": "Optionswerkzeugkasten für Grafiken",
-    "FR": "Boîte à outils des options de graphique"
-  },
 
-  "COPY": {
-    "EN": "Copy",
-    "DE": "Kopieren",
-    "FR": "Copier"
+
+
+"HIGH": {
+    "EN": "Highest value of this month",
+    "DE": "Höchstwert dieses Monats",
+    "FR": "Valeur la plus élevée de ce mois"
   },
-  "COPYURL": {
-    "EN": "Copy the URL",
-    "DE": "URL kopieren",
-    "FR": "Copier l'URL"
-  },
-  "CTR": {
-    "EN": "Countries",
-    "DE": "Länder",
-    "FR": "Pays"
-  },
-  "MENU_COUNTRY": {
-    "EN": "Select countries",
-    "DE": "Länder auswählen",
-    "FR": "Sélectionner les pays"
-  },
-  "FUEL": {
-    "EN": "Fuel",
-    "DE": "Kraftstoff",
-    "FR": "Carburant"
-  },
-  "MENU_FUEL": {
-    "EN": "Select fuel",
-    "DE": "Kraftstoff auswählen",
-    "FR": "Sélectionner le carburant"
+"LOW": {
+    "EN": "Lowest value of this month",
+    "DE": "Niedrigster Wert dieses Monats",
+    "FR": "Valeur la plus basse de ce mois"
   },
   "YEAR": {
     "EN": "Year",
@@ -453,31 +855,7 @@
     "DE": "Schlüsselwort eingeben",
     "FR": "Entrez le mot-clé"
   },
-  "AGGREGATE": {
-    "EN": "Aggregates",
-    "DE": "Aggregate",
-    "FR": "Agrégats"
-  },
-  "EUCTR": {
-    "EN": "EU countries",
-    "DE": "EU-Länder",
-    "FR": "Pays de l'UE"
-  },
-  "EFTA": {
-    "EN": "EFTA countries",
-    "DE": "EFTA-Länder",
-    "FR": "Pays de l'AELE"
-  },
-  "ENLARGEMENT": {
-    "EN": "Enlargement countries",
-    "DE": "Erweiterungsländer",
-    "FR": "Pays en élargissement"
-  },
-  "OTHERCTR": {
-    "EN": "Other third countries",
-    "DE": "Andere Drittländer",
-    "FR": "Autres pays tiers"
-  },
+  
   "CONSUMER": {
     "EN": "Consumer",
     "DE": "Verbraucher",
@@ -508,16 +886,7 @@
     "DE": "Verbrauchsebene auswählen",
     "FR": "Sélectionnez le niveau de consommation"
   },
-  "UNIT": {
-    "EN": "Unit",
-    "DE": "Einheit",
-    "FR": "Unité"
-  },
-  "MENU_UNIT": {
-    "EN": "Selected Unit",
-    "DE": "Ausgewählte Einheit",
-    "FR": "Unité sélectionnée"
-  },
+
   "4100": {
     "EN": "Natural gas",
     "DE": "Gas",
@@ -913,11 +1282,7 @@
     "DE": "Nicht zutreffend",
     "FR": "Non applicable"
   },
-  "TOTAL": {
-    "EN": "Total",
-    "DE": "Gesamt",
-    "FR": "Total"
-  },
+
   "BAR_CHART_TITLE_CONSOMS": {
     "EN": "Consumption levels",
     "DE": "Verbrauchsniveaus",
@@ -1103,61 +1468,7 @@
     "DE": "Barrierefreiheit",
     "FR": "Accessibilité"
   },
-  "DETAILS": {
-    "EN": "Show details",
-    "DE": "Details anzeigen",
-    "FR": "Afficher les détails"
-  },
-  "HIDE_DETAILS": {
-    "EN": "Hide details",
-    "DE": "Details verbergen",
-    "FR": "Masquer les détails"
-  },
-  "COMPONENTS_SHOW": {
-    "EN": "Show components",
-    "FR": "Afficher les composants",
-    "DE": "Komponenten anzeigen"
-  },
-  "COMPONENTS_HIDE": {
-    "EN": "Hide components",
-    "FR": "Masquer les composants",
-    "DE": "Komponenten ausblenden"
-  },
-  "SELECT_ORDER_OF_CHART": {
-    "EN": "Select the order of the chart",
-    "FR": "Sélectionnez l'ordre du graphique",
-    "DE": "Wählen Sie die Reihenfolge des Diagramms"
-  },
-  "SHOW_PERCENTAGE": {
-    "EN": "Show percentage view",
-    "FR": "Afficher la vue en pourcentage",
-    "DE": "Prozentansicht anzeigen"
-  },
-  "SHOW_AGGREGATES": {
-    "EN": "Show aggregates",
-    "FR": "Afficher les agrégats",
-    "DE": "Aggregate anzeigen"
-  },
-  "SHOW_BAR_CHART": {
-    "EN": "Show bar chart",
-    "FR": "Afficher le graphique en barres",
-    "DE": "Balkendiagramm anzeigen"
-  },
-  "SHOW_PIE_CHART": {
-    "EN": "Show pie chart",
-    "FR": "Afficher le graphique en secteurs",
-    "DE": "Kreisdiagramm anzeigen"
-  },
-  "SHOW_LINE_CHART": {
-    "EN": "Show line chart",
-    "FR": "Afficher le graphique linéaire",
-    "DE": "Liniendiagramm anzeigen"
-  },
-  "PRINT_CHART": {
-    "EN": "Print chart",
-    "FR": "Imprimer le graphique",
-    "DE": "Diagramm drucken"
-  },
+
   "VAL": {
     "EN": "Value",
     "FR": "Valeur",
@@ -1187,5 +1498,16 @@
     "EN": "Next",
     "FR": "Suivant",
     "DE": "Weiter"
+  },
+  "OPTIONS": {
+    "EN": "Options",
+    "DE": "Optionen",
+    "FR": "Options"
+  },
+  "OPTIONS_GRAPH_TOOLBOX": {
+    "EN": "Options graph toolbox",
+    "DE": "Optionswerkzeugkasten für Grafiken",
+    "FR": "Boîte à outils des options de graphique"
   }
+
 }
