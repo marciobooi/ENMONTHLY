@@ -18,84 +18,46 @@ var languageNameSpace = {
       async: false
       });
     // load the labels for the selected language
-    $.getJSON("data/labels_" + language + ".json", function (data) {
-      languageNameSpace.labels = data;   
+    $.getJSON("data/translations.json", function (data) {
+      for (let key in data) {
+        if (data[key][language]) {
+          languageNameSpace.labels[key] = data[key][language];
+        }
+      }
     }).then(
       $.getJSON("data/tutorial_" + language + ".json", function (data) {
-        languageNameSpace.tutorial = data;   
+        languageNameSpace.tutorial = data;
       })
-    )
-    $.ajaxSetup({
-      async: true
+    );
+  
+
+
+    const translateElements = (selector, attribute, targetAttr = "text") => {
+      $(selector).each(function () {
+        let key = $(this).data(attribute);
+        let translation = languageNameSpace.labels[key] || key;
+        if (targetAttr == "text") {
+          $(this).text(translation);
+        } else {
+          $(this).attr(targetAttr, translation);
+        }
       });
+    };
 
-    const elements = [".pie", ".barchart", ".line", ".db", ".meta", 
-    ".info", ".details", "#close", ".componentsShow", ".componentsHide",
-    ".play", "#share", ".Modalshare", ".twitter", ".linkedin", ".facebook", ".chartMenu",
-    "#vizualizationMenu", "#visualization-table", "#find-more-menu-icon", ".toggle-thumb", "#header-title-label"
-    ]
-
-    elements.forEach(id => {
-      const element = $(id);
-      const label = languageNameSpace.labels[id.substring(1)];
-      element.attr({
-        'title': label,
-        'data-original-title': label,
-        'aria-label': label
-      });
-      element.html(languageNameSpace.labels[id.substring(1)]);
-    });
+    translateElements("[data-i18n]", "i18n", "text");
+    translateElements("[data-i18n-label]", "i18n-label", "aria-label");
+    translateElements("[data-i18n-labelledby]","i18n-labelledby","aria-labelledby");
+    translateElements("[data-i18n-title]", "i18n-title", "title");
+    translateElements("optgroup[data-i18n-label]", "i18n-label", "label");  
 
 
 
-    const elementsBtn = [ 
-    "barChart", 
-    "pieChart",  
-    "lineChart",  
-    "toggleAgregates",  
-    "tb-togle-percentage",  
-    "tb-togle-table",   
-    "printBtn",  
-    "downloadBtn",  
-    "excelBtn",  
-    "shareChart",  
-    "btnCloseModalChart", 
-    "infoBtn", 
-    "shareChart1",
-    "tb-togle-details",
-    "tb-togle-renew",
-    "embebedBtn"
-  ]
 
-    const elementsBtnTranslations = [
-      "BTNBARCHART", 
-      "BTNPIECHART", 
-      "BTNLINECHART", 
-      "BTNAGREGATESCHART", 
-      "BTNPERCENTAGECHART", 
-      "BTNATABLE", 
-      "BTNPRINTCHART", 
-      "BTNDOWNLOADCHART", 
-      "BTNEXCELCHART", 
-      "BTNBSHARECHART", 
-      "BTNCLOSECHART", 
-      "BTNINFICHART", 
-      "BTNBSHARECHART",
-      "BTNEDETAILS",
-      "BTNRNW",
-      "BTNBSHARECHART",
-    ]
 
-    elementsBtn.forEach((id, idx) => {
-      const element = document.getElementById(id);
-      if (!element) {
-          return; 
-      }
-      const label = languageNameSpace.labels[elementsBtnTranslations[idx]];
-      element.setAttribute('title', label);
-      element.setAttribute('data-original-title', label);
-      element.setAttribute('aria-label', label);
-  });
+
+
+ 
+
 
       $("#footer-cookies").html(languageNameSpace.labels["COOKIES"]);
       $("#footer-privacy").html(languageNameSpace.labels["PRIVACY"]);
@@ -114,22 +76,11 @@ var languageNameSpace = {
   
    
       
-  
-      setTimeout(() => {
-        const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
-        thElements.forEach(element => {
-          const innerHTML = element.innerHTML.toLowerCase();
-          if (innerHTML.includes('low')) {
-            element.textContent = languageNameSpace.labels['LOW'];
-            element.style.color = 'red';
-          } else if (innerHTML.includes('high')) {
-            element.textContent = languageNameSpace.labels['HIGH'];
-            element.style.color = 'blue';
-          }
-        });   
-}, 200);  
 
-  
+
+      getTitle();
+
+      euGlobanContainer();
   
   
   
