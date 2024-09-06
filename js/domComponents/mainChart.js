@@ -79,17 +79,17 @@ class HighchartsChart {
                         // Check if both currentPoint and nextPoint have the 'point' property
                         if (currentPoint.point && nextPoint.point) {
                             tableContent += createTableRow(
-                                languageNameSpace.labels["high"],
+                                languageNameSpace.labels["HIGH"],
                                 nextPoint.point.high ? Highcharts.numberFormat(nextPoint.point.high, 2, ".") : '',
                                 '#007bff' // Blue color for high value
                             );
                             tableContent += createTableRow(
-                              REF.dataset === "nrg_cb_pem_RW" ? currentPoint.series.name : languageNameSpace.labels["values"],
+                              REF.dataset === "nrg_cb_pem_RW" ? currentPoint.series.name : languageNameSpace.labels["VALUES"],
                                 currentPoint.point.y ? Highcharts.numberFormat(currentPoint.point.y, 2, ".") : '',
                                 'black'
                             );
                             tableContent += createTableRow(
-                                languageNameSpace.labels["low"],
+                                languageNameSpace.labels["LOW"],
                                 nextPoint.point.low ? Highcharts.numberFormat(nextPoint.point.low, 2, ".") : '',
                                 'red' // Red color for low value
                             );

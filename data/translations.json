@@ -654,11 +654,6 @@
     "DE": "Erneuerbare Energien",
     "FR": "Énergies renouvelables"
   },
-"Nrw": {
-    "EN": "Non-renewables",
-    "DE": "Nicht erneuerbare Energien",
-    "FR": "Énergies non renouvelables"
-  },
 "nrw": {
     "EN": "Non-renewables",
     "DE": "Nicht erneuerbare Energien",
@@ -729,14 +724,6 @@
     "DE": "Erneuerbare/nicht erneuerbare Energien anzeigen",
     "FR": "Afficher renouvelables/non-renouvelables"
   },
-
-
-
-
-
-
-
-
   "HIDE_DETAILS": {
     "EN": "Hide details",
     "DE": "Details verbergen",
@@ -754,7 +741,137 @@
     "FR": "Afficher les agrégats",
     "DE": "Aggregate anzeigen"
   },
- 
+ "HIGH": {
+    "EN": "Highest value of this month",
+    "DE": "Höchstwert dieses Monats",
+    "FR": "Valeur la plus élevée de ce mois"
+  },
+"LOW": {
+    "EN": "Lowest value of this month",
+    "DE": "Niedrigster Wert dieses Monats",
+    "FR": "Valeur la plus basse de ce mois"
+  },
+  "YEAR": {
+    "EN": "Year",
+    "DE": "Jahr",
+    "FR": "Année"
+  },
+  "COOKIES": {
+    "EN": "Cookies policy",
+    "DE": "Cookie-Richtlinie",
+    "FR": "Politique de cookies"
+  },
+  "PRIVACY": {
+    "EN": "Privacy policy",
+    "DE": "Datenschutzrichtlinie",
+    "FR": "Politique de confidentialité"
+  },
+  "LEGAL": {
+    "EN": "Legal notice",
+    "DE": "Rechtlicher Hinweis",
+    "FR": "Mention légale"
+  },
+  "ACCESS": {
+    "EN": "Accessibility",
+    "DE": "Barrierefreiheit",
+    "FR": "Accessibilité"
+  },
+  "NODATA": {
+    "EN": "No data available",
+    "DE": "Keine Daten verfügbar",
+    "FR": "Aucune donnée disponible"
+  },
+"CREDITS": {
+    "EN": "Source: Eurostat",
+    "DE": "Quelle: Eurostat",
+    "FR": "Source : Eurostat"
+  },
+  "RANGE": {
+    "EN": "Range",
+    "DE": "Bereich",
+    "FR": "Plage"
+  },
+  "VALUES": {
+    "EN": "Values",
+    "DE": "Werte",
+    "FR": "Valeurs"
+  },
+  "FLAG_NA": {
+    "EN": "Not available",
+    "DE": "Nicht verfügbar",
+    "FR": "Non disponible"
+  },
+  "FLAG_C": {
+    "EN": "Confidential",
+    "DE": "Vertraulich",
+    "FR": "Confidentiel"
+  },
+  "FLAG_P": {
+    "EN": "Provisional",
+    "DE": "Vorläufig",
+    "FR": "Provisoire"
+  },
+  "FLAG_E": {
+    "EN": "Estimated",
+    "DE": "Geschätzt",
+    "FR": "Estimé"
+  },
+  "FLAG_N": {
+    "EN": "Not significant",
+    "DE": "Nicht signifikant",
+    "FR": "Non significatif"
+  },
+  "FLAG_B": {
+    "EN": "Break in time series",
+    "DE": "Bruch in der Zeitreihe",
+    "FR": "Rupture dans la série chronologique"
+  },
+  "FLAG_S": {
+    "EN": "Eurostat estimate",
+    "DE": "Eurostat-Schätzung",
+    "FR": "Estimation Eurostat"
+  },
+  "FLAG_F": {
+    "EN": "Forecast",
+    "DE": "Prognose",
+    "FR": "Prévision"
+  },
+  "FLAG_U": {
+    "EN": "Low reliability",
+    "DE": "Geringe Zuverlässigkeit",
+    "FR": "Fiabilité faible"
+  },
+  "FLAG_D": {
+    "EN": "Definition differs, see metadata",
+    "DE": "Definition weicht ab, siehe Metadaten",
+    "FR": "La définition diffère, voir les métadonnées"
+  },
+  "FLAG_I": {
+    "EN": "See metadata",
+    "DE": "Siehe Metadaten",
+    "FR": "Voir les métadonnées"
+  },
+  "FLAG_R": {
+    "EN": "Revised",
+    "DE": "Überarbeitet",
+    "FR": "Révisé"
+  },
+  "FLAG_Z": {
+    "EN": "Not applicable",
+    "DE": "Nicht zutreffend",
+    "FR": "Non applicable"
+  },
+  "BACK": {
+    "EN": "Back",
+    "FR": "Retour",
+    "DE": "Zurück"
+  },
+  "NEXT": {
+    "EN": "Next",
+    "FR": "Suivant",
+    "DE": "Weiter"
+  },
+
 
 
 
@@ -804,21 +921,7 @@
 
 
 
-"HIGH": {
-    "EN": "Highest value of this month",
-    "DE": "Höchstwert dieses Monats",
-    "FR": "Valeur la plus élevée de ce mois"
-  },
-"LOW": {
-    "EN": "Lowest value of this month",
-    "DE": "Niedrigster Wert dieses Monats",
-    "FR": "Valeur la plus basse de ce mois"
-  },
-  "YEAR": {
-    "EN": "Year",
-    "DE": "Jahr",
-    "FR": "Année"
-  },
+
   "MENU_YEARS": {
     "EN": "Select year",
     "DE": "Jahr auswählen",
@@ -1217,81 +1320,12 @@
     "DE": "NAT",
     "FR": "NAT"
   },
-  "FLAG_NA": {
-    "EN": "Not available",
-    "DE": "Nicht verfügbar",
-    "FR": "Non disponible"
-  },
-  "FLAG_C": {
-    "EN": "Confidential",
-    "DE": "Vertraulich",
-    "FR": "Confidentiel"
-  },
-  "FLAG_P": {
-    "EN": "Provisional",
-    "DE": "Vorläufig",
-    "FR": "Provisoire"
-  },
-  "FLAG_E": {
-    "EN": "Estimated",
-    "DE": "Geschätzt",
-    "FR": "Estimé"
-  },
-  "FLAG_N": {
-    "EN": "Not significant",
-    "DE": "Nicht signifikant",
-    "FR": "Non significatif"
-  },
-  "FLAG_B": {
-    "EN": "Break in time series",
-    "DE": "Bruch in der Zeitreihe",
-    "FR": "Rupture dans la série chronologique"
-  },
-  "FLAG_S": {
-    "EN": "Eurostat estimate",
-    "DE": "Eurostat-Schätzung",
-    "FR": "Estimation Eurostat"
-  },
-  "FLAG_F": {
-    "EN": "Forecast",
-    "DE": "Prognose",
-    "FR": "Prévision"
-  },
-  "FLAG_U": {
-    "EN": "Low reliability",
-    "DE": "Geringe Zuverlässigkeit",
-    "FR": "Fiabilité faible"
-  },
-  "FLAG_D": {
-    "EN": "Definition differs, see metadata",
-    "DE": "Definition weicht ab, siehe Metadaten",
-    "FR": "La définition diffère, voir les métadonnées"
-  },
-  "FLAG_I": {
-    "EN": "See metadata",
-    "DE": "Siehe Metadaten",
-    "FR": "Voir les métadonnées"
-  },
-  "FLAG_R": {
-    "EN": "Revised",
-    "DE": "Überarbeitet",
-    "FR": "Révisé"
-  },
-  "FLAG_Z": {
-    "EN": "Not applicable",
-    "DE": "Nicht zutreffend",
-    "FR": "Non applicable"
-  },
+
 
   "BAR_CHART_TITLE_CONSOMS": {
     "EN": "Consumption levels",
     "DE": "Verbrauchsniveaus",
     "FR": "Niveaux de consommation"
-  },
-  "EXPORT_FOOTER_TITLE": {
-    "EN": "Source: Eurostat",
-    "DE": "Quelle: Eurostat",
-    "FR": "Source: Eurostat"
   },
   "DB": {
     "EN": "Dataset",
@@ -1448,32 +1482,11 @@
     "DE": "in Prozent",
     "FR": "en pourcentages"
   },
-  "COOKIES": {
-    "EN": "Cookies policy",
-    "DE": "Cookie-Richtlinie",
-    "FR": "Politique de cookies"
-  },
-  "PRIVACY": {
-    "EN": "Privacy policy",
-    "DE": "Datenschutzrichtlinie",
-    "FR": "Politique de confidentialité"
-  },
-  "LEGAL": {
-    "EN": "Legal notice",
-    "DE": "Rechtlicher Hinweis",
-    "FR": "Mention légale"
-  },
-  "ACCESS": {
-    "EN": "Accessibility",
-    "DE": "Barrierefreiheit",
-    "FR": "Accessibilité"
-  },
 
-  "VAL": {
-    "EN": "Value",
-    "FR": "Valeur",
-    "DE": "Wert"
-  },
+
+
+
+
   "TAX": {
     "EN": "Tax",
     "FR": "Taxe",
@@ -1489,16 +1502,7 @@
     "FR": "Chargement",
     "DE": "Laden"
   },
-  "BACK": {
-    "EN": "Back",
-    "FR": "Retour",
-    "DE": "Zurück"
-  },
-  "NEXT": {
-    "EN": "Next",
-    "FR": "Suivant",
-    "DE": "Weiter"
-  },
+
   "OPTIONS": {
     "EN": "Options",
     "DE": "Optionen",

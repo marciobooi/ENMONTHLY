@@ -1,6 +1,6 @@
 function exportIframe() {
 
-    $('.ecl-modal__header-content').html(languageNameSpace.labels['BTNBSHARECHART'])
+    $('.ecl-modal__header-content').html(languageNameSpace.labels['SHARE'])
     $('.targetUrl').html(window.location.href) 
     
     const modal = document.getElementById('iframeModal');

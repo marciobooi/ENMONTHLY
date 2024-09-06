@@ -2,10 +2,37 @@ let buttonTimer;
 let currentStep;
 let isOpen = false
 
+function setCookie(name, value, days = 30) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i].trim();
+        if (cookie.indexOf(nameEQ) == 0) return cookie.substring(nameEQ.length, cookie.length);
+    }
+    return null;
+}
+
+function checkAndShowTutorial() {
+    const tutorialCookie = getCookie("tutorialShown");
+    if (!tutorialCookie) {
+        // If the cookie doesn't exist, show the tutorial and set the cookie
+        setTimeout(() => {
+            tutorial(); // Function to show the tutorial
+            setCookie("tutorialShown", "true", 30); // Set cookie for 30 days
+        }, 600);
+    }
+}
+
 
 function tutorial(buttonTimer) {
-
-	closeTutorial()
 
 	const introProfile = introJs();
 
@@ -79,9 +106,9 @@ function tutorial(buttonTimer) {
 		showBullets: false,
 		autoPosition:false,
 		tooltipClass: "customTooltip",
-		nextLabel:  languageNameSpace.labels['tutNEXT'],
-		prevLabel: languageNameSpace.labels['tutBACK'],
-		doneLabel: languageNameSpace.labels['tutFINISH'],
+		nextLabel:  languageNameSpace.labels['NEXT'],
+		prevLabel: languageNameSpace.labels['BACK'],
+		doneLabel: languageNameSpace.labels['CLOSE'],
 		steps: itens
 	  });  	 
 	  
@@ -96,12 +123,12 @@ function tutorial(buttonTimer) {
 		currentStep = this._currentStep
 
 		if (currentStep === 0) {
-			document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").innerHTML = languageNameSpace.labels['tutFINISH']
+			document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").innerHTML = languageNameSpace.labels['CLOSE']
 			setTimeout(() => {
 				$("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton.introjs-disabled").addClass( "close" )
 			}, 100);
 		} else {
-			document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").innerHTML = languageNameSpace.labels['tutBACK']
+			document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").innerHTML = languageNameSpace.labels['BACK']
 			$("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").removeClass( "close" )
 
 			$(".introjs-tooltip.customTooltip.introjs-auto").css({
@@ -123,7 +150,7 @@ function tutorial(buttonTimer) {
 		"class": "btn btn-primary min-with--nav"
 	});
 
-	document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").innerHTML = languageNameSpace.labels['tutFINISH']
+	document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").innerHTML = languageNameSpace.labels['CLOSE']
 	$("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-prevbutton").addClass( "close " )
 
 	traptutorialfocus()

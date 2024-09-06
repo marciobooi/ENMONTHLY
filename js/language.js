@@ -80,7 +80,7 @@ var languageNameSpace = {
 
       getTitle();
 
-      euGlobanContainer();
+   
   
   
   

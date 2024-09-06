@@ -47,8 +47,6 @@ class Singleselect {
                 return labelA.localeCompare(labelB);
             });
 
-            log(sortedOptionsArray)
-
             // For other elementIds, create options based on the provided sorted optionsArray
              optionsHTML = sortedOptionsArray.map(option => `
                 <option value="${option}" ${this.activeElement === option ? 'selected' : ''} data-i18n="${option}">

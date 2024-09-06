@@ -35,8 +35,8 @@ class FloatingChartControls {
     chartIcon.style.display = chartIcon.style.display === 'none' ? '' : 'none';
   
     if (tableIcon.style.display === 'none') {
-      toggleButton.setAttribute('aria-label', languageNameSpace.labels['BTNATABLE']);
-      toggleButton.title = languageNameSpace.labels['BTNATABLE'];
+		  toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
+		  toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE');
       openVizTable()
     setTimeout(() => {
             const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
@@ -53,8 +53,8 @@ class FloatingChartControls {
     }, 200);  
     
     } else {
-      toggleButton.setAttribute('aria-label', languageNameSpace.labels['BTNATABLE']);
-      toggleButton.title = languageNameSpace.labels['BTNATABLE'];      
+		  toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
+		  toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE');   
       closeTable()
     }
   }
@@ -74,10 +74,10 @@ class FloatingChartControls {
 
     const self = this; 
 
-		const percentageButton = new Button("tb-togle-percentage", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNPERCENTAGECHART'], "", "true");		
-		const tableButton = new Button("tb-togle-table", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNATABLE'], "", "true");
-		const detailsButton = new Button("tb-togle-details", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNEDETAILS'], "", "true");    
-		const renewButton = new Button("tb-togle-renew", ["ecl-button", "ecl-button--primary", "round-btn"], languageNameSpace.labels['BTNRNW'], "", "true");
+		const percentageButton = new Button("tb-togle-percentage", ["ecl-button", "ecl-button--primary", "round-btn"], "SHOW_PERCENTAGE", "", "true");		
+		const tableButton = new Button("tb-togle-table", ["ecl-button", "ecl-button--primary", "round-btn"], "SHOW_TABLE", "", "true");
+		const detailsButton = new Button("tb-togle-details", ["ecl-button", "ecl-button--primary", "round-btn"], "DETAILS", "", "true");    
+		const renewButton = new Button("tb-togle-renew", ["ecl-button", "ecl-button--primary", "round-btn"], "RENEW", "", "true");
 
     percentageButton.setInnerHtml('<i id="percentage-icon" class="fas fa-percentage"></i>');
     tableButton.setInnerHtml('<i id="table-icon" class="fas fa-table"></i><i id="chart-icon" class="fas fa-chart-bar" style="display: none;"></i>');
@@ -125,6 +125,11 @@ class FloatingChartControls {
 
 
 			auxiliarBarGraph();
+
+
+      languageNameSpace.initLanguage(REF.language);
+
+      
 		  });
 
     tableButton.setClickHandler(function() {
