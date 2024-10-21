@@ -35,7 +35,7 @@ var socialNameSpace = (function () {
     },
 
     email: function () {
-      const subject = encodeURIComponent("Energy prices");
+      const subject = encodeURIComponent("Energy monthly");
       const body = encodeURIComponent(`${text[language]} ${window.location.href}`);
       document.location = `mailto:ESTAT-ENERGY@ec.europa.eu?subject=${subject}&body=${body}`;
     },

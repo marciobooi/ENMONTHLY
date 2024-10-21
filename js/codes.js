@@ -192,11 +192,9 @@ defaultGeos = ["EU27_2020","BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR
 	"IS", "LI", "NO"
   ]
   
-  const ENLARGEMENT_COUNTRY_CODES = [
-	"ME","MK","AL","RS","TR","BA","XK"
-  ]
+  const ENLARGEMENT_COUNTRY_CODES = [ "BA","ME","MD","MK","GE","AL","RS","TR","UA","XK",]
   
-  const OTHER_THIRD_COUNTRY_CODES = [
-	"UA", "MD", "GE"
-  ]
+//   const OTHER_THIRD_COUNTRY_CODES = [
+// 	"UA", "MD", "GE"
+//   ]
   

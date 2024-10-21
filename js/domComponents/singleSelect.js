@@ -34,9 +34,7 @@ class Singleselect {
                     <optgroup label="${languageNameSpace.labels['ENLARGEMENT']}">
                         ${ENLARGEMENT_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
                     </optgroup>
-                    <optgroup label="${languageNameSpace.labels['OTHERCTR']}">
-                        ${OTHER_THIRD_COUNTRY_CODES.map(ctr => `<option value="${ctr}" ${REF.geos.includes(ctr) ? 'selected' : ''} data-i18n=${ctr}></option>`).join('')}
-                    </optgroup>    
+                
             `;
         } else {
 

@@ -390,9 +390,9 @@
     "FR": "Sélectionner l'unité"
   },
   "AGGREGATE": {
-    "EN": "Aggregates",
-    "DE": "Aggregate",
-    "FR": "Agrégats"
+    "EN": "Aggregate",
+    "DE": "Aggregat",
+    "FR": "agrégat"
   },
   "EUCTR": {
     "EN": "EU countries",
@@ -870,5 +870,10 @@
     "EN": "Next",
     "FR": "Suivant",
     "DE": "Weiter"
+  },
+  "DB": {
+    "EN": "Dataset",
+    "DE": "Datensatz",
+    "FR": "Jeu de données"
   }
 }
