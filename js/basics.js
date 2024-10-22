@@ -98,13 +98,9 @@ function removeAuxiliarBarGraphOptions() {
   auxiliarBarGraphOptions.removeFromDOM();
   hideAuxChartBtns();
 
-  const table = document.getElementsByClassName("highcharts-data-table")[0]; // Assuming you want the first element with the specified class
-  const chart = document.getElementById("chart");
+  // closeTable()
 
-  if(table){
-    table.style.display = table.style.display === "none" ? "block" : "none";
-  }    
-    chart.style.display === "block"
+
 
 
   enmonthly();
@@ -431,10 +427,10 @@ function getTitle() {
       subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
       break;
     default:    
-    chartTitle = `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal} - ${languageNameSpace.labels['rwTitle']}</span>`;
+    chartTitle = `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal}</span>`;
     title = `<b>${country}</b> - ${dataset}`;
     if(REF.dataset == "nrg_cb_pem_RW") {
-      subtitle = `${nrg_bal} - ${languageNameSpace.labels['rwTitle']}`;   
+      subtitle = `${nrg_bal} `;   
     } else {
       subtitle = `${nrg_bal}`;   
     }

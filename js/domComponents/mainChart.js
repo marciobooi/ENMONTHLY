@@ -140,7 +140,7 @@ class HighchartsChart {
       
           series: [
             {
-              name: languageNameSpace.labels['Nrw'],
+              name: languageNameSpace.labels['nrw'],
               data: val,
               type: "spline",
               zIndex: 1,

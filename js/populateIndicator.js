@@ -88,10 +88,15 @@
         REF.siec = codesDataset[REF.dataset].defaultSiec
         REF.unit = codesDataset[REF.dataset].defaultUnit
 
-        populateFlow(); 
-        populateFuel(); 
-        populateUnit();         
-        enmonthly()
+     
+
+      
+          populateFlow(); 
+          populateFuel(); 
+          populateUnit();     
+          enmonthly()
+    
+       
     });
   
     const singleSelectHTML = singleSelect.createSingleSelect();

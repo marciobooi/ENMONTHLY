@@ -201,8 +201,13 @@ class ChartControls {
 		embebedeChart.setClickHandler(function() {
 			exportIframe();
 		});
-		closeChart.setClickHandler(function() {
+		closeChart.setClickHandler(function() {		
 		  removeAuxiliarBarGraphOptions();
+		  closeTable()	
+		  $("#infoBtn").prop("disabled", false);
+		  $("#downloadBtn").prop("disabled", false);
+		  $("#shareChart").prop("disabled", false);
+		  $("#embebedBtn").prop("disabled", false);
 		});
 
 		renewButton.setClickHandler(function() {
