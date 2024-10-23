@@ -40,10 +40,18 @@ class Singleselect {
 
             // Sort optionsArray
             const sortedOptionsArray = this.optionsArray.sort((a, b) => {
+                // Check if either a or b is "TOTAL" and prioritize it
+                if (a === "TOTAL") return -1; // Move "TOTAL" to the top
+                if (b === "TOTAL") return 1;  // Keep "TOTAL" on top
+            
+                // Get the labels or default to the values themselves
                 const labelA = languageNameSpace.labels[a] !== undefined ? languageNameSpace.labels[a] : a;
                 const labelB = languageNameSpace.labels[b] !== undefined ? languageNameSpace.labels[b] : b;
+            
+                // Perform the locale compare for other values
                 return labelA.localeCompare(labelB);
             });
+            
 
             // For other elementIds, create options based on the provided sorted optionsArray
              optionsHTML = sortedOptionsArray.map(option => `
