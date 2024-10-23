@@ -422,9 +422,9 @@ function getTitle() {
       subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${time} - ${nrg_bal}</span>`;
       break;
     case "barChart":
-      chartTitle = `${dataset}<br><span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
+      chartTitle = `${dataset}<br><span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["TOTAL"]}</span>`;
       title = `${dataset}`;
-      subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["total"]}</span>`;
+      subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["TOTAL"]}</span>`;
       break;
     default:    
     chartTitle = `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal}</span>`;
