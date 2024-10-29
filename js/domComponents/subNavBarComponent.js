@@ -34,7 +34,7 @@ class SubNavbar {
               <ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="INFO">
               <button class="dropdown-item ecl-link" role="menuitem" onclick="tutorial()" data-i18n-labelledby="TUTORIAL" value="Tutorial" data-i18n="TUTORIAL"></button>
               <button class="dropdown-item ecl-link" role="menuitem" onclick="openMeta()" data-i18n-labelledby="META" value="metadata" data-i18n="META"></button>
-              <button class="dropdown-item ecl-link" role="menuitem" onclick="mailContact()" data-i18n-labelledby="FEED" value="Feedback" data-i18n="FEED"></button>
+              <button class="dropdown-item ecl-link" role="menuitem" onclick="socialNameSpace.email()" data-i18n-labelledby="FEED" value="Feedback" data-i18n="FEED"></button>
             </ul>
             
                 </li>
@@ -142,7 +142,7 @@ class SubNavbar {
             <ul class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="INFOBTN">
               <button class="dropdown-item" role="menuitem" onclick="tutorial()" data-i18n-label="TUTORIAL" value="Tutorial" data-i18n="TUTORIAL"></button>
               <button class="dropdown-item" role="menuitem" onclick="openMeta()" data-i18n-label="META" value="metadata" data-i18n="META"></button>
-              <button class="dropdown-item" role="menuitem" onclick="mailContact()" data-i18n-label="FEED" value="Feedback" data-i18n="FEED"></button>
+              <button class="dropdown-item" role="menuitem" onclick="socialNameSpace.email()" data-i18n-label="FEED" value="Feedback" data-i18n="FEED"></button>
             </ul>
             
               </li>

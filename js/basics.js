@@ -80,10 +80,6 @@ function exportXlsChart() { $("#chart").highcharts().downloadXLS()};
 function exportCsvChart() { $("#chart").highcharts().downloadCSV()};
 
 
-function mailContact() {
-  document.location = "mailto:ESTAT-ENERGY@ec.europa.eu?subject=ENERGY%20PRICES%20CONTACT&body=" +
-  encodeURIComponent(window.location.href);
-}
 
 function exportTable() {
   window.open('data:application/vnd.ms-excel,' + encodeURIComponent($('.highcharts-data-table').html()));

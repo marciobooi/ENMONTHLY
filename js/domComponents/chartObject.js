@@ -123,7 +123,7 @@ class Chart {
                 };                    
                 // Default label for unknown chart types
                 const defaultLabel = languageNameSpace.labels["YEAR"];  
-                log(chartLabels[REF.chartId])
+
                 const label = chartLabels[REF.chartId] || defaultLabel;
                 return label;                   
                 } else {

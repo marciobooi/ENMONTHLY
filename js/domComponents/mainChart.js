@@ -276,6 +276,7 @@ class HighchartsChart {
             ],
           },
           exporting: {      
+            filename: "Enegy Monthly - " + REF.geos,
             enabled: false,
             allowHTML: true,
             sourceWidth: 1200,
