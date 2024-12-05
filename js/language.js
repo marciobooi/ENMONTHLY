@@ -80,7 +80,7 @@ var languageNameSpace = {
 
       getTitle();
 
-   
+      document.documentElement.lang = language.toLowerCase();
   
   
   
