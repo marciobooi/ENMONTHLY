@@ -82,7 +82,7 @@ var languageNameSpace = {
 
       document.documentElement.lang = language.toLowerCase();
   
-  
+      enableTooltips()
   
   
   

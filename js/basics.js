@@ -444,15 +444,28 @@ function getTitle() {
   return chartTitle;
 }
 
+
+
 function credits() {
   const dataset = REF.dataset === "nrg_cb_pem_RW" ? "nrg_cb_pem" : REF.dataset;
-  const chartCredits = `<span style="font-size: .75rem;">${languageNameSpace.labels["CREDITS"]} - </span>
-  <a style="color:blue; text-decoration: underline; font-size: .75rem;"
-  href="https://ec.europa.eu/eurostat/databrowser/view/${dataset}/default/table?lang=${REF.language}">${languageNameSpace.labels['DB']}</a>,
-  <span style="font-size: .875rem;">                           
-</span>`;
+  const datasetURL = `https://ec.europa.eu/eurostat/databrowser/view/${dataset}/default/table?lang=${REF.language}`;
 
-  return chartCredits
+  // Return SVG-compatible credits text
+  return `
+    <tspan id="credits" style="font-size: 0.9rem;">
+      ${languageNameSpace.labels["CREDITS"]} -
+      <tspan
+        tabindex="0"
+        role="link"
+        aria-label="Eurostat dataset link: ${datasetURL}"
+        title="Eurostat dataset link"
+        style="cursor: pointer; fill: blue; text-decoration: underline;"
+        onclick="window.open('${datasetURL}', '_blank')"
+      >
+        ${languageNameSpace.labels['DB']}
+      </tspan>
+    </tspan>
+  `;
 }
 
 
@@ -615,3 +628,88 @@ function toggleBtns() {
   
     }
 
+    // function to show tooltip on keyboard
+function enableTooltips() {
+  // Select all button elements with data-i18n-title or data-i18n-label attributes
+  const buttons = document.querySelectorAll("button[title], button[aria-label]");
+  buttons.forEach((button) => {  
+    // Get the tooltip content from data-i18n-title or data-i18n-label
+    const tooltipText =
+      button.getAttribute("title") || button.getAttribute("aria-label");
+    if (!tooltipText) return; // Skip if neither attribute exists
+
+    // Create tooltip element
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+    tooltip.textContent = tooltipText; // Add the content
+    document.body.appendChild(tooltip);
+
+    // Position tooltip
+    const positionTooltip = (element) => {
+      const rect = element.getBoundingClientRect();
+      tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
+      tooltip.style.top = `${rect.top - tooltip.offsetHeight - 8}px`;
+    };
+
+    // Show tooltip
+    const showTooltip = (event) => {
+      tooltip.classList.add("visible");
+      positionTooltip(event.target);
+    };
+
+    // Hide tooltip
+    const hideTooltip = () => {
+      tooltip.classList.remove("visible");
+    };
+
+    // Event listeners for both mouse and keyboard interactions
+    button.addEventListener("mouseover", showTooltip);
+    button.addEventListener("mouseout", hideTooltip);
+    button.addEventListener("focus", showTooltip); // For keyboard focus
+    button.addEventListener("blur", hideTooltip); // Hide on blur
+  });
+}
+
+
+
+  function observeAriaHidden() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "attributes" && mutation.attributeName === "aria-hidden") {
+          const target = mutation.target;
+          if (target.tagName === "svg" && target.getAttribute("aria-hidden") === "false") {
+            // Remove or correct the attribute
+            target.removeAttribute("aria-hidden");
+            console.log("Corrected aria-hidden on:", target);
+          }
+        }
+      });
+    });
+  
+    // Observe the entire document for changes
+    observer.observe(document.body, {
+      attributes: true,
+      subtree: true,
+    });
+  }
+  
+  // Initialize the observer
+  document.addEventListener("DOMContentLoaded", observeAriaHidden);
+
+
+  function updateAccessibilityLabels() {
+
+    const elements = document.querySelectorAll('.highcharts-a11y-proxy-element');
+    elements.forEach((element) => {
+      let ariaLabel = element.getAttribute('aria-label');
+      if (ariaLabel && (ariaLabel.includes("Show") || ariaLabel.includes("Anzeigen") || ariaLabel.includes("Afficher"))) {
+        const updatedLabel = ariaLabel
+          .replace(/Show/g, translationsCache["SHOW"])
+          .replace(/Anzeigen/g, translationsCache["SHOW"])
+          .replace(/Afficher/g, translationsCache["SHOW"]);
+        element.setAttribute('aria-label', updatedLabel);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', updateAccessibilityLabels);

@@ -7,7 +7,7 @@
   box-shadow: rgb(50 50 93 / 25%) 8px 5px 12px -2px, rgb(0 0 0 / 30%) 4px 8px 7px -3px;
   width: 95vw;
   /* height: 18vh; */
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .dropdownBtnGroup {
@@ -199,22 +199,6 @@ a.dropdown-item.selected {
   display: none !important;
 }
 
-.close-chart-menu-btn {
-  display: flex;
-  border: none;
-  font-size: 31px;
-  color: #000;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background-color: transparent;
-  border-color: var(--bs-btn-active-border-color);
-  width: 2rem;
-  height: 2rem;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
 
 
 /* .fa-times:before {
@@ -222,30 +206,7 @@ a.dropdown-item.selected {
   -webkit-text-stroke: 1.8px #f3f6fc;
 } */
 
-.close-chart-menu-btn:focus {
-  outline: none;
-}
 
-.close-chart-menu-btn:hover {
-  color: white;
-  background-color: transparent;
-  border-color: var(--bs-btn-hover-border-color);
-}
-
-.close-chart-menu-btn span {
-  display: inline-block;
-  width: 30px;
-}
-
-.close-chart-menu-btn:hover span {
-  background-color: #aaa;
-  color: #fff;
-}
-
-.close-chart-menu-btn:focus span {
-  background-color: #aaa;
-  color: #fff;
-}
 
 
 .traped_focus:focus {

@@ -871,6 +871,11 @@
     "FR": "Suivant",
     "DE": "Weiter"
   },
+  "SHOW": {
+    "EN": "Show",
+    "DE": "Anzeigen",
+    "FR": "Afficher"
+  },
   "DB": {
     "EN": "Dataset",
     "DE": "Datensatz",

@@ -16,7 +16,7 @@ class ChartControls {
 				<h6 id="subtitle" class="subtitle auxSubtitle"></h6>
 			  </div>
 			  <div class="menu">
-				<ul id="chartBtns" role="menubar" aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
+				<ul id="chartBtns"  aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
 					<div class="groupOne">
 						<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
 						<li class="nav-item button px-1" id="togglePieChart" role="none"></li>
@@ -49,7 +49,7 @@ class ChartControls {
 		</button>
 		
 			<div class="menu d-none">
-			  <ul id="chartBtns" role="menubar" aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
+			  <ul id="chartBtns"  aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
 				
 			 	<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
 				<li class="nav-item button px-1" id="togglePieChart" role="none"></li>
@@ -115,6 +115,19 @@ class ChartControls {
 		  toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
 		  toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE');
 		  $('.ecl-button').not('button#tb-togle-table').not('#toggleTableBtn').not('#btnCloseModalChart').prop('disabled', true);		
+		  
+		 
+		 
+		  const charts = ["barChart", "pieChart"];  
+		  charts.forEach(chart => {
+			  $("#" + chart).attr("disabled", "disabled")
+			  $("#" + chart).attr("aria-disabled", "true")
+		  })
+		 
+		  $("#"+REF.chartId).addClass('highlighDisbleBtn');
+		 
+		 
+		 
 		  openVizTable()
 		  setTimeout(() => {
             const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
@@ -133,6 +146,7 @@ class ChartControls {
 			toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
 			toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE'); 
 		  $('.ecl-button').not('button#tb-togle-table').prop('disabled', false);
+		  $("#"+REF.chartId).removeClass('highlighDisbleBtn');
 		  closeTable()
 		  disableChatOptionsBtn(REF.chartId)
 		}
@@ -155,7 +169,7 @@ class ChartControls {
 		const downloadChart = new Button("downloadBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "DOWNLOAD_CHART_IMAGE", "false");
 		const downloadExcel = new Button("excelBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "DOWNLOAD_XLS", "false");
 		const embebedeChart = new Button("embebedBtn", ["ecl-button", "ecl-button--primary", "round-btn"], "SHARE", "false");
-		const closeChart = new Button("btnCloseModalChart", ["ecl-button", "ecl-button--primary", "round-btn"], "CLOSE", "false");
+		const closeChart = new Button("btnCloseModalChart", ["ecl-button", "ecl-button--primary", "round-btn", "close-chart-menu-btn"], "CLOSE", "false");
 		const percentageButton = new Button("tb-togle-percentage", ["ecl-button", "ecl-button--primary", "round-btn"], "SHOW_PERCENTAGE", "", "true");		
 		const tableButton = new Button("tb-togle-table", ["ecl-button", "ecl-button--primary", "round-btn"], "SHOW_TABLE", "", "true");
 		const detailsButton = new Button("tb-togle-details", ["ecl-button", "ecl-button--primary", "round-btn"], "DETAILS", "", "true");    
@@ -317,14 +331,17 @@ class ChartControls {
 	}
   }
   
+
   function disableChatOptionsBtn(chart) {
 	REF.chartId = chart;  
 	const charts = ["barChart", "pieChart", "lineChart"];  
 	charts.forEach(chart => {
 	  if (REF.chartId == chart) {
 		$("#" + chart).attr("disabled", "disabled");
+		$("#" + chart).attr("aria-disabled", "true")
 	  } else {
 		$("#" + chart).removeAttr("disabled");
+		$("#" + chart).attr("aria-disabled")
 	  }
 	});
   }

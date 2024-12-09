@@ -30,15 +30,6 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-hr {
-  height: 0.88rem;
-  width: 0.1vw;
-  border-width: 0;
-  background-color: var(--main-color);
-  margin-top: 22px;
-  opacity: 1;
-}
-
 
 .ecl-link {
   text-decoration: none;
@@ -46,5 +37,12 @@ hr {
   font-size: 16px;
 }
 
+.ecl-site-footer__list-item a {
+  border-right: 1px solid #0e47cb;
+  padding: 0.3rem 1rem;
+}
 
+.ecl-site-footer__list-item:last-child a {
+  border-right: none
+}
 
