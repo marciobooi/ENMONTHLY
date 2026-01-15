@@ -12,26 +12,26 @@ select#lang-selection {
   color: var(--main-color);
 }
 
-#lang-section>button>i {
+#navbar-container #lang-section>button>i {
   padding-right: 10px;
 }
 
-#lang-section>button>i {
+#navbar-container #lang-section>button>i {
   line-height: 20px;
 }
 
-#lang-section {
+#navbar-container #lang-section {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#toggleLanguageBtn {
+#navbar-container #toggleLanguageBtn {
   position: relative;
 }
 
-#language-list-overlay {
+#navbar-container #language-list-overlay {
   position: absolute;
   top: 40px;
   z-index: 99999999999;
@@ -47,24 +47,24 @@ select:focus option:focus {
   background-color: #eaf2ff;
 }
 
-.ecl-site-header__language-container {
+#navbar-container .ecl-site-header__language-container {
   display: none;
 }
 
-.ecl-site-header__language-container.visible {
+#navbar-container .ecl-site-header__language-container.visible {
   display: block;
 }
 
-.ecl-site-header__language-title {
+#navbar-container .ecl-site-header__language-title {
   font: normal normal 400 1.125rem/1.75rem arial, sans-serif;
   color: black
 }
 
-.ecl-site-header__language-link {
+#navbar-container .ecl-site-header__language-link {
   cursor: pointer;
 }
 
-#es_app_header {
+#navbar-container #es_app_header {
   display: grid;
   grid-template-columns: auto 250px 300px 190px;
   min-height: 70px;
@@ -73,23 +73,23 @@ select:focus option:focus {
   margin: 0 !important;
 }
 
-.es_app_top {
+#navbar-container .es_app_top {
   padding: 0rem 1rem !important;
   background-color: #082B7A;
   background: linear-gradient(125deg, #082b7a 35%, #AFDFE9 75%, white 100%);
 }
 
-.es_app_top {
+#navbar-container .es_app_top {
   height: 21vh;
   min-height: 99px;
   max-height: 99px;
 }
 
-#es_app_header_ribbon img {
+#navbar-container #es_app_header_ribbon img {
   max-height: 99px;
 }
 
-#header-title-label {
+#navbar-container #header-title-label {
   font-weight: 1000;
   line-height: 100%;
   margin-bottom: 0;
@@ -106,21 +106,21 @@ select:focus option:focus {
   white-space: nowrap;
 }
 
-#es_app_header_ribbon img {
+#navbar-container #es_app_header_ribbon img {
   max-height: 99px;
 }
 
-.es_logo {
+#navbar-container .es_logo {
   max-height: 26px;
 }
 
-.d-inline {
+#navbar-container .d-inline {
   display: inline !important;
 }
 
-span.ecl-link.ecl-site-header__language-link {
+#navbar-container span.ecl-link.ecl-site-header__language-link {
   text-decoration: none !important;
-}
+} 
 
 @media (min-width: 768px) and (max-width: 1200px) {
   #header-title-label {
@@ -153,14 +153,14 @@ span.ecl-link.ecl-site-header__language-link {
     margin-top: 0px;
   }
 
-  #es_app_header {
+  #navbar-container #es_app_header {
     max-width: 540px;
     height: 100%;
     grid-template-columns: auto 80px 0 143px;
     justify-content: center;
   }
 
-  #es_app_header_ribbon {
+  #navbar-container #es_app_header_ribbon {
     display: none;
   }
 
@@ -168,16 +168,16 @@ span.ecl-link.ecl-site-header__language-link {
     display: none;
   }
 
-  #toggleLanguageBtn {
+  #navbar-container #toggleLanguageBtn {
     width: 2.5rem;
     height: 2.5rem;
   }
 
-  .es_logo {
+  #navbar-container .es_logo {
     max-height: 18px;
   }
 
-  #language-list-overlay {
+  #navbar-container #language-list-overlay {
     position: absolute;
     top: 40px;
     left: -72px;
@@ -186,24 +186,24 @@ span.ecl-link.ecl-site-header__language-link {
 }
 
 @media (max-width: 576px) {
-  .es_app_top {
+  #navbar-container .es_app_top {
     min-height: 70px;
     max-height: 70px;
     background: rgba(0, 0, 0, 0) linear-gradient(280deg, #F6FAFC 0%, #AFDFE9 51%, #3E639D 73%, #122A75 90%, #082B7A 100%) 0% 0% no-repeat padding-box;
   }
 
-  #header-title-label {
+  #navbar-container #header-title-label {
     font-size: 1.5rem;
     text-shadow: 0px 0px 2px #000;
   }
 
-  #es_app_header {
+  #navbar-container #es_app_header {
     height: 100%;
     grid-template-columns: auto 80px 0 143px;
     justify-content: center;
   }
 
-  #es_app_header_ribbon {
+  #navbar-container #es_app_header_ribbon {
     display: none;
   }
 
@@ -211,16 +211,16 @@ span.ecl-link.ecl-site-header__language-link {
     display: none;
   }
 
-  #toggleLanguageBtn {
+  #navbar-container #toggleLanguageBtn {
     width: 2.5rem;
     height: 2.5rem;
   }
 
-  .es_logo {
+  #navbar-container .es_logo {
     max-height: 18px;
   }
 
-  #language-list-overlay {
+  #navbar-container #language-list-overlay {
     position: absolute;
     top: 40px;
     left: -72px;

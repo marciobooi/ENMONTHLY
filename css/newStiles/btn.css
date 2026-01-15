@@ -8,7 +8,7 @@
 
 
 
-#menu {
+#subnavbar-container #menu {
     position: relative;
     padding: 0.2rem !important;
     margin-left: 2rem;
@@ -47,7 +47,7 @@ span.iconText {
     font-size: 1.3em;
 }
 
-#chartBtns {
+#subnavbar-container #chartBtns {
     display: flex;
     justify-content: flex-end;
 }
@@ -96,7 +96,7 @@ span.agregates.fa-stack.fa-rotate-180 {
     list-style-type: none;
 }
 
-#menuSwitch {
+#subnavbar-container #menuSwitch {
     display: flex;
 }
 
@@ -181,7 +181,7 @@ ul#floatingMenu {
   
 
 
-  .close-button-container {
+  #subnavbar-container .close-button-container {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -197,7 +197,7 @@ ul#floatingMenu {
     padding: 1rem;
 }
 
-#toggleLanguageBtn:focus {
+#navbar-container #toggleLanguageBtn:focus {
     box-shadow: 0 2px 4px rgb(167 186 231 / 19%), 0 0 10px rgb(167 186 231 / 19%), 0 4px 5px rgb(167 186 231 / 19%), 0 -4px 4px rgb(167 186 231 / 19%);
     text-decoration: none;
     color: white !important;
@@ -206,7 +206,7 @@ ul#floatingMenu {
     color: var(--c-d) !important;
 }
 
-button#menu:focus, button#menu:active {
+#subnavbar-container button#menu:focus, #subnavbar-container button#menu:active {
     background-color: #f3f6fc !important;
     height: 4rem;
     align-items: center;
