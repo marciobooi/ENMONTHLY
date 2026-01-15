@@ -628,46 +628,14 @@ function toggleBtns() {
   
     }
 
-    // function to show tooltip on keyboard
+    // Tooltips are handled by the new TooltipManager in `js/tooltip.js`.
+// Provide a thin wrapper to preserve the existing API used across the codebase.
 function enableTooltips() {
-  // Select all button elements with data-i18n-title or data-i18n-label attributes
-  const buttons = document.querySelectorAll("button[title], button[aria-label]");
-  buttons.forEach((button) => {  
-    // Get the tooltip content from data-i18n-title or data-i18n-label
-    const tooltipText =
-      button.getAttribute("title") || button.getAttribute("aria-label");
-    if (!tooltipText) return; // Skip if neither attribute exists
-
-    // Create tooltip element
-    const tooltip = document.createElement("div");
-    tooltip.className = "tooltip";
-    tooltip.textContent = tooltipText; // Add the content
-    document.body.appendChild(tooltip);
-
-    // Position tooltip
-    const positionTooltip = (element) => {
-      const rect = element.getBoundingClientRect();
-      tooltip.style.left = `${rect.left + rect.width / 2 - tooltip.offsetWidth / 2}px`;
-      tooltip.style.top = `${rect.top - tooltip.offsetHeight - 8}px`;
-    };
-
-    // Show tooltip
-    const showTooltip = (event) => {
-      tooltip.classList.add("visible");
-      positionTooltip(event.target);
-    };
-
-    // Hide tooltip
-    const hideTooltip = () => {
-      tooltip.classList.remove("visible");
-    };
-
-    // Event listeners for both mouse and keyboard interactions
-    button.addEventListener("mouseover", showTooltip);
-    button.addEventListener("mouseout", hideTooltip);
-    button.addEventListener("focus", showTooltip); // For keyboard focus
-    button.addEventListener("blur", hideTooltip); // Hide on blur
-  });
+  if (typeof tooltipManager !== 'undefined' && tooltipManager && typeof tooltipManager.enable === 'function') {
+    tooltipManager.enable();
+  } else {
+    console.warn('TooltipManager not available when calling enableTooltips()');
+  }
 }
 
 

@@ -90,6 +90,26 @@ var languageNameSpace = {
     },
 
 
+  // Translate attributes for a single element set with data-i18n-* keys
+  translateElementAttributes: function (el) {
+    if (!el || !el.getAttribute) return;
+    const labelKey = el.getAttribute('data-i18n-label');
+    if (labelKey) {
+      el.setAttribute('aria-label', languageNameSpace.labels[labelKey] || labelKey);
+    }
+    const titleKey = el.getAttribute('data-i18n-title');
+    if (titleKey) {
+      el.setAttribute('title', languageNameSpace.labels[titleKey] || titleKey);
+    }
+  },
+
+  // Translate all elements matching a selector (useful after dynamic changes)
+  translateSelector: function (selector) {
+    document.querySelectorAll(selector).forEach(el => {
+      languageNameSpace.translateElementAttributes(el);
+    });
+  },
+
   ChangeLanguage: function (val) {
     REF.language = val;
     languageNameSpace.initLanguage(REF.language);

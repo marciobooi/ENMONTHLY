@@ -37,6 +37,9 @@ class FloatingChartControls {
     if (tableIcon.style.display === 'none') {
 		  toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
 		  toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE');
+      if (typeof languageNameSpace !== 'undefined' && languageNameSpace.translateElementAttributes) {
+        languageNameSpace.translateElementAttributes(toggleButton);
+      }
       openVizTable()
     setTimeout(() => {
             const thElements = document.querySelectorAll('thead > tr:nth-child(2) > th');
@@ -55,6 +58,9 @@ class FloatingChartControls {
     } else {
 		  toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
 		  toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE');   
+      if (typeof languageNameSpace !== 'undefined' && languageNameSpace.translateElementAttributes) {
+        languageNameSpace.translateElementAttributes(toggleButton);
+      }
       closeTable()
     }
   }
@@ -143,6 +149,9 @@ class FloatingChartControls {
 
     document.getElementById("togglePercentage").appendChild(percentageElement);
     document.getElementById("toggleTable").appendChild(tableElement);
+    if (typeof languageNameSpace !== 'undefined' && languageNameSpace.translateElementAttributes) {
+      languageNameSpace.translateElementAttributes(tableElement);
+    }
     document.getElementById("toggleDetails").appendChild(detailsElement);
     document.getElementById("toggleRenuewbles").appendChild(renewElement);
 

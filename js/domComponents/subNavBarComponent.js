@@ -86,7 +86,7 @@ class SubNavbar {
                   </button>
                 </li> -->
                 <li class="nav-item button px-1" id="embebedChart" >
-                <button id="embebedBtn" data-i18n-title="EMBED_CHART_IFRAME" type="button" class="ecl-button ecl-button--primary round-btn" data-i18n-label="EMBEDDED" onclick="exportIframe()">
+                <button id="embebedBtn" data-i18n-title="EMBEDDED" type="button" class="ecl-button ecl-button--primary round-btn" data-i18n-label="EMBEDDED" onclick="exportIframe()">
                   <i class="fas fa-code"></i>
                 </button>
               </li>

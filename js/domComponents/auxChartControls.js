@@ -114,9 +114,9 @@ class ChartControls {
 		if (tableIcon.style.display === 'none') {
 		  toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
 		  toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE');
-		  $('.ecl-button').not('button#tb-togle-table').not('#toggleTableBtn').not('#btnCloseModalChart').prop('disabled', true);		
-		  
-		 
+      if (typeof languageNameSpace !== 'undefined' && languageNameSpace.translateElementAttributes) {
+        languageNameSpace.translateElementAttributes(toggleButton);
+      }
 		 
 		  const charts = ["barChart", "pieChart"];  
 		  charts.forEach(chart => {
@@ -145,6 +145,9 @@ class ChartControls {
 		} else {
 			toggleButton.setAttribute('data-i18n-label', 'SHOW_TABLE');
 			toggleButton.setAttribute('data-i18n-title', 'SHOW_TABLE'); 
+      if (typeof languageNameSpace !== 'undefined' && languageNameSpace.translateElementAttributes) {
+        languageNameSpace.translateElementAttributes(toggleButton);
+      }
 		  $('.ecl-button').not('button#tb-togle-table').prop('disabled', false);
 		  $("#"+REF.chartId).removeClass('highlighDisbleBtn');
 		  closeTable()
@@ -298,8 +301,9 @@ class ChartControls {
 
 			document.getElementById("togglePercentage").appendChild(percentageElement);
 			document.getElementById("toggleTable").appendChild(tableElement);
-			document.getElementById("toggleDetails").appendChild(detailsElement);
-			document.getElementById("toggleRenuewbles").appendChild(renewElement);
+    if (typeof languageNameSpace !== 'undefined' && languageNameSpace.translateElementAttributes) {
+      languageNameSpace.translateElementAttributes(tableElement);
+    }
 
 			document.getElementById("togglePercentage").style.display = showHideValue;
 			document.getElementById("toggleDetails").style.display = showHideValue;
