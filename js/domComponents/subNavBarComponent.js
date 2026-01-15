@@ -243,7 +243,6 @@ class SubNavbar {
       this.menuButton.addEventListener("click", () => {
         this.toggleChartOptionsMenu();
         // $('#menu').css({"background-color": "#f3f6fc", "color": "#0e47cb"});
-        trapTab();
       });
 
       this.closeChartMenuBtn =
@@ -259,11 +258,37 @@ class SubNavbar {
   toggleMenu(button, menu, menuClass) {
     menu.classList.toggle(menuClass);
     button.classList.toggle("menuOpen");
+
+    // If this is the chart options menu, activate/deactivate keyboard trap
+    if (menu.id === 'chartOptionsMenu') {
+      if (menu.classList.contains(menuClass)) {
+        // opened
+        try { trapTab(); } catch(e) { /* trapTab may not be available yet */ }
+      } else {
+        // closed - remove handlers
+        try {
+          $('#subnavbar-container #chartOptionsMenu').off('.trap');
+          $(document).off('.trap');
+          $('#subnavbar-container #menu').off('.trap');
+        } catch(e) {}
+      }
+    }
   }
 
   toggleChartOptionsMenu() {
     this.chartOptionsMenu.classList.toggle("toggleMenu");
     this.chartMenuOpen.classList.toggle("menuOpen");
+
+    // if opened, activate trap, else remove handlers
+    if (this.chartOptionsMenu.classList.contains('toggleMenu')) {
+      try { trapTab(); } catch(e) {}
+    } else {
+      try {
+        $('#subnavbar-container #chartOptionsMenu').off('.trap');
+        $(document).off('.trap');
+        $('#subnavbar-container #menu').off('.trap');
+      } catch(e) {}
+    }
   }
 
   addToDOM(targetElement) {
