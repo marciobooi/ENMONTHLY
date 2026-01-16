@@ -375,7 +375,9 @@ class HighchartsChart {
       }
     }
 
-    creditsWrapper.setAttribute('role', 'contentinfo');
+    // Use role="note" for chart-level supplementary info to avoid nested page-level landmarks
+    creditsWrapper.setAttribute('role', 'note');
+    creditsWrapper.setAttribute('aria-label', 'Chart credits');
     creditsWrapper.setAttribute('aria-live', 'polite');
     creditsWrapper.innerHTML = creditsText;
 

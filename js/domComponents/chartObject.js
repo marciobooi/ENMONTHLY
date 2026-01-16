@@ -170,7 +170,9 @@ class Chart {
         }
       }
 
-      creditsWrapper.setAttribute('role', 'contentinfo');
+      // This is supplementary chart-level info; use role="note" rather than a page-level landmark
+      creditsWrapper.setAttribute('role', 'note');
+      creditsWrapper.setAttribute('aria-label', 'Chart credits');
       creditsWrapper.setAttribute('aria-live', 'polite');
       creditsWrapper.innerHTML = this.creditsText;
 
