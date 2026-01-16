@@ -10,10 +10,25 @@ function exportIframe() {
 
     ECL.autoInit();
 
+    // Add event listener for when modal closes (including ESC key and backdrop click)
+    modal.addEventListener('close', function handleModalClose() {
+        const infoBtn = document.getElementById('infoBtn');
+        if (infoBtn) {
+            infoBtn.focus();
+        }
+        // Remove event listener after it fires to prevent memory leaks
+        modal.removeEventListener('close', handleModalClose);
+    }, { once: true });
+
 }
 
 function closeModalUrl(params) {
     REF.share = false
+    // Return focus to the info button when modal closes
+    const infoBtn = document.getElementById('infoBtn');
+    if (infoBtn) {
+        infoBtn.focus();
+    }
 }
 
 

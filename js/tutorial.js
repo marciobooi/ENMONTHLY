@@ -183,7 +183,11 @@ function tutorial(buttonTimer) {
 function closeTutorial() {
 	buttonTimer = setTimeout("introJs().exit()", 4000);	
 	isOpen = false
-	$('button#infoBtn').focus();
+	// Return focus to the info button
+	const infoBtn = document.getElementById('infoBtn');
+	if (infoBtn) {
+		infoBtn.focus();
+	}
 }
 
 btn = document.querySelector("body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a.introjs-button.introjs-nextbutton")

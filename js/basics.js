@@ -447,26 +447,32 @@ function getTitle() {
 
 
 function credits() {
-  const dataset = REF.dataset === "nrg_cb_pem_RW" ? "nrg_cb_pem" : REF.dataset;
+   const dataset = REF.dataset === "nrg_cb_pem_RW" ? "nrg_cb_pem" : REF.dataset;
   const datasetURL = `https://ec.europa.eu/eurostat/databrowser/view/${dataset}/default/table?lang=${REF.language}`;
 
-  // Return SVG-compatible credits text
+  // Return HTML (now that useHTML: true is enabled in credits)
   return `
-    <tspan id="credits" style="font-size: 0.9rem;">
-      ${languageNameSpace.labels["CREDITS"]} -
-      <tspan
+    <span id="credits" style="font-size: 0.9rem;">
+      ${languageNameSpace.labels["CREDITS"]} - 
+      <a 
+        href="${datasetURL}" 
+        target="_blank"
+        rel="noopener noreferrer"
         tabindex="0"
         role="link"
         aria-label="Eurostat dataset link: ${datasetURL}"
         title="Eurostat dataset link"
-        style="cursor: pointer; fill: blue; text-decoration: underline;"
-        onclick="window.open('${datasetURL}', '_blank')"
-      >
-        ${languageNameSpace.labels['DB']}
-      </tspan>
-    </tspan>
+        style="cursor: pointer; color: blue; text-decoration: underline;"
+      >${languageNameSpace.labels['DB']}</a>
+    </span>
   `;
 }
+
+
+
+
+
+
 
 
 function chartApiCall() {

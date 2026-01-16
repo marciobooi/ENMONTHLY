@@ -59,6 +59,7 @@ class Chart {
           padding: 0, 
         },
         credits: {
+          useHTML:true,
           text: this.creditsText,
           href: this.creditsHref,
           position:{
