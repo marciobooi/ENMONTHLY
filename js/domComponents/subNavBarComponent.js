@@ -24,38 +24,38 @@ class SubNavbar {
               </div>
             </div>
             <div class="col-3">
-            <ul id="chartBtns"  aria-label="Options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
+            <ul id="chartBtns" role="menubar" aria-label="Options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
                 
-                <li class="nav-item dropdown px-1" id="infoBtnChart" >
-                <button class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="INFO" data-i18n-title="INFO" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="true" id="infoBtn">
+                <li class="nav-item dropdown px-1" id="infoBtnChart" role="none">
+                <button role="menuitem" class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="INFO" data-i18n-title="INFO" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" id="infoBtn" aria-controls="infoBtnChart-menu">
                 <i class="fas fa-info"></i>
               </button>
               
-              <ul class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="INFO">
+              <ul id="infoBtnChart-menu" class="dropdown-menu dropdown-menu-end" role="menu" aria-labelledby="INFO">
               <button role="menuitem" class="dropdown-item ecl-link"  onclick="tutorial()" data-i18n-labelledby="TUTORIAL" value="Tutorial" data-i18n="TUTORIAL"></button>
               <button role="menuitem" class="dropdown-item ecl-link"  onclick="openMeta()" data-i18n-labelledby="META" value="metadata" data-i18n="META"></button>
               <button role="menuitem" class="dropdown-item ecl-link"  onclick="socialNameSpace.email()" data-i18n-labelledby="FEED" value="Feedback" data-i18n="FEED"></button>
             </ul>
             
                 </li>
-                <li class="nav-item dropdown px-1" id="downloadChart" >
-                <button class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="DOWNLOAD_CHART_IMAGE" data-i18n-title="DOWNLOAD_CHART_IMAGE" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="true" id="downloadBtn">
+                <li class="nav-item dropdown px-1" id="downloadChart" role="none">
+                <button role="menuitem" class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="DOWNLOAD_CHART_IMAGE" data-i18n-title="DOWNLOAD_CHART_IMAGE" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" id="downloadBtn" aria-controls="downloadChart-menu">
                 <i class="fas fa-download"></i>
               </button>
               
-              <ul class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="DOWNLOAD">
+              <ul id="downloadChart-menu" class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="DOWNLOAD">
               <button role="menuitem" class="dropdown-item ecl-link"  onclick="exportPngChart()" data-i18n-label="DOWNLOAD_PNG" data-i18n="DOWNLOAD_PNG"></button>
               <button role="menuitem" class="dropdown-item ecl-link"  onclick="exportJpegChart()" data-i18n-label="DOWNLOAD_JPEG" data-i18n="DOWNLOAD_JPEG"></button>
               <button role="menuitem" class="dropdown-item ecl-link"  onclick="exportXlsChart()" data-i18n-label="DOWNLOAD_XLS" data-i18n="DOWNLOAD_XLS"></button>
             </ul>
             
                 </li>     
-                <li class="nav-item dropdown px-1" id="social-media" >
-                <button class="ecl-button ecl-button--primary round-btn round-btn" type="button" data-i18n-label="SHARE" data-i18n-title="SHARE" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="true" id="shareChart">
+                <li class="nav-item dropdown px-1" id="social-media" role="none">
+                <button role="menuitem" class="ecl-button ecl-button--primary round-btn round-btn" type="button" data-i18n-label="SHARE" data-i18n-title="SHARE" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" id="shareChart" aria-controls="social-media-menu">
                 <i class="fas fa-share-alt" aria-hidden="true"></i>
               </button>
               
-              <ul role="menu" class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="SHARE">
+              <ul id="social-media-menu" class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="SHARE">
               <p id="SHARETITLE" class="ecl-social-media-share__description" style="font-weight: normal;" data-i18n="SHARE"></p>
               <button role="menuitem" class="dropdown-item ecl-link ecl-link--standalone"  onclick="socialNameSpace.twitter()" data-i18n-label="TWITTER">
               <span class="socialImg ecl-icon ecl-icon--m ecl-link__icon ecl-social-media-share__icon">
@@ -85,8 +85,8 @@ class SubNavbar {
                     <i class="fas fa-share-alt"></i>
                   </button>
                 </li> -->
-                <li class="nav-item button px-1" id="embebedChart" >
-                <button id="embebedBtn" data-i18n-title="EMBEDDED" type="button" class="ecl-button ecl-button--primary round-btn" data-i18n-label="EMBEDDED" onclick="exportIframe()">
+                <li class="nav-item button px-1" id="embebedChart" role="none">
+                <button role="menuitem" id="embebedBtn" data-i18n-title="EMBEDDED" type="button" class="ecl-button ecl-button--primary round-btn" data-i18n-label="EMBEDDED" onclick="exportIframe()">
                   <i class="fas fa-code"></i>
                 </button>
               </li>
@@ -132,46 +132,46 @@ class SubNavbar {
         
 
         <div class="chartMenuMobile toggleMenu">
-          <ul id="chartBtns"  aria-label="Options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
-              <li class="nav-item dropdown px-1" id="infoBtnChart" >
-              <button class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="INFO" data-bs-toggle="dropdown"  data-i18n-title="INFO" aria-haspopup="true" aria-expanded="true" id="infoBtn">
+          <ul id="chartBtns" role="menubar" aria-label="Options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
+              <li class="nav-item dropdown px-1" id="infoBtnChart" role="none">
+              <button role="menuitem" class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="INFO" data-bs-toggle="dropdown"  data-i18n-title="INFO" aria-haspopup="true" aria-expanded="false" id="infoBtn" aria-controls="infoBtnChart-menu">
               <i class="fas fa-info"></i>
             </button>
             
-            <ul class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="INFOBTN">
-              <button class="dropdown-item"  onclick="tutorial()" data-i18n-label="TUTORIAL" value="Tutorial" data-i18n="TUTORIAL"></button>
-              <button class="dropdown-item"  onclick="openMeta()" data-i18n-label="META" value="metadata" data-i18n="META"></button>
-              <button class="dropdown-item"  onclick="socialNameSpace.email()" data-i18n-label="FEED" value="Feedback" data-i18n="FEED"></button>
+            <ul id="infoBtnChart-menu" class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="INFOBTN">
+              <button role="menuitem" class="dropdown-item"  onclick="tutorial()" data-i18n-label="TUTORIAL" value="Tutorial" data-i18n="TUTORIAL"></button>
+              <button role="menuitem" class="dropdown-item"  onclick="openMeta()" data-i18n-label="META" value="metadata" data-i18n="META"></button>
+              <button role="menuitem" class="dropdown-item"  onclick="socialNameSpace.email()" data-i18n-label="FEED" value="Feedback" data-i18n="FEED"></button>
             </ul>
             
               </li>
-              <li class="nav-item dropdown px-1" id="downloadChart" >
-              <button class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="DOWNLOAD" data-bs-toggle="dropdown"  data-i18n-title="DOWNLOAD" aria-haspopup="true" aria-expanded="true" id="downloadBtn">
+              <li class="nav-item dropdown px-1" id="downloadChart" role="none">
+              <button role="menuitem" class="ecl-button ecl-button--primary round-btn" type="button" data-i18n-label="DOWNLOAD" data-bs-toggle="dropdown"  data-i18n-title="DOWNLOAD" aria-haspopup="true" aria-expanded="false" id="downloadBtn" aria-controls="downloadChart-menu">
               <i class="fas fa-download"></i>
             </button>
             
-            <ul class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="DOWNLOAD">
-              <button class="dropdown-item"  onclick="exportPngChart()" data-i18n-label="DOWNLOAD_PNG" data-i18n="DOWNLOAD_PNG"></button>
-              <button class="dropdown-item"  onclick="exportJpegChart()" data-i18n-label="DOWNLOAD_JPEG" data-i18n="DOWNLOAD_JPEG"></button>
-              <button class="dropdown-item"  onclick="exportXlsChart()" data-i18n-label="DOWNLOAD_XLS" data-i18n="DOWNLOAD_XLS"></button>
+            <ul id="downloadChart-menu" class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="DOWNLOAD">
+              <button role="menuitem" class="dropdown-item"  onclick="exportPngChart()" data-i18n-label="DOWNLOAD_PNG" data-i18n="DOWNLOAD_PNG"></button>
+              <button role="menuitem" class="dropdown-item"  onclick="exportJpegChart()" data-i18n-label="DOWNLOAD_JPEG" data-i18n="DOWNLOAD_JPEG"></button>
+              <button role="menuitem" class="dropdown-item"  onclick="exportXlsChart()" data-i18n-label="DOWNLOAD_XLS" data-i18n="DOWNLOAD_XLS"></button>
             </ul>
             
               </li>     
-              <li class="nav-item button px-1" id="embebedChart" >
-              <button id="embebedBtn" type="button" class="ecl-button ecl-button--primary round-btn" data-i18n-title="EMBEDDED" data-i18n-label="EMBEDDED" onclick="exportIframe()">
+              <li class="nav-item button px-1" id="embebedChart" role="none">
+              <button role="menuitem" id="embebedBtn" type="button" class="ecl-button ecl-button--primary round-btn" data-i18n-title="EMBEDDED" data-i18n-label="EMBEDDED" onclick="exportIframe()">
               <i class="fas fa-code"></i>
             </button>
             
               </li>
-              <li class="nav-item dropdown px-1" id="social-media-dropdown" >
-              <button class="ecl-button ecl-button--primary round-btn round-btn" type="button" data-i18n-label="SHARE" data-bs-toggle="dropdown"  data-i18n-title="SHARE" aria-haspopup="true" aria-expanded="true" id="shareChart1">
+              <li class="nav-item dropdown px-1" id="social-media-dropdown" role="none">
+              <button role="menuitem" class="ecl-button ecl-button--primary round-btn round-btn" type="button" data-i18n-label="SHARE" data-bs-toggle="dropdown"  data-i18n-title="SHARE" aria-haspopup="true" aria-expanded="false" id="shareChart1" aria-controls="social-media-menu">
               <i class="fas fa-share-alt" aria-hidden="true"></i>
             </button>
             
-            <ul class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="SHARE_CHART">
-              <button class="dropdown-item"  onclick="socialNameSpace.twitter()" data-i18n-label="TWITTER" data-i18n="TWITTER"></button>
-              <button class="dropdown-item"  onclick="socialNameSpace.facebook()" data-i18n-label="FACEBOOK" data-i18n="FACEBOOK"></button>
-              <button class="dropdown-item"  onclick="socialNameSpace.linkedin()" data-i18n-label="LINKEDIN" data-i18n="LINKEDIN"></button>
+            <ul id="social-media-menu" class="dropdown-menu dropdown-menu-end" role="menu" data-i18n-labelledby="SHARE_CHART">
+              <button role="menuitem" class="dropdown-item"  onclick="socialNameSpace.twitter()" data-i18n-label="TWITTER" data-i18n="TWITTER"></button>
+              <button role="menuitem" class="dropdown-item"  onclick="socialNameSpace.facebook()" data-i18n-label="FACEBOOK" data-i18n="FACEBOOK"></button>
+              <button role="menuitem" class="dropdown-item"  onclick="socialNameSpace.linkedin()" data-i18n-label="LINKEDIN" data-i18n="LINKEDIN"></button>
             </ul>
             </li>    
           </ul>
