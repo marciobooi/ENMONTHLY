@@ -113,14 +113,6 @@ function enmonthly(d = null) {
 
   const chart = new HighchartsChart("chart", val, seriesOne, valrw, seriesTwo, languageNameSpace, REF);
   chart.setOptions({
-    credits: {
-      text: credits(),
-      href: "",   
-      position: {
-        align: 'center',
-        y: .2
-    }         
-    },
     title: {
       text: getTitle(),
     },

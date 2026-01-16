@@ -654,7 +654,7 @@ function enableTooltips() {
           if (target.tagName === "svg" && target.getAttribute("aria-hidden") === "false") {
             // Remove or correct the attribute
             target.removeAttribute("aria-hidden");
-            console.log("Corrected aria-hidden on:", target);
+            // console.log("Corrected aria-hidden on:", target);
           }
         }
       });

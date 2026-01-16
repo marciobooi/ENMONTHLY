@@ -94,3 +94,16 @@ font-family: Arial, sans-serif;
 #globan.dark .wt-globan--flag {
     border: 1px solid rgba(255, 255, 255, 0.884) !important;
 }
+
+.chart-credits-region {
+    margin-top: 0.75rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #262B38;
+}
+
+.chart-credits-region a {
+    color: #004494;
+    text-decoration: underline;
+}

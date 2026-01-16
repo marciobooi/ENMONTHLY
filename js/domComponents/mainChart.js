@@ -112,6 +112,9 @@ class HighchartsChart {
           legend: {
             enabled: REF.dataset == "nrg_cb_pem_RW" ? true: false,
           },
+          credits: {
+            enabled: false,
+          },
           navigator: {
             enabled: true ,
             enableMouseWheelZoom: true,     
@@ -237,14 +240,6 @@ class HighchartsChart {
                 chartOptions: {
                   "chart": {
                     height: 300,                      
-                  }, 
-                  credits:{
-                    enabled: true,
-                    position: {
-                      align: 'center',
-                      x: 15
-                  }
-              
                   },
                   scrollbar: {
                     enabled: false,
@@ -346,7 +341,54 @@ class HighchartsChart {
                   resetButton.classList.add("custom-reset-zoom-button");
               }
           }
+
+          // Render custom credits after chart is created
+          setTimeout(() => {
+            this.renderCustomCredits();
+          }, 1000);
       });
+  }
+
+  renderCustomCredits() {
+    const creditsText = credits();
+    if (!creditsText) {
+      return;
+    }
+
+    const container = document.getElementById('chart');
+    if (!container) {
+      return;
+    }
+
+    const regionId = 'chart-credits-region';
+    let creditsWrapper = document.getElementById(regionId);
+
+    if (!creditsWrapper) {
+      creditsWrapper = document.createElement('div');
+      creditsWrapper.id = regionId;
+      creditsWrapper.className = 'chart-credits-region';
+
+      if (container.parentNode) {
+        container.parentNode.insertBefore(creditsWrapper, container.nextSibling);
+      } else {
+        container.appendChild(creditsWrapper);
+      }
+    }
+
+    creditsWrapper.setAttribute('role', 'contentinfo');
+    creditsWrapper.setAttribute('aria-live', 'polite');
+    creditsWrapper.innerHTML = creditsText;
+
+    const link = creditsWrapper.querySelector('a');
+    if (link) {
+      link.setAttribute('tabindex', '0');
+      link.addEventListener('keydown', (event) => {
+        if (event.key === ' ' || event.key === 'Spacebar') {
+          event.preventDefault();
+          link.click();
+        }
+      });
+    }
   }
   }
   

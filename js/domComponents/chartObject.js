@@ -58,13 +58,8 @@ class Chart {
           useHTML: true,         
           padding: 0, 
         },
-        credits: {
-          useHTML:true,
-          text: this.creditsText,
-          href: this.creditsHref,
-          position:{
-            align:'center',
-          },   
+       credits: {
+          enabled: false,
         },
         legend: this.legend,
         plotOptions: {
@@ -138,8 +133,58 @@ class Chart {
 
       setTimeout(() => {
         updateAccessibilityLabels()
+   
       }, 500);
+
+      // Render custom credits after chart is created
+      setTimeout(() => {
+        this.renderCustomCredits();
+      }, 1000);
     } // end of chart function
+
+
+
+         renderCustomCredits() {
+      if (!this.creditsText) {
+        return;
+      }
+
+      // Use hardcoded "chart" ID since that's what's used in createChart()
+      const container = document.getElementById('chart');
+      if (!container) {
+        return;
+      }
+
+      const regionId = 'chart-credits-region';
+      let creditsWrapper = document.getElementById(regionId);
+
+      if (!creditsWrapper) {
+        creditsWrapper = document.createElement('div');
+        creditsWrapper.id = regionId;
+        creditsWrapper.className = 'chart-credits-region';
+
+        if (container.parentNode) {
+          container.parentNode.insertBefore(creditsWrapper, container.nextSibling);
+        } else {
+          container.appendChild(creditsWrapper);
+        }
+      }
+
+      creditsWrapper.setAttribute('role', 'contentinfo');
+      creditsWrapper.setAttribute('aria-live', 'polite');
+      creditsWrapper.innerHTML = this.creditsText;
+
+      const link = creditsWrapper.querySelector('a');
+      if (link) {
+        link.setAttribute('tabindex', '0');
+        link.addEventListener('keydown', (event) => {
+          if (event.key === ' ' || event.key === 'Spacebar') {
+            event.preventDefault();
+            link.click();
+          }
+        });
+      }
+    }
     
   }
 
