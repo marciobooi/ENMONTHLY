@@ -26,9 +26,9 @@ class FloatingChartControls {
   }
 
   toggleIcons() {
-    const tableIcon = this.chartControls.querySelector('#table-icon');
-    const chartIcon = this.chartControls.querySelector('#chart-icon');
-    const toggleButton = this.chartControls.querySelector('#tb-togle-table');
+    const tableIcon = document.getElementById('table-icon');
+    const chartIcon = document.getElementById('chart-icon');
+    const toggleButton = document.getElementById('tb-togle-table');
   
   
     tableIcon.style.display = tableIcon.style.display === 'none' ? '' : 'none';
@@ -73,7 +73,8 @@ class FloatingChartControls {
 
     const referenceElement = container.firstChild; 
     
-    container.insertBefore(this.chartControls, referenceElement);
+    // Insert each <li> child directly into the menubar so we don't create an invalid wrapper element
+    Array.from(this.chartControls.children).forEach(child => container.insertBefore(child, referenceElement));
 
     
     const showHideValue = REF.chartOption === 1 ? '' : 'none';
@@ -146,6 +147,12 @@ class FloatingChartControls {
     const tableElement = tableButton.createButton();
     const detailsElement = detailsButton.createButton();
     const renewElement = renewButton.createButton();    
+
+    // These buttons are inserted into the chart menubar; mark them as menuitems for ARIA
+    percentageElement.setAttribute('role', 'menuitem');
+    tableElement.setAttribute('role', 'menuitem');
+    detailsElement.setAttribute('role', 'menuitem');
+    renewElement.setAttribute('role', 'menuitem');
 
     document.getElementById("togglePercentage").appendChild(percentageElement);
     document.getElementById("toggleTable").appendChild(tableElement);
