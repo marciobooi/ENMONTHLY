@@ -13,6 +13,25 @@
     background-color: #ffffff;
 }
 
+/* Ensure highcharts data table captions meet WCAG contrast (>=7:1) */
+.highcharts-data-table .highcharts-table-caption {
+    color: #111827; /* ~12:1 contrast vs #fff */
+    font-weight: 600;
+}
+
+/* Some highcharts table header cells are styled inline with red; override to a darker red to meet WCAG AAA (7:1) contrast */
+.highcharts-data-table thead th[style*="color: red"] {
+    color: #3b0000 !important; /* darker red to pass 7:1 contrast vs #f3f6fc */
+    font-weight: 700;
+}
+
+/* Make the data table container focusable and show clear focus outline */
+.highcharts-data-table:focus {
+    outline: 3px solid var(--btn-color, #0E47CB);
+    outline-offset: 2px;
+}
+
+
 thead {
     background-color: #f3f6fc;
     display: table-header-group;

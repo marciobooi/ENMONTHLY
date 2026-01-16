@@ -591,6 +591,10 @@ $jscomp.polyfill(
         c &&
           ((this.dataTableDiv = ca.createElement("div")),
           (this.dataTableDiv.className = "highcharts-data-table"),
+          // Make the data table keyboard-focusable and expose it as a region for screen readers
+          this.dataTableDiv.setAttribute('tabindex', '0'),
+          this.dataTableDiv.setAttribute('role', 'region'),
+          this.dataTableDiv.setAttribute('aria-label', (this.options && this.options.lang && this.options.lang.viewData) ? this.options.lang.viewData : 'Data table'),
           this.renderTo.parentNode.insertBefore(
             this.dataTableDiv,
             this.renderTo.nextSibling

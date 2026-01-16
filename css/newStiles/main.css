@@ -107,3 +107,9 @@ font-family: Arial, sans-serif;
     color: #004494;
     text-decoration: underline;
 }
+
+/* Ensure .ecl-form-label meets WCAG contrast requirements against light backgrounds */
+.ecl-form-label {
+  /* Darker text to achieve at least 7:1 contrast against #f3f6fc */
+  color: #111827; /* ~12:1 contrast vs #f3f6fc */
+}
