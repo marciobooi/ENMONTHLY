@@ -13,7 +13,7 @@ class ChartControls {
 			<div class="container-fluid">
 			  <div id="auxChartTitle">
 				<h2 id="title" class="title auxTitle"></h2>
-				<h6 id="subtitle" class="subtitle auxSubtitle"></h6>
+					<h3 id="subtitle" class="subtitle auxSubtitle"></h3>>
 			  </div>
 			  <div class="menu">
 				<ul id="chartBtns"  aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
