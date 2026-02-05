@@ -117,7 +117,7 @@ class HighchartsChart {
           },
           navigator: {
             enabled: true ,
-            enableMouseWheelZoom: true,     
+            enableMouseWheelZoom: false,     
             xAxis: {
               labels: {
                   enabled: false
@@ -332,6 +332,50 @@ class HighchartsChart {
       Highcharts.chart(this.containerId, this.options, (chart) => {
           // Enable screen reader accessibility
           enableScreenREader()
+
+          // Track hover state over chart
+          let isHoveringChart = false;
+          const chartContainer = document.getElementById(this.containerId);
+          
+          if (chartContainer) {
+            // Set hover state
+            chartContainer.addEventListener('mouseenter', () => {
+              isHoveringChart = true;
+              chartContainer.style.cursor = 'zoom-in';
+            });
+            
+            chartContainer.addEventListener('mouseleave', () => {
+              isHoveringChart = false;
+              chartContainer.style.cursor = 'default';
+            });
+
+            // Add custom wheel event handler for zoom
+            chartContainer.addEventListener('wheel', (event) => {
+              // Enable zoom if: (1) hovering over chart OR (2) Ctrl/Cmd is held
+              if (isHoveringChart || event.ctrlKey || event.metaKey) {
+                event.preventDefault();
+                
+                // Determine zoom direction
+                const zoomMultiplier = event.deltaY < 0 ? 1.2 : 0.8;
+                
+                // Get current extremes
+                const xAxis = chart.xAxis[0];
+                if (xAxis) {
+                  const { min, max } = xAxis.getExtremes();
+                  const range = max - min;
+                  const center = (min + max) / 2;
+                  
+                  // Calculate new extremes
+                  const newRange = range / zoomMultiplier;
+                  const newMin = center - newRange / 2;
+                  const newMax = center + newRange / 2;
+                  
+                  // Apply zoom
+                  xAxis.setExtremes(newMin, newMax);
+                }
+              }
+            }, { passive: false });
+          }
   
           // Check if the chart toolbar and resetZoomButton are available
           if (chart && chart.toolbar && chart.toolbar.resetZoomButton) {
@@ -355,8 +399,8 @@ class HighchartsChart {
       return;
     }
 
-    const container = document.getElementById('chart');
-    if (!container) {
+    const sectionContainer = document.getElementById('enmonthly');
+    if (!sectionContainer) {
       return;
     }
 
@@ -368,10 +412,11 @@ class HighchartsChart {
       creditsWrapper.id = regionId;
       creditsWrapper.className = 'chart-credits-region';
 
-      if (container.parentNode) {
-        container.parentNode.insertBefore(creditsWrapper, container.nextSibling);
+      // Insert after the section containing the chart
+      if (sectionContainer.parentNode) {
+        sectionContainer.parentNode.insertBefore(creditsWrapper, sectionContainer.nextSibling);
       } else {
-        container.appendChild(creditsWrapper);
+        sectionContainer.appendChild(creditsWrapper);
       }
     }
 
