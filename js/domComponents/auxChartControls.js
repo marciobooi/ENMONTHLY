@@ -16,7 +16,7 @@ class ChartControls {
 					<h3 id="subtitle" class="subtitle auxSubtitle"></h3>>
 			  </div>
 			  <div class="menu">
-				<ul id="chartBtns"  aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
+				<div id="chartBtns"  aria-label="options graph toolbox" class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vw;">
 					<div class="groupOne">
 						<li class="nav-item button px-1" id="toggleBarChart" role="none"></li>
 						<li class="nav-item button px-1" id="togglePieChart" role="none"></li>
@@ -34,7 +34,7 @@ class ChartControls {
 						<li class="nav-item button px-1" id="embebedChart" role="none"></li>
 						<li class="nav-item button px-1" id="closeChart" role="none"></li>
 					</div>  
-				</ul>
+				</div>
 			  </div>
 			</div>
 		  </nav>
