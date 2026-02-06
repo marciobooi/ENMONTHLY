@@ -230,7 +230,7 @@ if(REF.chartId == "pieChart") {
     let html = "";
   
     html += `<table class="table_component" > 
-    <thead">
+    <thead>
       <tr >
           <th scope="cols" colspan="2">${title}</th>                
       </tr>
