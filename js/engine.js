@@ -1,7 +1,7 @@
 
 
 
-function initenprices(d = null) {
+function initenmonthly(d = null) {
 
   languageNameSpace.initLanguage(REF.language);
 

@@ -116,7 +116,7 @@ var languageNameSpace = {
 
     removeComponents()
     buildComponents()
-    initenprices();
+    initenmonthly();
 
     if(REF.chartId != "mainChart"){
       addAuxiliarBarGraphOptions()
@@ -142,11 +142,7 @@ var languageNameSpace = {
       $('#table-icon').css('display', 'none');
       $('#chart-icon').css('display', '');  } 
       
-      $wt.render("euGlobanContainer", {
-        utility: "globan",
-        lang: REF.language.toLowerCase(),
-        theme: "dark",
-      });
+
 
   }
 };

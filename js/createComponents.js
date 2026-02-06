@@ -5,15 +5,17 @@ $( document ).ready(function() {
 
   languageNameSpace.initLanguage(REF.language);
 
-  const euGlobanContainer = $('<div>').attr('id', 'euGlobanContainer')
+ // Initialize GLOBAN after language is set
+if (typeof globanManager !== 'undefined') {
+  globanManager.init();
+}
 
-  euGlobanContainer.prependTo('header');
-
-    $wt.render("euGlobanContainer", {
-      utility: "globan",
-      lang: REF.language.toLowerCase(),
-      theme: "dark",
-    });
+// Regenerate CCK with the current language (delay to ensure CCK is ready)
+setTimeout(() => {
+  if (typeof cckManager !== 'undefined') {
+    cckManager.regenerate(REF.language);
+  }
+}, 300);
 
   buildComponents();
 

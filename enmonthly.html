@@ -81,6 +81,9 @@
   
     <script src="https://webtools.europa.eu/load.js" type="text/javascript"></script>
 
+
+
+
   <!-- External js Libraries needed -->
   <script src="js/jquery/jquery-3.7.0.js"></script>
   <script src="externajJS/bootstrap.min.js"></script>
@@ -101,6 +104,8 @@
   <script src="js/codes.js"></script>
   <script src="js/data.js"></script>
   <script src="js/engine.js"></script>
+  <script src="js/globan.js"></script>
+  <script src="js/cck.js"></script>
 
   <script src="js/social.js" type="text/javascript"></script>
  
@@ -138,6 +143,15 @@
     <script src="js/populateFlow.js"></script>
     <script src="js/populateUnit.js"></script>
     <script src="js/keyboardNavigationLogic.js"></script>
+
+
+     <!-- Cookie Consent Kit Configuration -->
+  <script type="application/json">
+  {
+    "utility": "cck",
+    "url": "https://commission.europa.eu/cookies-policy_{lang}"
+  }
+  </script>
  
 
     <!-- need to be added the correct params -->
@@ -148,6 +162,7 @@
 <body id="body">
 
   <div id="hiddenFormDiv"></div>
+    <div id="euGlobanContainer"></div>
   <noscript>
       <p class="no-script"> Your browser does not support Javascript or Javascript is disabled. <br /> Please enable Javascript to use the enprices tool. </p>
   </noscript>
@@ -230,24 +245,16 @@
 
   <script src="js/bootstrap/bootstrap@5.3.0.js"></script>
   <script src="js/external/intro7.0.1.js"></script>
-  <!-- <script src="js/debug/zoom-diagnostic.js"></script> -->
   <script>
-
     $( document ).ready(function() {        
-    initenprices()    
+    initenmonthly()    
     hideForIframe()
     checkAndShowTutorial()
     }); 
 </script>
 
 
-<!-- functions from eurostat -->
 
-<script type="application/json">{
-  "utility": "cck",
-  "url": "http://ec.europa.eu/cookies/index_en.htm",
-  "target": true
-}</script>
   
 </body>
 
