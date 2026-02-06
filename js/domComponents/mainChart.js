@@ -349,32 +349,6 @@ class HighchartsChart {
               chartContainer.style.cursor = 'default';
             });
 
-            // Add custom wheel event handler for zoom
-            chartContainer.addEventListener('wheel', (event) => {
-              // Enable zoom if: (1) hovering over chart OR (2) Ctrl/Cmd is held
-              if (isHoveringChart || event.ctrlKey || event.metaKey) {
-                event.preventDefault();
-                
-                // Determine zoom direction
-                const zoomMultiplier = event.deltaY < 0 ? 1.2 : 0.8;
-                
-                // Get current extremes
-                const xAxis = chart.xAxis[0];
-                if (xAxis) {
-                  const { min, max } = xAxis.getExtremes();
-                  const range = max - min;
-                  const center = (min + max) / 2;
-                  
-                  // Calculate new extremes
-                  const newRange = range / zoomMultiplier;
-                  const newMin = center - newRange / 2;
-                  const newMax = center + newRange / 2;
-                  
-                  // Apply zoom
-                  xAxis.setExtremes(newMin, newMax);
-                }
-              }
-            }, { passive: false });
           }
   
           // Check if the chart toolbar and resetZoomButton are available

@@ -21,6 +21,14 @@ class Chart {
 
 
     createChart() {
+      const chartContainer = document.getElementById("chart");
+      
+      // Destroy any existing Highcharts chart in this container
+      const existingChart = Highcharts.charts.find(chart => chart && chart.renderTo && chart.renderTo.id === 'chart');
+      if (existingChart) {
+        existingChart.destroy();
+      }
+
       Highcharts.chart("chart", {
         chart: {
           type: this.type,
@@ -33,6 +41,9 @@ class Chart {
             animation: true,
             duration: 1000,
           },
+           zooming: {
+            mouseWheel: false
+        }
         },
         title: {
           text: this.title,
@@ -187,6 +198,16 @@ class Chart {
         });
       }
     }
+
+    destroy() {
+      // Destroy Highcharts chart
+      const existingChart = Highcharts.charts.find(chart => chart && chart.renderTo && chart.renderTo.id === 'chart');
+      if (existingChart) {
+        existingChart.destroy();
+      }
+    }
+
+
     
   }
 
