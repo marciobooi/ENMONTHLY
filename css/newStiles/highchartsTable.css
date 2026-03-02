@@ -17,6 +17,12 @@
 .highcharts-data-table .highcharts-table-caption {
     color: #111827; /* ~12:1 contrast vs #fff */
     font-weight: 600;
+    position: absolute ;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
 }
 
 /* Some highcharts table header cells are styled inline with red; override to a darker red to meet WCAG AAA (7:1) contrast */
