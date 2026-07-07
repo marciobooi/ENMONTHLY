@@ -57,7 +57,7 @@ function tutorial() {
 			}
 		},
 		{
-			element: "#chart",
+			element: ".highcharts-series",
 			popover: {
 				title: languageNameSpace.tutorial["TUTO_5"],
 				description: languageNameSpace.tutorial["TUTO_6"]
