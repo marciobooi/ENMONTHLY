@@ -26,6 +26,13 @@ class HighchartsChart {
           accessibility: {
             // Single chart landmark; avoids duplicate role="region" per series
             landmarkVerbosity: "one",
+            keyboardNavigation: {
+              // Legend/exporting are off on this chart; omitting them from the
+              // order stops Highcharts from creating empty proxy nav groups (empty <li>)
+              order: REF.dataset === "nrg_cb_pem_RW"
+                ? ["series", "zoom", "rangeSelector", "legend"]
+                : ["series", "zoom", "rangeSelector"],
+            },
           },
           rangeSelector: {
             selected: 1,
@@ -332,10 +339,42 @@ class HighchartsChart {
 
   
     // Method to create and display the chart
-    render() {        
+    render() {
+      const renderTo = document.getElementById(this.containerId);
+      if (renderTo && !renderTo.hasAttribute('tabindex')) {
+        // Highcharts' keyboard-nav module puts tabindex="0" on its own inner
+        // .highcharts-container div unless renderTo already has a tabindex -
+        // in which case it uses renderTo instead. renderTo already gets
+        // role="region"/"group" from the accessibility module, so pre-setting
+        // this avoids a focusable element with no ARIA role.
+        renderTo.setAttribute('tabindex', '0');
+      }
+
       Highcharts.chart(this.containerId, this.options, (chart) => {
           // Enable screen reader accessibility
           enableScreenREader()
+
+          // Force the accessibility module to rebuild its keyboard-nav proxies
+          // now, rather than relying solely on the legend's own "afterRender"
+          // event - avoids a momentarily-empty legend proxy list.
+          if (chart.accessibility) {
+            chart.accessibility.update();
+          }
+
+          // The "end of chart" marker div is a pure announcement (not a
+          // control) but Highcharts gives it tabindex without a role.
+          const exitMarker = document.getElementById(`highcharts-end-of-chart-marker-${chart.index}`);
+          if (exitMarker) {
+            exitMarker.setAttribute('role', 'note');
+          }
+
+          // The root SVG has an aria-label but no role. Safe to add role="img"
+          // here specifically: data points inside the SVG are tabindex="-1"
+          // (not real tab stops), and the real keyboard-nav controls (legend/
+          // series/zoom proxy buttons) are separate elements outside the SVG.
+          if (chart.renderer && chart.renderer.box) {
+            chart.renderer.box.setAttribute('role', 'img');
+          }
 
           // Track hover state over chart
           let isHoveringChart = false;

@@ -1,4 +1,9 @@
 {
+  "SKIPTOCONTENT": {
+    "EN": "Skip to main content",
+    "DE": "Zum Hauptinhalt springen",
+    "FR": "Aller au contenu principal"
+  },
   "EU28": {
     "EN": "European Union (28 countries)",
     "DE": "Europäische Union (28 Länder)",

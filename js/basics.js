@@ -422,9 +422,11 @@ function getTitle() {
       title = `${dataset}`;
       subtitle = `<span style="font-size:12px; padding-top:5px"><b>${country}</b> - ${unit} - ${nrg_bal}  - ${languageNameSpace.labels["TOTAL"]}</span>`;
       break;
-    default:    
-    chartTitle = `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal}</span>`;
-    title = `<b>${country}</b> - ${dataset}`;
+    default:
+    chartTitle = country
+      ? `<b>${country}</b> - ${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal}</span>`
+      : `${dataset}<br><span style="font-size:10px; padding-top:5px">${nrg_bal}</span>`;
+    title = country ? `<b>${country}</b> - ${dataset}` : `${dataset}`;
     if(REF.dataset == "nrg_cb_pem_RW") {
       subtitle = `${nrg_bal} `;   
     } else {

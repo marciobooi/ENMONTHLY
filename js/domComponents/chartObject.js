@@ -22,14 +22,23 @@ class Chart {
 
     createChart() {
       const chartContainer = document.getElementById("chart");
-      
+
       // Destroy any existing Highcharts chart in this container
       const existingChart = Highcharts.charts.find(chart => chart && chart.renderTo && chart.renderTo.id === 'chart');
       if (existingChart) {
         existingChart.destroy();
       }
 
-      Highcharts.chart("chart", {
+      if (chartContainer && !chartContainer.hasAttribute('tabindex')) {
+        // Highcharts' keyboard-nav module puts tabindex="0" on its own inner
+        // .highcharts-container div unless renderTo already has a tabindex -
+        // in which case it uses renderTo instead. renderTo already gets
+        // role="region"/"group" from the accessibility module, so pre-setting
+        // this avoids a focusable element with no ARIA role.
+        chartContainer.setAttribute('tabindex', '0');
+      }
+
+      const chart = Highcharts.chart("chart", {
         chart: {
           type: this.type,
           plotBackgroundColor: null,
@@ -145,6 +154,28 @@ class Chart {
       }
       }); // end of chart object
       enableScreenREader()
+
+      // Force the accessibility module to rebuild its keyboard-nav proxies
+      // now, rather than relying solely on the legend's own "afterRender"
+      // event - avoids a momentarily-empty legend proxy list.
+      if (chart.accessibility) {
+        chart.accessibility.update();
+      }
+
+      // The "end of chart" marker div is a pure announcement (not a
+      // control) but Highcharts gives it tabindex without a role.
+      const exitMarker = document.getElementById(`highcharts-end-of-chart-marker-${chart.index}`);
+      if (exitMarker) {
+        exitMarker.setAttribute('role', 'note');
+      }
+
+      // The root SVG has an aria-label but no role. Safe to add role="img"
+      // here specifically: data points inside the SVG are tabindex="-1"
+      // (not real tab stops), and the real keyboard-nav controls (legend/
+      // series/zoom proxy buttons) are separate elements outside the SVG.
+      if (chart.renderer && chart.renderer.box) {
+        chart.renderer.box.setAttribute('role', 'img');
+      }
 
       setTimeout(() => {
         updateAccessibilityLabels()

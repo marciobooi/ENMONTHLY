@@ -45,20 +45,20 @@ class Navbar {
           <div class="ecl-site-header__language-content ecl-site-header__language-content--stack">
               <div class="ecl-site-header__language-category ecl-site-header__language-category--3-col" data-ecl-language-list-eu="">
               <div class="ecl-site-header__language-category-title" data-i18n="OFFICIAL"></div>
-                  <ul class="ecl-site-header__language-list">
-                  <li class="ecl-site-header__language-item" id="EN" data-lang="EN" tabindex="0">
+                  <ul class="ecl-site-header__language-list" role="listbox" aria-label="Language">
+                  <li class="ecl-site-header__language-item" id="EN" data-lang="EN" tabindex="0" role="option" aria-selected="false">
                   <a class="ecl-link ecl-link--standalone ecl-site-header__language-link" lang="en-EN">
                     <span class="ecl-site-header__language-link-code">en</span>
                     <span class="ecl-site-header__language-link-label">English</span>
                   </a>
                 </li>
-                <li class="ecl-site-header__language-item" id="DE"  data-lang="DE" tabindex="0">
+                <li class="ecl-site-header__language-item" id="DE"  data-lang="DE" tabindex="0" role="option" aria-selected="false">
                   <a class="ecl-link ecl-link--standalone ecl-site-header__language-link" lang="de-DE">
                     <span class="ecl-site-header__language-link-code">de</span>
                     <span class="ecl-site-header__language-link-label">Deutsch</span>
                   </a>
                 </li>
-                <li class="ecl-site-header__language-item" id="FR" data-lang="FR" tabindex="0">
+                <li class="ecl-site-header__language-item" id="FR" data-lang="FR" tabindex="0" role="option" aria-selected="false">
                   <a class="ecl-link ecl-link--standalone ecl-site-header__language-link" lang="fr-FR">
                     <span class="ecl-site-header__language-link-code">fr</span>
                     <span class="ecl-site-header__language-link-label">Français</span>
@@ -133,15 +133,24 @@ class Navbar {
 
 
 selectLanguage(langItem) {
+  if (!langItem) return;
+
   // Remove "active" class from all language items
   const languageItems = this.navbar.querySelectorAll(".ecl-site-header__language-item");
-  languageItems.forEach(item => item.classList.remove("ecl-site-header__language-link--active"));
+  languageItems.forEach(item => {
+    item.classList.remove("ecl-site-header__language-link--active");
+    item.setAttribute("aria-selected", "false");
+  });
 
   // Add "active" class to the selected language item
   langItem.classList.add("ecl-site-header__language-link--active");
+  langItem.setAttribute("aria-selected", "true");
 
   // Update button text with the selected language
-  const langLabel = langItem.querySelector(".ecl-site-header__language-link-label").textContent;
+  const labelEl = langItem.querySelector(".ecl-site-header__language-link-label");
+  const langLabel = labelEl ? labelEl.textContent : "";
+  if (!langLabel) return; // nothing usable yet - leave the button's current label alone
+
   this.langSelection.innerHTML = `<i class="fas fa-globe" focusable="false" aria-hidden="true"></i>
   <span id="lang-selection-text" class="btn-text">${langLabel}</span>`;
   // Use translated prefix if available, else fallback to English
