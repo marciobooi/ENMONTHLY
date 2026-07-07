@@ -45,6 +45,10 @@ class Chart {
             mouseWheel: false
         }
         },
+        accessibility: {
+          // Single chart landmark; avoids duplicate role="region" per series
+          landmarkVerbosity: "one",
+        },
         title: {
           text: this.title,
         },

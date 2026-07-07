@@ -22,7 +22,11 @@ class HighchartsChart {
             animation: true,
             duration: 1000,
           },
-        },        
+        },
+          accessibility: {
+            // Single chart landmark; avoids duplicate role="region" per series
+            landmarkVerbosity: "one",
+          },
           rangeSelector: {
             selected: 1,
           },
