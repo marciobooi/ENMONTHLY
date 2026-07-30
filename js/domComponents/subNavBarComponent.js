@@ -90,6 +90,18 @@ class SubNavbar {
                   <i class="fas fa-code"></i>
                 </button>
               </li>
+                <li class="nav-item button px-1" id="insightsBtnChart" role="none">
+                <button role="menuitem" id="insights" data-i18n-title="INSIGHTS" type="button" class="ecl-button ecl-button--primary round-btn" value="insightsChart" data-i18n-label="INSIGHTS" aria-label="Display insights" onclick="toggleInsightsView(true)">
+                  <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                  <span class="ecl-u-sr-only" data-i18n="INSIGHTS">Display insights</span>
+                </button>
+              </li>
+                <li class="nav-item button px-1 insightsCloseContainer" role="none" style="display: none;">
+                <button role="menuitem" class="ecl-button ecl-button--primary round-btn close-chart-menu-btn closeInsightsNavBtn" type="button" data-i18n-label="CLOSE" data-i18n-title="CLOSE" aria-label="Close" onclick="toggleInsightsView(false)">
+                  <i class="fas fa-times" aria-hidden="true"></i>
+                  <span class="ecl-u-sr-only" data-i18n="CLOSE">Close</span>
+                </button>
+              </li>
 
               </ul>
             </div>
@@ -163,6 +175,19 @@ class SubNavbar {
             </button>
             
               </li>
+              <li class="nav-item button px-1" id="insightsBtnChartMobile" role="none">
+              <button role="menuitem" id="insightsMobile" type="button" class="ecl-button ecl-button--primary round-btn" value="insightsChart" data-i18n-title="INSIGHTS" data-i18n-label="INSIGHTS" aria-label="Display insights" onclick="toggleInsightsView(true)">
+              <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              <span class="ecl-u-sr-only" data-i18n="INSIGHTS">Display insights</span>
+            </button>
+            
+              </li>
+              <li class="nav-item button px-1 insightsCloseContainer" role="none" style="display: none;">
+              <button role="menuitem" class="ecl-button ecl-button--primary round-btn close-chart-menu-btn closeInsightsNavBtn" type="button" data-i18n-label="CLOSE" data-i18n-title="CLOSE" aria-label="Close" onclick="toggleInsightsView(false)">
+                <i class="fas fa-times" aria-hidden="true"></i>
+                <span class="ecl-u-sr-only" data-i18n="CLOSE">Close</span>
+              </button>
+            </li>
               <li class="nav-item dropdown px-1" id="social-media-dropdown" role="none">
               <button role="menuitem" class="ecl-button ecl-button--primary round-btn round-btn" type="button" data-i18n-label="SHARE" data-bs-toggle="dropdown"  data-i18n-title="SHARE" aria-haspopup="true" aria-expanded="false" id="shareChart1" aria-controls="social-media-menu">
               <i class="fas fa-share-alt" aria-hidden="true"></i>
@@ -294,5 +319,68 @@ class SubNavbar {
   addToDOM(targetElement) {
     const container = document.querySelector(targetElement);
     container.appendChild(this.subNavbar);
+  }
+}
+
+var insightsViewState = {
+  auxWasVisible: false,
+  menuSwitchWasVisible: false
+};
+
+function toggleInsightsView(show) {
+  const $enmonthly = $('#enmonthly');
+  const $insightsPage = $('#insightsPage');
+  const $auxChartControls = $('#auxChartControls');
+  const $menuSwitch = $('#menuSwitch');
+  const $chartBtns = $('#chartBtns, .chartMenuMobile #chartBtns');
+
+  if (show) {
+    insightsViewState.auxWasVisible = $auxChartControls.is(':visible');
+    insightsViewState.menuSwitchWasVisible = $menuSwitch.is(':visible');
+
+    $enmonthly.hide();
+    $auxChartControls.hide();
+    $menuSwitch.hide();
+
+    $chartBtns.addClass('insights-mode');
+    $insightsPage.show().focus();
+
+    $(document).off('keydown.insights').on('keydown.insights', function(e) {
+      if (e.key === 'Escape') {
+        toggleInsightsView(false);
+      }
+    });
+
+    setTimeout(() => {
+      const closeBtn = document.querySelector('.insightsCloseContainer .closeInsightsNavBtn');
+      if (closeBtn) closeBtn.focus();
+      try { if (typeof enableTooltips === 'function') enableTooltips(); } catch(e) {}
+    }, 100);
+
+  } else {
+    $insightsPage.hide();
+    $chartBtns.removeClass('insights-mode');
+
+    $enmonthly.show();
+
+    if (insightsViewState.auxWasVisible) {
+      $auxChartControls.show();
+    } else {
+      $auxChartControls.hide();
+    }
+
+    if (insightsViewState.menuSwitchWasVisible) {
+      $menuSwitch.show();
+    } else {
+      $menuSwitch.hide();
+    }
+
+    $(document).off('keydown.insights');
+
+    setTimeout(() => {
+      const btn = document.getElementById('insights') || document.getElementById('insightsMobile');
+      if (btn) btn.focus();
+      try { if (typeof enableTooltips === 'function') enableTooltips(); } catch(e) {}
+    }, 100);
   }
 }

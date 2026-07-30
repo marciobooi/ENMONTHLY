@@ -113,3 +113,22 @@ font-family: Arial, sans-serif;
   /* Darker text to achieve at least 7:1 contrast against #f3f6fc */
   color: #111827; /* ~12:1 contrast vs #f3f6fc */
 }
+
+#insightsPage {
+  min-height: 80vh;
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+}
+
+#chartBtns li.insightsCloseContainer {
+  display: none !important;
+}
+
+#chartBtns.insights-mode > li {
+  display: none !important;
+}
+
+#chartBtns.insights-mode > li.insightsCloseContainer {
+  display: block !important;
+}
