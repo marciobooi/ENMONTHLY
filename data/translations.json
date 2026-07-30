@@ -254,6 +254,1031 @@
     "DE": "Erkenntnisse anzeigen",
     "FR": "Afficher les aperçus"
   },
+  "INSIGHTS_TITLE": {
+    "EN": "Insights",
+    "DE": "Einblicke",
+    "FR": "Aperçus"
+  },
+  "INSIGHTS_NO_DATA": {
+    "EN": "No data available to build insights for this selection.",
+    "DE": "Keine Daten verfügbar, um Einblicke für diese Auswahl zu erstellen.",
+    "FR": "Aucune donnée disponible pour générer des aperçus pour cette sélection."
+  },
+  "INSIGHTS_META_COUNTRY": {
+    "EN": "Country",
+    "DE": "Land",
+    "FR": "Pays"
+  },
+  "INSIGHTS_META_MONTH": {
+    "EN": "Reference month",
+    "DE": "Referenzmonat",
+    "FR": "Mois de référence"
+  },
+  "INSIGHTS_META_UNIT": {
+    "EN": "Unit",
+    "DE": "Einheit",
+    "FR": "Unité"
+  },
+  "INSIGHTS_HEADLINE_DEFAULT": {
+    "EN": "In {month}, renewables made up {value} of {country}'s electricity generation.",
+    "DE": "Im {month} machten erneuerbare Energien {value} der Stromerzeugung von {country} aus.",
+    "FR": "En {month}, les énergies renouvelables ont représenté {value} de la production d'électricité de {country}."
+  },
+  "INSIGHTS_HEADLINE_RECORD_HIGH": {
+    "EN": "{country} reached a record renewable electricity share of {value} in {month}.",
+    "DE": "{country} erreichte im {month} mit {value} einen Rekordanteil an erneuerbarem Strom.",
+    "FR": "{country} a atteint un niveau record de {value} d'électricité renouvelable en {month}."
+  },
+  "INSIGHTS_HEADLINE_RECORD_LOW": {
+    "EN": "{country} recorded its lowest renewable electricity share of {value} in {month}.",
+    "DE": "{country} verzeichnete im {month} mit {value} den niedrigsten Anteil an erneuerbarem Strom.",
+    "FR": "{country} a enregistré sa part la plus faible d'électricité renouvelable, à {value}, en {month}."
+  },
+  "INSIGHTS_HEADLINE_CROSSOVER_UP": {
+    "EN": "Renewables overtook fossil fuels in {country}'s electricity mix in {month}.",
+    "DE": "Erneuerbare Energien überholten im {month} die fossilen Energien im Strommix von {country}.",
+    "FR": "Les énergies renouvelables ont dépassé les énergies fossiles dans le mix électrique de {country} en {month}."
+  },
+  "INSIGHTS_HEADLINE_CROSSOVER_DOWN": {
+    "EN": "Fossil fuels overtook renewables in {country}'s electricity mix in {month}.",
+    "DE": "Fossile Energien überholten im {month} die erneuerbaren Energien im Strommix von {country}.",
+    "FR": "Les énergies fossiles ont dépassé les énergies renouvelables dans le mix électrique de {country} en {month}."
+  },
+  "INSIGHTS_LOADING": {
+    "EN": "Loading insights…",
+    "DE": "Einblicke werden geladen…",
+    "FR": "Chargement des aperçus…"
+  },
+  "INSIGHTS_ERROR": {
+    "EN": "We couldn't load insights right now.",
+    "DE": "Einblicke konnten derzeit nicht geladen werden.",
+    "FR": "Impossible de charger les aperçus pour le moment."
+  },
+  "INSIGHTS_RISING": {
+    "EN": "Rising",
+    "DE": "Steigend",
+    "FR": "En hausse"
+  },
+  "INSIGHTS_FALLING": {
+    "EN": "Falling",
+    "DE": "Sinkend",
+    "FR": "En baisse"
+  },
+  "INSIGHTS_STABLE": {
+    "EN": "Stable",
+    "DE": "Stabil",
+    "FR": "Stable"
+  },
+  "INSIGHTS_NOT_AVAILABLE": {
+    "EN": "Not available",
+    "DE": "Nicht verfügbar",
+    "FR": "Non disponible"
+  },
+  "INSIGHTS_WHAT_IT_IS": {
+    "EN": "What it is",
+    "DE": "Was es ist",
+    "FR": "De quoi s'agit-il"
+  },
+  "INSIGHTS_CALCULATION": {
+    "EN": "Calculation",
+    "DE": "Berechnung",
+    "FR": "Calcul"
+  },
+  "INSIGHTS_PURPOSE": {
+    "EN": "Purpose",
+    "DE": "Zweck",
+    "FR": "Objectif"
+  },
+  "INSIGHTS_KPI_WHAT_IT_IS": {
+    "EN": "A quick scoreboard of the country's energy transition, trade position and import exposure this month.",
+    "DE": "Ein schneller Überblick über Energiewende, Handelsposition und Importabhängigkeit des Landes in diesem Monat.",
+    "FR": "Un tableau de bord rapide de la transition énergétique, de la position commerciale et de l'exposition aux importations du pays ce mois-ci."
+  },
+  "INSIGHTS_CLIMATE_TRANSITION": {
+    "EN": "Climate Transition Indicator",
+    "DE": "Klima-Transitionsindikator",
+    "FR": "Indicateur de transition climatique"
+  },
+  "INSIGHTS_CLIMATE_TRANSITION_NOTE": {
+    "EN": "Renewables' share of renewables + fossils (nuclear excluded)",
+    "DE": "Anteil der Erneuerbaren an Erneuerbaren + Fossilen (ohne Kernenergie)",
+    "FR": "Part des renouvelables dans renouvelables + fossiles (nucléaire exclu)"
+  },
+  "INSIGHTS_DECARBONISATION_JOURNEY": {
+    "EN": "Decarbonisation Journey",
+    "DE": "Dekarbonisierungspfad",
+    "FR": "Trajectoire de décarbonation"
+  },
+  "INSIGHTS_DISPLACEMENT": {
+    "EN": "Displacement (5y)",
+    "DE": "Verdrängung (5J)",
+    "FR": "Substitution (5 ans)"
+  },
+  "INSIGHTS_DISPLACEMENT_SUB": {
+    "EN": "Renewables gained vs fossils lost",
+    "DE": "Zugewinn Erneuerbare vs. Verlust Fossile",
+    "FR": "Gains des renouvelables vs pertes des fossiles"
+  },
+  "INSIGHTS_EU_COMPARISON_CALCULATION": {
+    "EN": "Country value minus EU27_2020 aggregate value, for the same reference month where available.",
+    "DE": "Länderwert minus EU27_2020-Aggregatwert, für denselben Referenzmonat, sofern verfügbar.",
+    "FR": "Valeur du pays moins la valeur agrégée EU27_2020, pour le même mois de référence si disponible."
+  },
+  "INSIGHTS_EU_COMPARISON_PURPOSE": {
+    "EN": "Puts the national picture in a European context.",
+    "DE": "Stellt das nationale Bild in einen europäischen Kontext.",
+    "FR": "Replace la situation nationale dans un contexte européen."
+  },
+  "INSIGHTS_EU_COMPARISON_TITLE": {
+    "EN": "EU Comparison",
+    "DE": "EU-Vergleich",
+    "FR": "Comparaison UE"
+  },
+  "INSIGHTS_EU_COMPARISON_WHAT_IT_IS": {
+    "EN": "How this country's electricity mix compares with the EU27 average.",
+    "DE": "Wie der Strommix dieses Landes im Vergleich zum EU27-Durchschnitt abschneidet.",
+    "FR": "Comment le mix électrique de ce pays se compare à la moyenne de l'UE27."
+  },
+  "INSIGHTS_EXPORTS": {
+    "EN": "Exports",
+    "DE": "Exporte",
+    "FR": "Exportations"
+  },
+  "INSIGHTS_FASTEST_GROWING": {
+    "EN": "Fastest Growing Source",
+    "DE": "Am schnellsten wachsende Quelle",
+    "FR": "Source à la croissance la plus rapide"
+  },
+  "INSIGHTS_FINDINGS_CALCULATION": {
+    "EN": "Largest historical month-on-month swings, new records, EU27 deviation and the fuel with the biggest single-month move.",
+    "DE": "Größte historische Monatsschwankungen, neue Rekorde, Abweichung vom EU27-Wert und der Energieträger mit der größten Veränderung in einem Monat.",
+    "FR": "Plus fortes variations mensuelles historiques, nouveaux records, écart par rapport à l'UE27 et le combustible ayant connu la plus forte variation mensuelle."
+  },
+  "INSIGHTS_FINDINGS_PURPOSE": {
+    "EN": "Surfaces the stories worth reading first, without digging through the raw series.",
+    "DE": "Hebt die wichtigsten Geschichten hervor, ohne die Rohdaten durchsuchen zu müssen.",
+    "FR": "Met en avant les faits les plus pertinents sans avoir à explorer les séries brutes."
+  },
+  "INSIGHTS_FINDINGS_WHAT_IT_IS": {
+    "EN": "The most notable facts auto-detected in this month's data.",
+    "DE": "Die auffälligsten automatisch erkannten Fakten in den Daten dieses Monats.",
+    "FR": "Les faits les plus marquants détectés automatiquement dans les données de ce mois."
+  },
+  "INSIGHTS_FINDING_EU_ABOVE": {
+    "EN": "Renewable share is {delta} above the EU27 average.",
+    "DE": "Der Anteil erneuerbarer Energien liegt {delta} über dem EU27-Durchschnitt.",
+    "FR": "La part des renouvelables est supérieure de {delta} à la moyenne de l'UE27."
+  },
+  "INSIGHTS_FINDING_EU_BELOW": {
+    "EN": "Renewable share is {delta} below the EU27 average.",
+    "DE": "Der Anteil erneuerbarer Energien liegt {delta} unter dem EU27-Durchschnitt.",
+    "FR": "La part des renouvelables est inférieure de {delta} à la moyenne de l'UE27."
+  },
+  "INSIGHTS_FINDING_LARGEST_DECREASE": {
+    "EN": "The largest month-on-month drop on record: renewable share fell {delta} between {previousMonth} and {month}.",
+    "DE": "Der größte je verzeichnete monatliche Rückgang: Der Anteil erneuerbarer Energien sank zwischen {previousMonth} und {month} um {delta}.",
+    "FR": "La plus forte baisse mensuelle jamais enregistrée : la part des renouvelables a chuté de {delta} entre {previousMonth} et {month}."
+  },
+  "INSIGHTS_FINDING_LARGEST_INCREASE": {
+    "EN": "The largest month-on-month jump on record: renewable share rose {delta} between {previousMonth} and {month}.",
+    "DE": "Der größte je verzeichnete monatliche Anstieg: Der Anteil erneuerbarer Energien stieg zwischen {previousMonth} und {month} um {delta}.",
+    "FR": "La plus forte hausse mensuelle jamais enregistrée : la part des renouvelables a augmenté de {delta} entre {previousMonth} et {month}."
+  },
+  "INSIGHTS_FINDING_SHARE_CHANGE_DOWN": {
+    "EN": "{source} saw the biggest month-on-month decrease, {value} GWh.",
+    "DE": "{source} verzeichnete den größten monatlichen Rückgang, {value} GWh.",
+    "FR": "{source} a enregistré la plus forte baisse mensuelle, {value} GWh."
+  },
+  "INSIGHTS_FINDING_SHARE_CHANGE_UP": {
+    "EN": "{source} saw the biggest month-on-month increase, +{value} GWh.",
+    "DE": "{source} verzeichnete den größten monatlichen Anstieg, +{value} GWh.",
+    "FR": "{source} a enregistré la plus forte hausse mensuelle, +{value} GWh."
+  },
+  "INSIGHTS_HISTORY_CALCULATION": {
+    "EN": "Max/min renewable share across the full series; percentile = share of past months at or below today's value.",
+    "DE": "Max./Min. des Anteils erneuerbarer Energien über die gesamte Reihe; Perzentil = Anteil vergangener Monate auf oder unter dem heutigen Wert.",
+    "FR": "Part max./min. des renouvelables sur toute la série ; centile = part des mois passés à ou sous la valeur actuelle."
+  },
+  "INSIGHTS_HISTORY_PURPOSE": {
+    "EN": "Puts the current reading in long-run perspective.",
+    "DE": "Setzt den aktuellen Wert in eine langfristige Perspektive.",
+    "FR": "Replace la valeur actuelle dans une perspective de long terme."
+  },
+  "INSIGHTS_HISTORY_TITLE": {
+    "EN": "Historical Evolution",
+    "DE": "Historische Entwicklung",
+    "FR": "Évolution historique"
+  },
+  "INSIGHTS_HISTORY_WHAT_IT_IS": {
+    "EN": "Where this month sits against the entire recorded history for this country.",
+    "DE": "Wo dieser Monat im Vergleich zur gesamten erfassten Geschichte dieses Landes steht.",
+    "FR": "Comment ce mois se situe par rapport à l'ensemble de l'historique enregistré pour ce pays."
+  },
+  "INSIGHTS_IMPORTS": {
+    "EN": "Imports",
+    "DE": "Importe",
+    "FR": "Importations"
+  },
+  "INSIGHTS_LARGEST_DECLINE": {
+    "EN": "Largest Decline",
+    "DE": "Größter Rückgang",
+    "FR": "Plus forte baisse"
+  },
+  "INSIGHTS_MIX_CALCULATION": {
+    "EN": "Each source's share of total generation; growth is year-on-year change per source.",
+    "DE": "Anteil jeder Quelle an der Gesamterzeugung; Wachstum ist die jährliche Veränderung je Quelle.",
+    "FR": "Part de chaque source dans la production totale ; la croissance est la variation annuelle par source."
+  },
+  "INSIGHTS_MIX_PURPOSE": {
+    "EN": "Shows which sources dominate the mix and which are moving fastest.",
+    "DE": "Zeigt, welche Quellen den Mix dominieren und welche sich am schnellsten verändern.",
+    "FR": "Montre quelles sources dominent le mix et lesquelles évoluent le plus vite."
+  },
+  "INSIGHTS_MIX_TITLE": {
+    "EN": "Electricity Mix",
+    "DE": "Strommix",
+    "FR": "Mix électrique"
+  },
+  "INSIGHTS_MIX_WHAT_IT_IS": {
+    "EN": "The breakdown of electricity generation by individual fuel source this month.",
+    "DE": "Die Aufschlüsselung der Stromerzeugung nach einzelnen Energieträgern in diesem Monat.",
+    "FR": "La répartition de la production d'électricité par source d'énergie ce mois-ci."
+  },
+  "INSIGHTS_MOMENTUM_INDICATOR": {
+    "EN": "Momentum",
+    "DE": "Dynamik",
+    "FR": "Dynamique"
+  },
+  "INSIGHTS_MOMENTUM_SUB_3V12": {
+    "EN": "3-month avg vs 12-month avg",
+    "DE": "3-Monats- vs. 12-Monats-Durchschnitt",
+    "FR": "Moyenne 3 mois vs moyenne 12 mois"
+  },
+  "INSIGHTS_PERCENTILE": {
+    "EN": "Historical Ranking",
+    "DE": "Historisches Ranking",
+    "FR": "Classement historique"
+  },
+  "INSIGHTS_PERCENTILE_NOTE": {
+    "EN": "Share of past months at or below the current renewable share",
+    "DE": "Anteil vergangener Monate auf oder unter dem aktuellen Anteil erneuerbarer Energien",
+    "FR": "Part des mois passés à ou sous la part actuelle des renouvelables"
+  },
+  "INSIGHTS_PERCENTILE_SUFFIX": {
+    "EN": "th percentile",
+    "DE": ". Perzentil",
+    "FR": "e centile"
+  },
+  "INSIGHTS_RECOVERY_TRACKER": {
+    "EN": "Recovery vs 2019",
+    "DE": "Erholung gegenüber 2019",
+    "FR": "Reprise par rapport à 2019"
+  },
+  "INSIGHTS_STRUCTURAL_CHANGE": {
+    "EN": "Structural Change",
+    "DE": "Struktureller Wandel",
+    "FR": "Changement structurel"
+  },
+  "INSIGHTS_STRUCTURAL_CHANGE_SUB": {
+    "EN": "12-month avg vs 5-year avg",
+    "DE": "12-Monats- vs. 5-Jahres-Durchschnitt",
+    "FR": "Moyenne 12 mois vs moyenne 5 ans"
+  },
+  "INSIGHTS_TODAY": {
+    "EN": "Today",
+    "DE": "Heute",
+    "FR": "Aujourd'hui"
+  },
+  "INSIGHTS_TRADE_PURPOSE": {
+    "EN": "Shows whether the country relies on imported electricity or exports its surplus.",
+    "DE": "Zeigt, ob das Land auf importierten Strom angewiesen ist oder seinen Überschuss exportiert.",
+    "FR": "Montre si le pays dépend de l'électricité importée ou exporte son surplus."
+  },
+  "INSIGHTS_TRADE_TITLE": {
+    "EN": "Electricity Trade",
+    "DE": "Stromhandel",
+    "FR": "Commerce de l'électricité"
+  },
+  "INSIGHTS_TRADE_WHAT_IT_IS": {
+    "EN": "How much electricity the country imported and exported this month.",
+    "DE": "Wie viel Strom das Land in diesem Monat importiert und exportiert hat.",
+    "FR": "La quantité d'électricité importée et exportée par le pays ce mois-ci."
+  },
+  "INSIGHTS_TRANSITION_PURPOSE": {
+    "EN": "Tracks the direction and pace of decarbonisation.",
+    "DE": "Verfolgt Richtung und Tempo der Dekarbonisierung.",
+    "FR": "Suit la direction et le rythme de la décarbonation."
+  },
+  "INSIGHTS_TRANSITION_WHAT_IT_IS": {
+    "EN": "How green the electricity system is right now.",
+    "DE": "Wie grün das Stromsystem derzeit ist.",
+    "FR": "À quel point le système électrique est actuellement vert."
+  },
+  "INSIGHTS_TREND_10Y": {
+    "EN": "10-Year Trend",
+    "DE": "10-Jahres-Trend",
+    "FR": "Tendance sur 10 ans"
+  },
+  "INSIGHTS_TREND_3Y": {
+    "EN": "3-Year Trend",
+    "DE": "3-Jahres-Trend",
+    "FR": "Tendance sur 3 ans"
+  },
+  "INSIGHTS_TREND_5Y": {
+    "EN": "5-Year Trend",
+    "DE": "5-Jahres-Trend",
+    "FR": "Tendance sur 5 ans"
+  },
+  "INSIGHTS_TREND_MOMENTUM_CALCULATION": {
+    "EN": "5-year change, 3-month vs 12-month average, 12-month vs 5-year average, month-to-month volatility, and change since 2019.",
+    "DE": "5-Jahres-Veränderung, 3-Monats- vs. 12-Monats-Durchschnitt, 12-Monats- vs. 5-Jahres-Durchschnitt, Monat-zu-Monat-Volatilität und Veränderung seit 2019.",
+    "FR": "Variation sur 5 ans, moyenne 3 mois vs 12 mois, moyenne 12 mois vs 5 ans, volatilité mensuelle et variation depuis 2019."
+  },
+  "INSIGHTS_TREND_MOMENTUM_PURPOSE": {
+    "EN": "Answers: is the transition accelerating, stalling, or reversing?",
+    "DE": "Beantwortet: Beschleunigt sich die Energiewende, stagniert sie oder kehrt sie sich um?",
+    "FR": "Répond à : la transition s'accélère-t-elle, stagne-t-elle ou s'inverse-t-elle ?"
+  },
+  "INSIGHTS_TREND_MOMENTUM_TITLE": {
+    "EN": "Trend & Momentum",
+    "DE": "Trend & Dynamik",
+    "FR": "Tendance et dynamique"
+  },
+  "INSIGHTS_TREND_MOMENTUM_WHAT_IT_IS": {
+    "EN": "How the renewable share is moving over multiple time horizons - not just this month.",
+    "DE": "Wie sich der Anteil erneuerbarer Energien über mehrere Zeithorizonte entwickelt - nicht nur in diesem Monat.",
+    "FR": "Comment évolue la part des renouvelables sur plusieurs horizons temporels, au-delà de ce seul mois."
+  },
+  "INSIGHTS_VOLATILITY": {
+    "EN": "Volatility",
+    "DE": "Volatilität",
+    "FR": "Volatilité"
+  },
+  "INSIGHTS_VOLATILITY_SUB": {
+    "EN": "Month-to-month stability (last 24 months)",
+    "DE": "Monat-zu-Monat-Stabilität (letzte 24 Monate)",
+    "FR": "Stabilité mois par mois (24 derniers mois)"
+  },
+  "INSIGHTS_VS_EU_AVERAGE": {
+    "EN": "vs EU27 average",
+    "DE": "im Vergleich zum EU27-Durchschnitt",
+    "FR": "par rapport à la moyenne UE27"
+  },
+  "INSIGHTS_YOY": {
+    "EN": "year-on-year",
+    "DE": "gegenüber Vorjahr",
+    "FR": "sur un an"
+  },
+  "INSIGHTS_SECURITY_TITLE": {
+    "EN": "Energy Security",
+    "DE": "Energiesicherheit",
+    "FR": "Sécurité énergétique"
+  },
+  "INSIGHTS_SECURITY_LOW": {
+    "EN": "Low risk",
+    "DE": "Geringes Risiko",
+    "FR": "Risque faible"
+  },
+  "INSIGHTS_SECURITY_MODERATE": {
+    "EN": "Moderate risk",
+    "DE": "Mittleres Risiko",
+    "FR": "Risque modéré"
+  },
+  "INSIGHTS_SECURITY_HIGH": {
+    "EN": "High risk",
+    "DE": "Hohes Risiko",
+    "FR": "Risque élevé"
+  },
+  "INSIGHTS_SECURITY_WHAT_IT_IS": {
+    "EN": "A combined read of import exposure across gas, oil and electricity.",
+    "DE": "Ein kombinierter Blick auf die Importabhängigkeit bei Gas, Öl und Strom.",
+    "FR": "Une lecture combinée de l'exposition aux importations de gaz, de pétrole et d'électricité."
+  },
+  "INSIGHTS_SECURITY_CALCULATION": {
+    "EN": "Each factor scores 0-2 points (< 50% = 0, 50-80% = 1, ≥ 80% = 2); risk level is the share of the maximum possible score.",
+    "DE": "Jeder Faktor erhält 0-2 Punkte (< 50 % = 0, 50-80 % = 1, ≥ 80 % = 2); die Risikostufe ergibt sich aus dem Anteil an der maximal möglichen Punktzahl.",
+    "FR": "Chaque facteur reçoit 0 à 2 points (< 50 % = 0, 50-80 % = 1, ≥ 80 % = 2) ; le niveau de risque correspond à la part du score maximal possible."
+  },
+  "INSIGHTS_SECURITY_PURPOSE": {
+    "EN": "A single at-a-glance signal for how exposed the country is to external energy supply.",
+    "DE": "Ein einziges, auf einen Blick erfassbares Signal für die Abhängigkeit des Landes von externer Energieversorgung.",
+    "FR": "Un signal unique et synthétique de l'exposition du pays à l'approvisionnement énergétique extérieur."
+  },
+  "INSIGHTS_OIL_DEPENDENCY": {
+    "EN": "Oil Import Dependency",
+    "DE": "Ölimportabhängigkeit",
+    "FR": "Dépendance aux importations de pétrole"
+  },
+  "INSIGHTS_ELECTRICITY_IMPORT_SHARE": {
+    "EN": "Electricity Import Share",
+    "DE": "Anteil der Stromimporte",
+    "FR": "Part des importations d'électricité"
+  },
+  "INSIGHTS_GAS_MARKET_TITLE": {
+    "EN": "Gas Market",
+    "DE": "Gasmarkt",
+    "FR": "Marché du gaz"
+  },
+  "INSIGHTS_GAS_MARKET_WHAT_IT_IS": {
+    "EN": "How much gas the country used this month, and how storage is supporting supply.",
+    "DE": "Wie viel Gas das Land in diesem Monat verbraucht hat und welche Rolle die Speicher bei der Versorgung spielen.",
+    "FR": "La quantité de gaz consommée par le pays ce mois-ci et le rôle du stockage dans l'approvisionnement."
+  },
+  "INSIGHTS_GAS_MARKET_CALCULATION": {
+    "EN": "Inland gas consumption compared to the previous month, the same month last year, and the same calendar month's historical average; storage contribution is the month-on-month stock change.",
+    "DE": "Inländischer Gasverbrauch im Vergleich zum Vormonat, zum gleichen Monat des Vorjahres und zum historischen Durchschnitt desselben Kalendermonats; der Speicherbeitrag ist die monatliche Bestandsänderung.",
+    "FR": "Consommation intérieure de gaz comparée au mois précédent, au même mois de l'année précédente et à la moyenne historique du même mois calendaire ; la contribution du stockage est la variation mensuelle des stocks."
+  },
+  "INSIGHTS_GAS_MARKET_PURPOSE": {
+    "EN": "Tracks demand pressure and the role storage plays in balancing supply.",
+    "DE": "Verfolgt den Nachfragedruck und die Rolle der Speicher beim Ausgleich der Versorgung.",
+    "FR": "Suit la pression de la demande et le rôle du stockage dans l'équilibrage de l'approvisionnement."
+  },
+  "INSIGHTS_GAS_CONSUMPTION": {
+    "EN": "Gas Consumption",
+    "DE": "Gasverbrauch",
+    "FR": "Consommation de gaz"
+  },
+  "INSIGHTS_YOY_CHANGE": {
+    "EN": "vs same month last year",
+    "DE": "im Vergleich zum gleichen Monat des Vorjahres",
+    "FR": "par rapport au même mois de l'année précédente"
+  },
+  "INSIGHTS_VS_HISTORICAL_AVG": {
+    "EN": "vs historical average",
+    "DE": "im Vergleich zum historischen Durchschnitt",
+    "FR": "par rapport à la moyenne historique"
+  },
+  "INSIGHTS_SAMPLE_YEARS": {
+    "EN": "{n}-year average",
+    "DE": "{n}-Jahres-Durchschnitt",
+    "FR": "Moyenne sur {n} ans"
+  },
+  "INSIGHTS_STORAGE_CONTRIBUTION": {
+    "EN": "Storage Contribution",
+    "DE": "Speicherbeitrag",
+    "FR": "Contribution du stockage"
+  },
+  "INSIGHTS_STORAGE_DRAWDOWN": {
+    "EN": "Drawing from storage",
+    "DE": "Entnahme aus dem Speicher",
+    "FR": "Puisage dans les stocks"
+  },
+  "INSIGHTS_STORAGE_INJECTION": {
+    "EN": "Injecting into storage",
+    "DE": "Einspeicherung",
+    "FR": "Injection dans les stocks"
+  },
+  "INSIGHTS_OIL_MARKET_TITLE": {
+    "EN": "Oil Market",
+    "DE": "Ölmarkt",
+    "FR": "Marché pétrolier"
+  },
+  "INSIGHTS_OIL_MARKET_WHAT_IT_IS": {
+    "EN": "Petroleum production, trade, crude oil prices and strategic stock levels this month.",
+    "DE": "Erdölproduktion, -handel, Rohölpreise und strategische Lagerbestände in diesem Monat.",
+    "FR": "Production, échanges, prix du pétrole brut et niveaux des stocks stratégiques ce mois-ci."
+  },
+  "INSIGHTS_OIL_MARKET_CALCULATION": {
+    "EN": "Oil dependency = Imports / (Production + Imports) × 100; stock alert flags a month-on-month stock change of 10% or more.",
+    "DE": "Ölabhängigkeit = Importe / (Produktion + Importe) × 100; ein Bestandsalarm wird bei einer monatlichen Bestandsänderung von 10 % oder mehr ausgelöst.",
+    "FR": "Dépendance pétrolière = Importations / (Production + Importations) × 100 ; une alerte de stock est déclenchée en cas de variation mensuelle des stocks de 10 % ou plus."
+  },
+  "INSIGHTS_OIL_MARKET_PURPOSE": {
+    "EN": "Tracks petroleum market pressure and reserve adequacy.",
+    "DE": "Verfolgt den Druck auf dem Ölmarkt und die Angemessenheit der Reserven.",
+    "FR": "Suit la pression sur le marché pétrolier et l'adéquation des réserves."
+  },
+  "INSIGHTS_OIL_PRODUCTION": {
+    "EN": "Oil Production",
+    "DE": "Ölproduktion",
+    "FR": "Production de pétrole"
+  },
+  "INSIGHTS_CRUDE_OIL_PRICE": {
+    "EN": "Crude Oil Price",
+    "DE": "Rohölpreis",
+    "FR": "Prix du pétrole brut"
+  },
+  "INSIGHTS_CRUDE_OIL_VOLUME": {
+    "EN": "Crude Oil Import Volume",
+    "DE": "Rohölimportvolumen",
+    "FR": "Volume des importations de pétrole brut"
+  },
+  "INSIGHTS_STOCK_LEVEL_EUE": {
+    "EN": "Oil Stocks (EU-defined)",
+    "DE": "Ölbestände (EU-Definition)",
+    "FR": "Stocks de pétrole (définition UE)"
+  },
+  "INSIGHTS_STOCK_LEVEL_NAT": {
+    "EN": "Oil Stocks (nationally-defined)",
+    "DE": "Ölbestände (nationale Definition)",
+    "FR": "Stocks de pétrole (définition nationale)"
+  },
+  "INSIGHTS_STOCK_ALERT_BUILD": {
+    "EN": "Stock alert: a major build-up of {delta} was recorded in {month}.",
+    "DE": "Bestandsalarm: Im {month} wurde ein deutlicher Bestandsaufbau von {delta} verzeichnet.",
+    "FR": "Alerte stock : une forte hausse de {delta} des stocks a été enregistrée en {month}."
+  },
+  "INSIGHTS_STOCK_ALERT_DRAWDOWN": {
+    "EN": "Stock alert: a major drawdown of {delta} was recorded in {month}.",
+    "DE": "Bestandsalarm: Im {month} wurde ein deutlicher Bestandsabbau von {delta} verzeichnet.",
+    "FR": "Alerte stock : une forte baisse de {delta} des stocks a été enregistrée en {month}."
+  },
+  "INSIGHTS_FOSSIL_DEPENDENCY": {
+    "EN": "Fossil Dependency",
+    "DE": "Abhängigkeit von fossilen Energien",
+    "FR": "Dépendance aux énergies fossiles"
+  },
+  "INSIGHTS_GAUGE_LOW": {
+    "EN": "Low (< 33%)",
+    "DE": "Niedrig (< 33 %)",
+    "FR": "Faible (< 33 %)"
+  },
+  "INSIGHTS_GAUGE_MEDIUM": {
+    "EN": "Medium (33-66%)",
+    "DE": "Mittel (33-66 %)",
+    "FR": "Moyenne (33-66 %)"
+  },
+  "INSIGHTS_GAUGE_HIGH": {
+    "EN": "High (≥ 66%)",
+    "DE": "Hoch (≥ 66 %)",
+    "FR": "Élevée (≥ 66 %)"
+  },
+  "INSIGHTS_MOMENTUM_TREND_TITLE": {
+    "EN": "Renewable share trend",
+    "DE": "Trend des Anteils erneuerbarer Energien",
+    "FR": "Tendance de la part des renouvelables"
+  },
+  "INSIGHTS_CRUDE_OIL_PRICE_TREND_TITLE": {
+    "EN": "Crude oil price trend",
+    "DE": "Rohölpreistrend",
+    "FR": "Tendance du prix du pétrole brut"
+  },
+  "INSIGHTS_GAS_CONSUMPTION_TREND_TITLE": {
+    "EN": "Gas consumption trend",
+    "DE": "Trend des Gasverbrauchs",
+    "FR": "Tendance de la consommation de gaz"
+  },
+  "INSIGHTS_GAS_IMPORTS": {
+    "EN": "Gas Imports",
+    "DE": "Gasimporte",
+    "FR": "Importations de gaz"
+  },
+  "INSIGHTS_ELECTRICITY_IMPORTS": {
+    "EN": "Electricity Imports",
+    "DE": "Stromimporte",
+    "FR": "Importations d'électricité"
+  },
+  "INSIGHTS_MARKET_PRESSURE_TITLE": {
+    "EN": "Market Pressure",
+    "DE": "Marktdruck",
+    "FR": "Pression du marché"
+  },
+  "INSIGHTS_MARKET_PRESSURE_WHAT_IT_IS": {
+    "EN": "Whether energy costs and import volumes are rising or easing right now.",
+    "DE": "Ob Energiekosten und Importmengen derzeit steigen oder nachlassen.",
+    "FR": "Si les coûts de l'énergie et les volumes d'importation augmentent ou diminuent actuellement."
+  },
+  "INSIGHTS_MARKET_PRESSURE_CALCULATION": {
+    "EN": "Month-on-month % change in crude oil price, gas imports, electricity imports and crude oil import volume; a majority moving the same way (beyond ±2%) sets the overall signal.",
+    "DE": "Monatliche prozentuale Veränderung von Rohölpreis, Gasimporten, Stromimporten und Rohölimportvolumen; bewegt sich die Mehrheit in dieselbe Richtung (über ±2 %), bestimmt dies das Gesamtsignal.",
+    "FR": "Variation mensuelle en % du prix du pétrole brut, des importations de gaz, des importations d'électricité et du volume d'importation de pétrole brut ; si la majorité évolue dans le même sens (au-delà de ±2 %), cela détermine le signal global."
+  },
+  "INSIGHTS_MARKET_PRESSURE_PURPOSE": {
+    "EN": "An early warning for tightening or loosening energy markets.",
+    "DE": "Ein Frühwarnsignal für sich verschärfende oder entspannende Energiemärkte.",
+    "FR": "Un signal d'alerte précoce pour des marchés de l'énergie qui se tendent ou se détendent."
+  },
+  "INSIGHTS_PRESSURE_RISING": {
+    "EN": "Rising pressure",
+    "DE": "Steigender Druck",
+    "FR": "Pression en hausse"
+  },
+  "INSIGHTS_PRESSURE_EASING": {
+    "EN": "Easing pressure",
+    "DE": "Nachlassender Druck",
+    "FR": "Pression en baisse"
+  },
+  "INSIGHTS_PRESSURE_MIXED": {
+    "EN": "Mixed signals",
+    "DE": "Uneinheitliche Signale",
+    "FR": "Signaux contrastés"
+  },
+  "INSIGHTS_DIRECTION_TITLE": {
+    "EN": "Direction of Travel",
+    "DE": "Entwicklungsrichtung",
+    "FR": "Direction d'évolution"
+  },
+  "INSIGHTS_DIRECTION_UP": {
+    "EN": "Renewables trending up",
+    "DE": "Erneuerbare im Aufwärtstrend",
+    "FR": "Renouvelables en hausse"
+  },
+  "INSIGHTS_DIRECTION_DOWN": {
+    "EN": "Renewables trending down",
+    "DE": "Erneuerbare im Abwärtstrend",
+    "FR": "Renouvelables en baisse"
+  },
+  "INSIGHTS_DIRECTION_FLAT": {
+    "EN": "Broadly flat",
+    "DE": "Weitgehend stabil",
+    "FR": "Globalement stable"
+  },
+  "INSIGHTS_DIRECTION_TEXT": {
+    "EN": "based on the pace of the last {years} years ({pace} per year). This is a simple trend read, not a forecast.",
+    "DE": "basierend auf dem Tempo der letzten {years} Jahre ({pace} pro Jahr). Dies ist eine einfache Trendbetrachtung, keine Prognose.",
+    "FR": "sur la base du rythme des {years} dernières années ({pace} par an). Il s'agit d'une simple lecture de tendance, pas d'une prévision."
+  },
+  "INSIGHTS_DIRECTION_WHAT_IT_IS": {
+    "EN": "A simple read of where the renewable share has been heading recently.",
+    "DE": "Eine einfache Einschätzung, wohin sich der Anteil erneuerbarer Energien zuletzt entwickelt hat.",
+    "FR": "Une lecture simple de la direction récente de la part des renouvelables."
+  },
+  "INSIGHTS_DIRECTION_CALCULATION": {
+    "EN": "Change over the last 3 years, divided by 3 to get an annualised pace.",
+    "DE": "Veränderung über die letzten 3 Jahre, geteilt durch 3 für ein jährliches Tempo.",
+    "FR": "Variation sur les 3 dernières années, divisée par 3 pour obtenir un rythme annualisé."
+  },
+  "INSIGHTS_DIRECTION_PURPOSE": {
+    "EN": "Answers \"where are we heading?\" without pretending to forecast the future.",
+    "DE": "Beantwortet die Frage \"Wohin geht die Reise?\", ohne eine Prognose der Zukunft vorzutäuschen.",
+    "FR": "Répond à « où allons-nous ? » sans prétendre prévoir l'avenir."
+  },
+  "INSIGHTS_TAKEAWAYS_TITLE": {
+    "EN": "Key Takeaways",
+    "DE": "Wichtigste Erkenntnisse im Überblick",
+    "FR": "Points clés à retenir"
+  },
+  "INSIGHTS_TAKEAWAYS_WHAT_IT_IS": {
+    "EN": "A short narrative wrap-up of everything above.",
+    "DE": "Eine kurze zusammenfassende Einordnung des Vorstehenden.",
+    "FR": "Une brève synthèse narrative de tout ce qui précède."
+  },
+  "INSIGHTS_TAKEAWAYS_PURPOSE": {
+    "EN": "Answers the four framing questions from the top of this page in one place.",
+    "DE": "Beantwortet die vier einleitenden Fragen dieser Seite an einem Ort.",
+    "FR": "Répond en un seul endroit aux quatre questions posées en introduction de cette page."
+  },
+  "INSIGHTS_TAKEAWAY_WHERE_WERE_WE": {
+    "EN": "Where were we?",
+    "DE": "Wo standen wir?",
+    "FR": "Où en étions-nous ?"
+  },
+  "INSIGHTS_TAKEAWAY_WERE_TEXT": {
+    "EN": "{years} years ago, renewable share stood at {value} ({month}).",
+    "DE": "Vor {years} Jahren lag der Anteil erneuerbarer Energien bei {value} ({month}).",
+    "FR": "Il y a {years} ans, la part des renouvelables s'élevait à {value} ({month})."
+  },
+  "INSIGHTS_TAKEAWAY_WHERE_NOW": {
+    "EN": "Where are we now?",
+    "DE": "Wo stehen wir jetzt?",
+    "FR": "Où en sommes-nous maintenant ?"
+  },
+  "INSIGHTS_TAKEAWAY_NOW_TEXT": {
+    "EN": "Renewable share is {value} as of {month}.",
+    "DE": "Der Anteil erneuerbarer Energien liegt zum {month} bei {value}.",
+    "FR": "La part des renouvelables est de {value} en {month}."
+  },
+  "INSIGHTS_TAKEAWAY_WHERE_HEADING": {
+    "EN": "Where are we heading?",
+    "DE": "Wohin geht die Reise?",
+    "FR": "Où allons-nous ?"
+  },
+  "INSIGHTS_YEAR_ABBR": {
+    "EN": "year",
+    "DE": "Jahr",
+    "FR": "an"
+  },
+  "INSIGHTS_TAKEAWAY_WHY_MATTERS": {
+    "EN": "Why does it matter?",
+    "DE": "Warum ist das wichtig?",
+    "FR": "Pourquoi est-ce important ?"
+  },
+  "INSIGHTS_TAKEAWAY_MATTERS_TEXT": {
+    "EN": "Energy security: {level}. The pace of transition directly shapes {country}'s exposure to imported fuel.",
+    "DE": "Energiesicherheit: {level}. Das Tempo der Energiewende beeinflusst unmittelbar die Abhängigkeit von {country} von importierten Brennstoffen.",
+    "FR": "Sécurité énergétique : {level}. Le rythme de la transition détermine directement l'exposition de {country} aux combustibles importés."
+  },
+  "INSIGHTS_FINDING_ENERGY_SECURITY": {
+    "EN": "Energy security risk is {level}, driven mainly by {factor} ({value}).",
+    "DE": "Das Energiesicherheitsrisiko ist {level} und wird hauptsächlich durch {factor} ({value}) bestimmt.",
+    "FR": "Le risque pour la sécurité énergétique est {level}, principalement en raison de {factor} ({value})."
+  },
+  "INSIGHTS_FINDING_OIL_PRICE_UP": {
+    "EN": "Crude oil price jumped {delta} month-on-month, to {price}.",
+    "DE": "Der Rohölpreis stieg im Monatsvergleich um {delta} auf {price}.",
+    "FR": "Le prix du pétrole brut a bondi de {delta} sur un mois, à {price}."
+  },
+  "INSIGHTS_FINDING_OIL_PRICE_DOWN": {
+    "EN": "Crude oil price dropped {delta} month-on-month, to {price}.",
+    "DE": "Der Rohölpreis sank im Monatsvergleich um {delta} auf {price}.",
+    "FR": "Le prix du pétrole brut a chuté de {delta} sur un mois, à {price}."
+  },
+  "INSIGHTS_DATA_COVERAGE": {
+    "EN": "Data Coverage",
+    "DE": "Datenabdeckung",
+    "FR": "Couverture des données"
+  },
+  "INSIGHTS_YEARS": {
+    "EN": "years",
+    "DE": "Jahre",
+    "FR": "ans"
+  },
+  "INSIGHTS_SINCE": {
+    "EN": "Since",
+    "DE": "Seit",
+    "FR": "Depuis"
+  },
+  "INSIGHTS_RECORD_BREAKS": {
+    "EN": "Records Set",
+    "DE": "Aufgestellte Rekorde",
+    "FR": "Records établis"
+  },
+  "INSIGHTS_RECORD_BREAKS_SUB": {
+    "EN": "New all-time highs across the full history",
+    "DE": "Neue historische Höchststände über die gesamte Historie",
+    "FR": "Nouveaux records absolus sur l'ensemble de l'historique"
+  },
+  "INSIGHTS_LONGEST_STREAK_UP": {
+    "EN": "Longest Rising Streak",
+    "DE": "Längste Anstiegsserie",
+    "FR": "Plus longue série de hausses"
+  },
+  "INSIGHTS_LONGEST_STREAK_DOWN": {
+    "EN": "Longest Falling Streak",
+    "DE": "Längste Rückgangsserie",
+    "FR": "Plus longue série de baisses"
+  },
+  "INSIGHTS_MONTHS": {
+    "EN": "months",
+    "DE": "Monate",
+    "FR": "mois"
+  },
+  "INSIGHTS_BEST_YEAR": {
+    "EN": "Best Year",
+    "DE": "Bestes Jahr",
+    "FR": "Meilleure année"
+  },
+  "INSIGHTS_WORST_YEAR": {
+    "EN": "Worst Year",
+    "DE": "Schwächstes Jahr",
+    "FR": "Année la plus faible"
+  },
+  "INSIGHTS_MILESTONES": {
+    "EN": "First Crossed",
+    "DE": "Erstmals erreicht",
+    "FR": "Premier franchissement"
+  },
+  "INSIGHTS_TRADE_HIGH": {
+    "EN": "Highest Balance on Record",
+    "DE": "Höchste jemals verzeichnete Bilanz",
+    "FR": "Solde le plus élevé jamais enregistré"
+  },
+  "INSIGHTS_TRADE_LOW": {
+    "EN": "Lowest Balance on Record",
+    "DE": "Niedrigste jemals verzeichnete Bilanz",
+    "FR": "Solde le plus faible jamais enregistré"
+  },
+  "INSIGHTS_TRADE_AVG": {
+    "EN": "Average Balance",
+    "DE": "Durchschnittliche Bilanz",
+    "FR": "Solde moyen"
+  },
+  "INSIGHTS_TRADE_AVG_SUB": {
+    "EN": "Across the full recorded history",
+    "DE": "Über die gesamte erfasste Historie",
+    "FR": "Sur l'ensemble de l'historique enregistré"
+  },
+  "INSIGHTS_SCROLL_TOP": {
+    "EN": "Back to top",
+    "DE": "Nach oben",
+    "FR": "Haut de page"
+  },
+  "INSIGHTS_PACE_FASTER": {
+    "EN": "Transitioning faster than the EU27 average over the last {years} years.",
+    "DE": "Der Wandel vollzieht sich schneller als im EU27-Durchschnitt der letzten {years} Jahre.",
+    "FR": "La transition est plus rapide que la moyenne de l'UE27 sur les {years} dernières années."
+  },
+  "INSIGHTS_PACE_SLOWER": {
+    "EN": "Transitioning slower than the EU27 average over the last {years} years.",
+    "DE": "Der Wandel vollzieht sich langsamer als im EU27-Durchschnitt der letzten {years} Jahre.",
+    "FR": "La transition est plus lente que la moyenne de l'UE27 sur les {years} dernières années."
+  },
+  "INSIGHTS_PACE_FOCUS": {
+    "EN": "5-Year Pace (this country)",
+    "DE": "5-Jahres-Tempo (dieses Land)",
+    "FR": "Rythme sur 5 ans (ce pays)"
+  },
+  "INSIGHTS_PACE_EU": {
+    "EN": "5-Year Pace (EU27 average)",
+    "DE": "5-Jahres-Tempo (EU27-Durchschnitt)",
+    "FR": "Rythme sur 5 ans (moyenne UE27)"
+  },
+  "INSIGHTS_FUEL_CLASS_FOSSIL": {
+    "EN": "Non-Renewable (Fossil)",
+    "DE": "Nicht erneuerbar (fossil)",
+    "FR": "Non renouvelable (fossile)"
+  },
+  "INSIGHTS_FUEL_CLASS_NUCLEAR": {
+    "EN": "Non-Renewable (Nuclear)",
+    "DE": "Nicht erneuerbar (nuklear)",
+    "FR": "Non renouvelable (nucléaire)"
+  },
+  "INSIGHTS_FUEL_CLASS_TOTAL": {
+    "EN": "Total",
+    "DE": "Gesamt",
+    "FR": "Total"
+  },
+  "INSIGHTS_FUEL_CLASS_AGGREGATE": {
+    "EN": "Combustible Fuels (aggregate)",
+    "DE": "Brennbare Brennstoffe (Summe)",
+    "FR": "Combustibles (agrégat)"
+  },
+  "INSIGHTS_FUEL_CLASS_OTHER": {
+    "EN": "Other / Not Classified",
+    "DE": "Sonstige / nicht klassifiziert",
+    "FR": "Autre / non classé"
+  },
+  "INSIGHTS_FUEL_EXPLORER_TITLE": {
+    "EN": "Fuel Explorer",
+    "DE": "Brennstoff-Explorer",
+    "FR": "Explorateur de combustibles"
+  },
+  "INSIGHTS_SELECT_FUEL": {
+    "EN": "Select a fuel",
+    "DE": "Brennstoff auswählen",
+    "FR": "Sélectionner un combustible"
+  },
+  "INSIGHTS_OF_TOTAL": {
+    "EN": "of total generation",
+    "DE": "der Gesamterzeugung",
+    "FR": "de la production totale"
+  },
+  "INSIGHTS_KPI_PURPOSE": {
+    "EN": "Gives a quick read on transition progress, trade exposure and import dependency.",
+    "DE": "Bietet einen schnellen Überblick über den Fortschritt der Energiewende, die Handelsexposition und die Importabhängigkeit.",
+    "FR": "Donne un aperçu rapide de la progression de la transition, de l'exposition commerciale et de la dépendance aux importations."
+  },
+  "INSIGHTS_KPI_TITLE": {
+    "EN": "KPI Scorecard",
+    "DE": "KPI-Übersicht",
+    "FR": "Indicateurs clés"
+  },
+  "INSIGHTS_KPI_RENEWABLE_SHARE": {
+    "EN": "Renewable Share",
+    "DE": "Anteil erneuerbarer Energien",
+    "FR": "Part des énergies renouvelables"
+  },
+  "INSIGHTS_KPI_FOSSIL_SHARE": {
+    "EN": "Fossil Share",
+    "DE": "Anteil fossiler Energien",
+    "FR": "Part des énergies fossiles"
+  },
+  "INSIGHTS_KPI_TRADE_BALANCE": {
+    "EN": "Electricity Trade Balance",
+    "DE": "Stromhandelsbilanz",
+    "FR": "Balance commerciale de l'électricité"
+  },
+  "INSIGHTS_KPI_GAS_DEPENDENCY": {
+    "EN": "Gas Import Dependency",
+    "DE": "Gasimportabhängigkeit",
+    "FR": "Dépendance aux importations de gaz"
+  },
+  "INSIGHTS_VS_PREV_MONTH": {
+    "EN": "vs previous month",
+    "DE": "im Vergleich zum Vormonat",
+    "FR": "par rapport au mois précédent"
+  },
+  "INSIGHTS_NET_EXPORTER": {
+    "EN": "Net exporter",
+    "DE": "Nettoexporteur",
+    "FR": "Exportateur net"
+  },
+  "INSIGHTS_NET_IMPORTER": {
+    "EN": "Net importer",
+    "DE": "Nettoimporteur",
+    "FR": "Importateur net"
+  },
+  "INSIGHTS_CALC_LABEL": {
+    "EN": "How is this calculated?",
+    "DE": "Wie wird das berechnet?",
+    "FR": "Comment ce chiffre est-il calculé ?"
+  },
+  "INSIGHTS_CALC_RENEWABLE_SHARE": {
+    "EN": "Sum of hydro, wind, solar, geothermal and other renewables, divided by total generation.",
+    "DE": "Summe aus Wasser-, Wind-, Solar-, Geothermie- und sonstiger erneuerbarer Energie, geteilt durch die Gesamterzeugung.",
+    "FR": "Somme de l'hydraulique, de l'éolien, du solaire, de la géothermie et des autres renouvelables, divisée par la production totale."
+  },
+  "INSIGHTS_CALC_FOSSIL_SHARE": {
+    "EN": "Sum of coal, natural gas and oil products, divided by total generation.",
+    "DE": "Summe aus Kohle, Erdgas und Ölprodukten, geteilt durch die Gesamterzeugung.",
+    "FR": "Somme du charbon, du gaz naturel et des produits pétroliers, divisée par la production totale."
+  },
+  "INSIGHTS_CALC_TRADE_BALANCE": {
+    "EN": "Electricity exports minus electricity imports.",
+    "DE": "Stromexporte minus Stromimporte.",
+    "FR": "Exportations d'électricité moins importations d'électricité."
+  },
+  "INSIGHTS_CALC_GAS_DEPENDENCY": {
+    "EN": "Net gas imports divided by indigenous production plus net imports.",
+    "DE": "Netto-Gasimporte geteilt durch die Eigenerzeugung zuzüglich Netto-Importe.",
+    "FR": "Importations nettes de gaz divisées par la production indigène plus les importations nettes."
+  },
+  "INSIGHTS_FINDINGS_TITLE": {
+    "EN": "Key Findings",
+    "DE": "Wichtigste Erkenntnisse",
+    "FR": "Principaux constats"
+  },
+  "INSIGHTS_FINDING_MOM_UP": {
+    "EN": "Renewable share rose {delta} month-on-month, to {value}.",
+    "DE": "Der Anteil erneuerbarer Energien stieg im Monatsvergleich um {delta} auf {value}.",
+    "FR": "La part des renouvelables a progressé de {delta} sur un mois, à {value}."
+  },
+  "INSIGHTS_FINDING_MOM_DOWN": {
+    "EN": "Renewable share fell {delta} month-on-month, to {value}.",
+    "DE": "Der Anteil erneuerbarer Energien sank im Monatsvergleich um {delta} auf {value}.",
+    "FR": "La part des renouvelables a reculé de {delta} sur un mois, à {value}."
+  },
+  "INSIGHTS_FINDING_YOY_UP": {
+    "EN": "Renewable share is up {delta} compared to {month}.",
+    "DE": "Der Anteil erneuerbarer Energien liegt {delta} über dem Wert von {month}.",
+    "FR": "La part des renouvelables a augmenté de {delta} par rapport à {month}."
+  },
+  "INSIGHTS_FINDING_YOY_DOWN": {
+    "EN": "Renewable share is down {delta} compared to {month}.",
+    "DE": "Der Anteil erneuerbarer Energien liegt {delta} unter dem Wert von {month}.",
+    "FR": "La part des renouvelables a diminué de {delta} par rapport à {month}."
+  },
+  "INSIGHTS_FINDING_RECORD_HIGH": {
+    "EN": "New historical high: {value} renewable share, the highest on record.",
+    "DE": "Neuer historischer Höchstwert: {value} Anteil erneuerbarer Energien, der höchste je verzeichnete Wert.",
+    "FR": "Nouveau record historique : {value} de part renouvelable, le plus haut niveau jamais enregistré."
+  },
+  "INSIGHTS_FINDING_RECORD_LOW": {
+    "EN": "New historical low: {value} renewable share, the lowest on record.",
+    "DE": "Neuer historischer Tiefstwert: {value} Anteil erneuerbarer Energien, der niedrigste je verzeichnete Wert.",
+    "FR": "Nouveau minimum historique : {value} de part renouvelable, le plus bas niveau jamais enregistré."
+  },
+  "INSIGHTS_FINDING_TOP_SOURCE": {
+    "EN": "{source} was the largest single contributor in {month}, at {value} GWh.",
+    "DE": "{source} war im {month} mit {value} GWh der größte einzelne Beitrag.",
+    "FR": "{source} a été la principale source en {month}, avec {value} GWh."
+  },
+  "INSIGHTS_TRANSITION_TITLE": {
+    "EN": "Energy Transition",
+    "DE": "Energiewende",
+    "FR": "Transition énergétique"
+  },
+  "INSIGHTS_RENEWABLES": {
+    "EN": "Renewables",
+    "DE": "Erneuerbare",
+    "FR": "Renouvelables"
+  },
+  "INSIGHTS_NON_RENEWABLES": {
+    "EN": "Non-renewables",
+    "DE": "Nicht erneuerbare",
+    "FR": "Non renouvelables"
+  },
+  "INSIGHTS_MOMENTUM_TITLE": {
+    "EN": "Renewable Momentum",
+    "DE": "Dynamik der Erneuerbaren",
+    "FR": "Dynamique des renouvelables"
+  },
+  "INSIGHTS_MOMENTUM_SUB": {
+    "EN": "Renewable share, full history",
+    "DE": "Anteil erneuerbarer Energien, gesamter Verlauf",
+    "FR": "Part des renouvelables, historique complet"
+  },
+  "INSIGHTS_MAX": {
+    "EN": "Max",
+    "DE": "Max",
+    "FR": "Max"
+  },
+  "INSIGHTS_MIN": {
+    "EN": "Min",
+    "DE": "Min",
+    "FR": "Min"
+  },
+  "INSIGHTS_AVG": {
+    "EN": "Average",
+    "DE": "Durchschnitt",
+    "FR": "Moyenne"
+  },
+  "INSIGHTS_RECORDS_TITLE": {
+    "EN": "Records & Milestones",
+    "DE": "Rekorde und Meilensteine",
+    "FR": "Records et jalons"
+  },
+  "INSIGHTS_RECORDS_HIGH": {
+    "EN": "Historical maximum renewable share",
+    "DE": "Historischer Höchstanteil erneuerbarer Energien",
+    "FR": "Part maximale historique des renouvelables"
+  },
+  "INSIGHTS_RECORDS_LOW": {
+    "EN": "Historical minimum renewable share",
+    "DE": "Historischer Mindestanteil erneuerbarer Energien",
+    "FR": "Part minimale historique des renouvelables"
+  },
   "MAINMENU": {
     "EN": "Menu",
     "DE": "Menü",

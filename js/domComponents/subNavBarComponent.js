@@ -345,8 +345,23 @@ function toggleInsightsView(show) {
     $chartBtns.addClass('insights-mode');
     $insightsPage.show().focus();
 
+    try {
+      if (typeof loadInsights === 'function') loadInsights();
+    } catch (e) {
+      console.warn('Insights: load failed', e);
+    }
+
     $(document).off('keydown.insights').on('keydown.insights', function(e) {
       if (e.key === 'Escape') {
+        // If a "how is this calculated" popover is open, close that first -
+        // only close the whole view on a second Escape.
+        const $openPopovers = $('.ecl-popover__container').not('[hidden]');
+        if ($openPopovers.length) {
+          $openPopovers.attr('hidden', 'hidden');
+          $('.ecl-popover__toggle').attr('aria-expanded', 'false');
+          e.preventDefault();
+          return;
+        }
         toggleInsightsView(false);
       }
     });
