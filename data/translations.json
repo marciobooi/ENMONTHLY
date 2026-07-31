@@ -224,7 +224,7 @@
     "DE": "Albanien",
     "FR": "Albanie"
   },
-"TITLE": {
+  "TITLE": {
     "EN": "Energy monthly",
     "DE": "Energie monatlich",
     "FR": "Énergie mensuelle"
@@ -1288,8 +1288,8 @@
     "EN": "Show table view",
     "FR": "Afficher la vue en tableau",
     "DE": "Tabellenansicht anzeigen"
-  },  
-"INFO": {
+  },
+  "INFO": {
     "EN": "Information",
     "DE": "Informationen",
     "FR": "Infos"
@@ -1389,7 +1389,7 @@
     "DE": "Fluss",
     "FR": "Flux"
   },
-"MENU_FLOW": {
+  "MENU_FLOW": {
     "EN": "Select flow",
     "DE": "Fluss auswählen",
     "FR": "Sélectionner le flux"
@@ -1409,7 +1409,7 @@
     "DE": "Indikator",
     "FR": "Indicateur"
   },
-"MENU_INDICATOR": {
+  "MENU_INDICATOR": {
     "EN": "Select indicator",
     "DE": "Indikator auswählen",
     "FR": "Sélectionner l'indicateur"
@@ -1454,37 +1454,37 @@
     "DE": "Versorgung und Umwandlung fester fossiler Brennstoffe",
     "FR": "Approvisionnement et transformation des combustibles fossiles solides"
   },
-"nrg_cb_oilm": {
+  "nrg_cb_oilm": {
     "EN": "Supply and transformation of oil and petroleum products",
     "DE": "Versorgung und Umwandlung von Öl und Mineralölerzeugnissen",
     "FR": "Approvisionnement et transformation du pétrole et des produits pétroliers"
   },
-"nrg_cb_cosm": {
+  "nrg_cb_cosm": {
     "EN": "Crude oil supply",
     "DE": "Versorgung mit Rohöl",
     "FR": "Approvisionnement en pétrole brut"
   },
-"nrg_cb_gasm": {
+  "nrg_cb_gasm": {
     "EN": "Supply, transformation and consumption of gas",
     "DE": "Versorgung, Umwandlung und Verbrauch von Gas",
     "FR": "Approvisionnement, transformation et consommation de gaz"
   },
-"nrg_cb_em": {
+  "nrg_cb_em": {
     "EN": "Supply, transformation and consumption of electricity",
     "DE": "Versorgung, Umwandlung und Verbrauch von Strom",
     "FR": "Approvisionnement, transformation et consommation d'électricité"
   },
-"nrg_cb_pem": {
+  "nrg_cb_pem": {
     "EN": "Net electricity generation by type of fuel",
     "DE": "Nettostromerzeugung nach Brennstoffart",
     "FR": "Production nette d'électricité par type de combustible"
   },
-"nrg_cb_pem_RW": {
+  "nrg_cb_pem_RW": {
     "EN": "Net electricity generation Renewable vs non-renewable electricity",
     "DE": "Nettostromerzeugung Erneuerbar vs. nicht erneuerbar",
     "FR": "Production nette d'électricité Renouvelable vs non renouvelable"
   },
-"nrg_cb_cosm_Fuel": {
+  "nrg_cb_cosm_Fuel": {
     "EN": "Crude oil",
     "DE": "Rohöl",
     "FR": "Pétrole brut"
@@ -1494,217 +1494,217 @@
     "DE": "Inlandsproduktion",
     "FR": "Production indigène"
   },
-"IMP": {
+  "IMP": {
     "EN": "Imports",
     "DE": "Einfuhren",
     "FR": "Importations"
   },
-"EXP": {
+  "EXP": {
     "EN": "Exports",
     "DE": "Ausfuhren",
     "FR": "Exportations"
   },
-"PRD": {
+  "PRD": {
     "EN": "Production",
     "DE": "Produktion",
     "FR": "Production"
   },
-"NETIMP": {
+  "NETIMP": {
     "EN": "Net imports",
     "DE": "Nettoeinfuhren",
     "FR": "Importations nettes"
   },
-"GID_CAL": {
+  "GID_CAL": {
     "EN": "Gross inland deliveries - calculated",
     "DE": "Bruttoinlandslieferungen - berechnet",
     "FR": "Livraisons intérieures brutes - calculées"
   },
-"Net_imp": {
+  "Net_imp": {
     "EN": "Net imports",
     "DE": "Nettoeinfuhren",
     "FR": "Importations nettes"
   },
-"TO_RPI_RO": {
+  "TO_RPI_RO": {
     "EN": "Refinery output",
     "DE": "Raffinerieausstoß",
     "FR": "Production des raffineries"
   },
-"STK_CHG_MG": {
+  "STK_CHG_MG": {
     "EN": "Stock changes - as defined in MOS GAS",
     "DE": "Bestandsveränderungen - definiert wie in MOS GAS",
     "FR": "Variations de stocks - comme défini dans MOS GAS"
   },
-"IC_CAL_MG": {
+  "IC_CAL_MG": {
     "EN": "Inland consumption - calculated as defined in MOS GAS",
     "DE": "Inlandsverbrauch - berechnet wie im MOS GAS",
     "FR": "Consommation intérieure - calculée comme défini dans MOS GAS"
   },
-"DL": {
+  "DL": {
     "EN": "Distribution losses",
     "DE": "Netzverluste",
     "FR": "Pertes de distribution"
   },
-"AIM": {
+  "AIM": {
     "EN": "Available to internal market",
     "DE": "Verfügbar für den inländischen Markt",
     "FR": "Disponible pour le marché intérieur"
   },
-"noNrg": {
+  "noNrg": {
     "EN": "No NRG inside dataset",
     "DE": "Keine NRG im Datensatz",
     "FR": "Pas de NRG dans l'ensemble de données"
   },
-"NEG": {
+  "NEG": {
     "EN": "Net electricity generation",
     "DE": "Netto-Stromerzeugung",
     "FR": "Production nette d'électricité"
   },
-"RVN": {
+  "RVN": {
     "EN": "Renewable vs non-renewable",
     "DE": "Erneuerbare vs nicht erneuerbare",
     "FR": "Renouvelable vs non renouvelable"
   },
-"C0100": {
+  "C0100": {
     "EN": "Hard coal",
     "DE": "Steinkohle",
     "FR": "Houille"
   },
-"C0200": {
+  "C0200": {
     "EN": "Brown coal",
     "DE": "Braunkohle",
     "FR": "Charbon brun"
   },
-"C0311": {
+  "C0311": {
     "EN": "Coke oven coke",
     "DE": "Kokereikoks",
     "FR": "Coke de four à coke"
   },
-"P1100": {
+  "P1100": {
     "EN": "Peat",
     "DE": "Torf",
     "FR": "Tourbe"
   },
-"S2000": {
+  "S2000": {
     "EN": "Oil shale and oil sands",
     "DE": "Ölschiefer und bituminöse Sande",
     "FR": "Schiste bitumineux et sables bitumineux"
   },
-"O4640": {
+  "O4640": {
     "EN": "Naphtha",
     "DE": "Naphta",
     "FR": "Naphta"
   },
-"O4652": {
+  "O4652": {
     "EN": "Motor gasoline",
     "DE": "Motorenbenzin",
     "FR": "Essence moteur"
   },
-"O4661": {
+  "O4661": {
     "EN": "Kerosene-type jet fuel",
     "DE": "Flugturbinenkraftstoff auf Petroleumbasis",
     "FR": "Carburéacteur type kérosène"
   },
-"O4671": {
+  "O4671": {
     "EN": "Gas oil and diesel oil",
     "DE": "Gasöl und Dieselöl",
     "FR": "Gazole et carburant diesel"
   },
-"O4630": {
+  "O4630": {
     "EN": "Liquefied petroleum gases",
     "DE": "Flüssiggas",
     "FR": "Gaz de pétrole liquéfiés"
   },
-"O4680": {
+  "O4680": {
     "EN": "Fuel oil",
     "DE": "Heizöl",
     "FR": "Fioul"
   },
-"G3000": {
+  "G3000": {
     "EN": "Natural gas",
     "DE": "Erdgas",
     "FR": "Gaz naturel"
   },
-"E7000": {
+  "E7000": {
     "EN": "Electricity",
     "DE": "Elektrizität",
     "FR": "Électricité"
   },
-"C0000": {
+  "C0000": {
     "EN": "Coal and manufactured gases",
     "DE": "Kohle und synthetische Gase",
     "FR": "Charbon et gaz manufacturés"
   },
-"O4000XBIO": {
+  "O4000XBIO": {
     "EN": "Oil and petroleum products (excluding biofuel portion)",
     "DE": "Öl und Mineralölerzeugnisse (ohne Biokraftstoffanteil)",
     "FR": "Pétrole et produits pétroliers (part de biocarburant non comprise)"
   },
-"N9000": {
+  "N9000": {
     "EN": "Nuclear fuels and other fuels n.e.c.",
     "DE": "Nukleare Brennstoffe und sonstige Brennstoffe a.n.g.",
     "FR": "Combustibles nucléaires et autres combustibles n.c.a."
   },
-"RA100": {
+  "RA100": {
     "EN": "Hydro",
     "DE": "Wasserenergie",
     "FR": "Hydraulique"
   },
-"RA200": {
+  "RA200": {
     "EN": "Geothermal",
     "DE": "Geothermie",
     "FR": "Géothermique"
   },
-"RA300": {
+  "RA300": {
     "EN": "Wind",
     "DE": "Wind",
     "FR": "Éolien"
   },
-"RA400": {
+  "RA400": {
     "EN": "Solar",
     "DE": "Solar",
     "FR": "Solaire"
   },
-"RA500_5160": {
+  "RA500_5160": {
     "EN": "Other renewable energies",
     "DE": "Sonstige erneuerbare Energien",
     "FR": "Autres énergies renouvelables"
   },
-"O4000": {
+  "O4000": {
     "EN": "Oil and petroleum products",
     "DE": "Öl und Mineralölerzeugnisse",
     "FR": "Pétrole et produits pétroliers"
   },
-"O4100_TOT_4200-4500": {
+  "O4100_TOT_4200-4500": {
     "EN": "Crude oil, NGL, refinery feedstocks, additives and oxygenates and other hydrocarbons",
     "DE": "Rohöl, NGL, Einsatzmaterial und sonstige Kohlenwasserstoffe",
     "FR": "Pétrole brut, LGN, produits d'alimentation et autres hydrocarbures"
   },
-"O4600": {
+  "O4600": {
     "EN": "Oil products",
     "DE": "Mineralölerzeugnisse",
     "FR": "Produits pétroliers"
   },
-"rw": {
+  "rw": {
     "EN": "Renewables",
     "DE": "Erneuerbare Energien",
     "FR": "Énergies renouvelables"
   },
-"nrw": {
+  "nrw": {
     "EN": "Non-renewables",
     "DE": "Nicht erneuerbare Energien",
     "FR": "Énergies non renouvelables"
   },
-"TOTAL": {
+  "TOTAL": {
     "EN": "Total",
     "DE": "Gesamt",
     "FR": "Total"
   },
-"X9900": {
+  "X9900": {
     "EN": "Other fuels n.e.c.",
     "DE": "Sonstige Brennstoffe n.a.g.",
     "FR": "Autres combustibles n.d.a."
   },
-"CF": {
+  "CF": {
     "EN": "Combustible fuels",
     "DE": "Brennbare Brennstoffe",
     "FR": "Carburants combustibles"
@@ -1714,17 +1714,17 @@
     "DE": "Millionen Kubikmeter (MIO_M3)",
     "FR": "Million de mètres cubes (MIO_M3)"
   },
-"TJ_GCV": {
+  "TJ_GCV": {
     "EN": "Terajoule (gross calorific value - GCV) (TJ_GCV)",
     "DE": "Terajoule (Bruttoheizwert - GCV) (TJ_GCV)",
     "FR": "Térajoule (valeur calorifique brute - GCV) (TJ_GCV)"
   },
-"THS_T": {
+  "THS_T": {
     "EN": "Thousand tonnes (THS_T)",
     "DE": "Tausend Tonnen (THS_T)",
     "FR": "Mille tonnes (THS_T)"
   },
-"GWH": {
+  "GWH": {
     "EN": "Gigawatt-hour (GWH)",
     "DE": "Gigawattstunde (GWH)",
     "FR": "Gigawattheure (GWH)"
@@ -1764,24 +1764,22 @@
     "DE": "Details verbergen",
     "FR": "Masquer les détails"
   },
-
   "SELECT_ORDER_OF_CHART": {
     "EN": "Select the order of the chart",
     "FR": "Sélectionnez l'ordre du graphique",
     "DE": "Wählen Sie die Reihenfolge des Diagramms"
   },
-
   "SHOW_AGGREGATES": {
     "EN": "Show aggregates",
     "FR": "Afficher les agrégats",
     "DE": "Aggregate anzeigen"
   },
- "HIGH": {
+  "HIGH": {
     "EN": "Highest value of this month",
     "DE": "Höchstwert dieses Monats",
     "FR": "Valeur la plus élevée de ce mois"
   },
-"LOW": {
+  "LOW": {
     "EN": "Lowest value of this month",
     "DE": "Niedrigster Wert dieses Monats",
     "FR": "Valeur la plus basse de ce mois"
@@ -1816,7 +1814,7 @@
     "DE": "Keine Daten verfügbar",
     "FR": "Aucune donnée disponible"
   },
-"CREDITS": {
+  "CREDITS": {
     "EN": "Source: Eurostat",
     "DE": "Quelle: Eurostat",
     "FR": "Source : Eurostat"
@@ -1915,5 +1913,15 @@
     "EN": "Dataset",
     "DE": "Datensatz",
     "FR": "Jeu de données"
+  },
+  "INSIGHTS_TO": {
+    "EN": "to",
+    "DE": "bis",
+    "FR": "à"
+  },
+  "INSIGHTS_LOADED_STATUS": {
+    "EN": "Insights loaded for {country}, {month}.",
+    "DE": "Insights geladen für {country}, {month}.",
+    "FR": "Insights chargées pour {country}, {month}."
   }
 }

@@ -357,8 +357,16 @@ function toggleInsightsView(show) {
         // only close the whole view on a second Escape.
         const $openPopovers = $('.ecl-popover__container').not('[hidden]');
         if ($openPopovers.length) {
+          // Return focus to whichever toggle button opened this popover,
+          // same as closePopover(), so keyboard/screen-reader users don't
+          // lose their place when Escape closes it.
+          $openPopovers.each(function () {
+            const $toggle = $(this).closest('.ecl-popover').find('.ecl-popover__toggle');
+            $toggle.attr('aria-expanded', 'false');
+            const toggleEl = $toggle[0];
+            if (toggleEl && typeof toggleEl.focus === 'function') toggleEl.focus();
+          });
           $openPopovers.attr('hidden', 'hidden');
-          $('.ecl-popover__toggle').attr('aria-expanded', 'false');
           e.preventDefault();
           return;
         }

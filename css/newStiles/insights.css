@@ -137,13 +137,13 @@
     margin-top: 0.5rem !important;
     margin-left: 0 !important;
     z-index: 9999 !important;
-    width: 420px !important;
+    width: 480px !important;
     max-width: 88vw !important;
     background: #ffffff !important;
-    border: 1px solid #cbd5e1 !important;
-    border-radius: 8px !important;
-    box-shadow: 0 12px 28px -5px rgba(15, 23, 42, 0.22), 0 8px 12px -6px rgba(15, 23, 42, 0.12) !important;
-    padding: 1.25rem 1.5rem !important;
+    border: 1px solid #c8d1d3 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    padding: 1.5rem !important;
 }
 
 .insights-section .ecl-popover__container[hidden] {
@@ -156,8 +156,32 @@
 
 .insights-section .ecl-popover__close {
     position: absolute !important;
-    top: 0.75rem !important;
-    right: 0.75rem !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: opacity 0.2s ease, background 0.15s ease;
+}
+
+.insights-section .ecl-popover__close:hover {
+    opacity: 0.7;
+}
+
+.insights-section .ecl-popover__close:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.insights-section .ecl-popover__close .ecl-button__icon {
+    fill: #595959 !important;
+    width: 14px;
+    height: 14px;
 }
 
 .insights-year-label {
@@ -973,56 +997,26 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.insight-popover-card__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.65rem;
-    border-bottom: 1px solid #cbd5e1;
-}
-
 .insight-popover-card__title {
-    margin: 0;
-    font-size: 0.88rem;
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--nav-color);
     display: flex;
     align-items: center;
     gap: 0.35rem;
-}
-
-.insight-popover-card__close {
-    background: transparent;
-    border: 1px solid transparent;
-    font-size: 1.25rem;
-    line-height: 1;
-    color: #334155;
-    cursor: pointer;
-    padding: 0.1rem 0.4rem;
-    border-radius: 4px;
-    transition: all 0.15s ease;
-}
-
-.insight-popover-card__close:hover,
-.insight-popover-card__close:focus-visible {
-    color: #0f172a;
-    background: #f1f5f9;
-    border-color: #94a3b8;
-    outline: 2px solid #000;
-    outline-offset: 2px;
-}
-
-.insight-popover-card__body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    padding-right: 2rem;
 }
 
 .insight-popover-card__item {
-    font-size: 0.82rem;
-    color: #1e293b;
-    line-height: 1.45;
+    font-size: 0.85rem;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.insight-popover-card__item:last-child {
+    margin-bottom: 0;
 }
 
 .insight-popover-card__item strong {
@@ -1030,6 +1024,20 @@
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
+}
+
+.insight-popover-card__item code {
+    display: block;
+    background-color: #f5f7f8;
+    border-left: 3px solid var(--nav-color);
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.4rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.78rem;
+    color: #222222;
+    white-space: pre-wrap;
+    word-break: break-word;
+    border-radius: 0 4px 4px 0;
 }
 
 /* Puts the donut and the gauge side by side on one row (wraps on narrow viewports) */
@@ -1320,3 +1328,7 @@
     outline: 2px solid #000;
     outline-offset: 2px;
 }
+
+
+
+

@@ -87,6 +87,18 @@ const insightsRenderNameSpace = (function () {
       ' (' + sign + esc(formatNumber(deltaPp, 1)) + ' pp ' + esc(vsLabel) + ')';
   }
 
+  // The HTML used to join chained items (milestones, journey legs, date
+  // ranges): visually a "→" arrow, but spoken as "to" by screen readers
+  // instead of "right arrow" so the sequence reads naturally.
+  function arrowSeparator() {
+    return '<span aria-hidden="true"> → </span><span class="ecl-u-sr-only"> ' + esc(t("INSIGHTS_TO", "to")) + ' </span>';
+  }
+
+  // Joins two plain-text labels with arrowSeparator(), escaping each side.
+  function arrowRange(fromLabel, toLabel) {
+    return esc(fromLabel) + arrowSeparator() + esc(toLabel);
+  }
+
   // ---- card / section primitives -----------------------------------------------------
 
   function card(opts) {
@@ -107,30 +119,36 @@ const insightsRenderNameSpace = (function () {
     if (!bodyHtml) return "";
     popoverIdCounter++;
     const popoverId = "insightPopover-" + popoverIdCounter;
+    const sectionTitleId = "insightSectionTitle-" + popoverIdCounter;
 
     let popoverHtml = "";
     if (info) {
+      const popoverTitleId = "insightPopoverTitle-" + popoverIdCounter;
       const whatHtml = info.whatItIs ? '<div class="insight-popover-card__item"><strong>' + esc(t("INSIGHTS_WHAT_IT_IS", "What it is")) + ':</strong> ' + esc(info.whatItIs) + '</div>' : "";
-      const calcHtml = info.calculation ? '<div class="insight-popover-card__item"><strong>' + esc(t("INSIGHTS_CALCULATION", "Calculation")) + ':</strong> <code>' + esc(info.calculation) + '</code></div>' : "";
+      const calcHtml = info.calculation ? '<div class="insight-popover-card__item"><strong>' + esc(t("INSIGHTS_CALCULATION", "Calculation")) + ':</strong> <code>' + esc(info.calculation).split(" · ").join("\n") + '</code></div>' : "";
       const purposeHtml = info.purpose ? '<div class="insight-popover-card__item"><strong>' + esc(t("INSIGHTS_PURPOSE", "Purpose")) + ':</strong> ' + esc(info.purpose) + '</div>' : "";
       const calcLabel = t("INSIGHTS_CALC_LABEL", "How is this calculated?");
+      const closeLabel = t("CLOSE", "Close");
 
       popoverHtml = '<span class="ecl-popover">' +
         '<button type="button" class="insight-card__info-btn ecl-popover__toggle" aria-controls="' + popoverId + '" aria-expanded="false" title="' + esc(calcLabel) + '" onclick="insightsRenderNameSpace.togglePopover(this, event)">' +
         '<span aria-hidden="true">i</span><span class="ecl-u-sr-only">' + esc(calcLabel) + '</span>' +
         '</button>' +
-        '<div id="' + popoverId + '" class="ecl-popover__container" hidden>' +
-        '<button type="button" class="ecl-popover__close" aria-label="' + esc(t("CLOSE", "Close")) + '" onclick="insightsRenderNameSpace.closePopover(this, event)">' +
-        '<span aria-hidden="true">&times;</span><span class="ecl-u-sr-only">' + esc(t("CLOSE", "Close")) + '</span>' +
+        '<div id="' + popoverId + '" class="ecl-popover__container" role="dialog" aria-labelledby="' + popoverTitleId + '" hidden>' +
+        '<button type="button" class="ecl-popover__close" title="' + esc(closeLabel) + '" onclick="insightsRenderNameSpace.closePopover(this, event)">' +
+        '<svg class="ecl-button__icon" width="14" height="14" viewBox="0 0 24 24" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">' +
+        '<path d="M18.3 5.71L12 12.01l-6.3-6.3-1.41 1.41L10.59 13.42l-6.3 6.3 1.41 1.41 6.3-6.3 6.3 6.3 1.41-1.41-6.3-6.3 6.3-6.3z"></path>' +
+        '</svg>' +
+        '<span class="ecl-u-sr-only">' + esc(closeLabel) + '</span>' +
         '</button>' +
-        '<h4 class="insight-popover-card__title">' + esc(titleText) + '</h4>' +
+        '<h4 class="insight-popover-card__title" id="' + popoverTitleId + '">' + esc(titleText) + '</h4>' +
         whatHtml + calcHtml + purposeHtml +
         '</div>' +
         '</span>';
     }
 
-    return '<section class="insights-section">' +
-      '<h3 class="insights-section__title">' + esc(titleText) + popoverHtml + '</h3>' +
+    return '<section class="insights-section" aria-labelledby="' + sectionTitleId + '">' +
+      '<h3 class="insights-section__title" id="' + sectionTitleId + '">' + esc(titleText) + popoverHtml + '</h3>' +
       bodyHtml +
       '</section>';
   }
@@ -147,14 +165,23 @@ const insightsRenderNameSpace = (function () {
     if (isHidden) {
       $container.removeAttr("hidden");
       $(btn).attr("aria-expanded", "true");
+      // Move focus into the popover so keyboard/screen-reader users land on
+      // its content immediately, instead of it opening silently off-screen.
+      const closeBtn = $container.find(".ecl-popover__close")[0];
+      if (closeBtn && typeof closeBtn.focus === "function") closeBtn.focus();
     }
   }
 
   function closePopover(btn, e) {
     if (e) { e.preventDefault(); e.stopPropagation(); }
     const $popover = $(btn).closest(".ecl-popover");
+    const $toggle = $popover.find(".ecl-popover__toggle");
     $popover.find(".ecl-popover__container").attr("hidden", "hidden");
-    $popover.find(".ecl-popover__toggle").attr("aria-expanded", "false");
+    $toggle.attr("aria-expanded", "false");
+    // Return focus to the toggle button that opened this popover, so
+    // keyboard/screen-reader users don't lose their place on close.
+    const toggleEl = $toggle[0];
+    if (toggleEl && typeof toggleEl.focus === "function") toggleEl.focus();
   }
 
   // Hovering a composition-bar segment or its matching legend swatch
@@ -571,7 +598,7 @@ const insightsRenderNameSpace = (function () {
       '<label class="insights-input-label" for="insightFuelSelect">' + esc(t("INSIGHTS_SELECT_FUEL", "Select a fuel")) + '</label>' +
       '<select class="insight-select" id="insightFuelSelect" onchange="insightsRenderNameSpace.onFuelExplorerChange(this.value)">' + options + '</select>' +
       '</div>' +
-      '<div id="insightFuelExplorerResult">' + fuelExplorerResultHtml("TOTAL", data) + '</div>' +
+      '<div id="insightFuelExplorerResult" aria-live="polite">' + fuelExplorerResultHtml("TOTAL", data) + '</div>' +
       '</div>';
   }
 
@@ -765,7 +792,7 @@ const insightsRenderNameSpace = (function () {
         cards.push(card({
           label: t("INSIGHTS_LONGEST_STREAK_UP", "Longest Rising Streak"),
           value: up.months + " " + esc(t("INSIGHTS_MONTHS", "months")),
-          sub: esc(formatMonth(up.startMonth)) + " → " + esc(formatMonth(up.endMonth)),
+          sub: arrowRange(formatMonth(up.startMonth), formatMonth(up.endMonth)),
           modifier: "positive",
         }));
       }
@@ -773,7 +800,7 @@ const insightsRenderNameSpace = (function () {
         cards.push(card({
           label: t("INSIGHTS_LONGEST_STREAK_DOWN", "Longest Falling Streak"),
           value: down.months + " " + esc(t("INSIGHTS_MONTHS", "months")),
-          sub: esc(formatMonth(down.startMonth)) + " → " + esc(formatMonth(down.endMonth)),
+          sub: arrowRange(formatMonth(down.startMonth), formatMonth(down.endMonth)),
           modifier: "negative",
         }));
       }
@@ -798,7 +825,7 @@ const insightsRenderNameSpace = (function () {
     if (he && he.milestoneCrossings && he.milestoneCrossings.length) {
       const items = he.milestoneCrossings.map((m) => (
         '<span class="insight-rank-item">' + m.threshold + '%: <strong>' + esc(formatMonth(m.month)) + '</strong></span>'
-      )).join(" → ");
+      )).join(arrowSeparator());
       milestonesHtml = '<div class="insights-rank-movement">' +
         '<div class="insights-rank-movement__label">' + esc(t("INSIGHTS_MILESTONES", "First Crossed")) + '</div>' +
         '<div class="insights-rank-movement__items">' + items + '</div>' +
@@ -898,7 +925,7 @@ const insightsRenderNameSpace = (function () {
         cards.push(card({
           label: t(labelKey, labelFallback),
           value: esc(formatSignedPp(trendPoint.deltaPp)),
-          sub: esc(formatMonth(trendPoint.baseMonth)) + " → " + esc(formatMonth(trendPoint.latestMonth)),
+          sub: arrowRange(formatMonth(trendPoint.baseMonth), formatMonth(trendPoint.latestMonth)),
         }));
       });
 
@@ -951,7 +978,7 @@ const insightsRenderNameSpace = (function () {
           ? ' <span class="' + (p.deltaPp >= 0 ? "insight-rank-up" : "insight-rank-down") + '">(' + esc(formatSignedPp(p.deltaPp)) + ')</span>'
           : "";
         return '<span class="insight-rank-item">' + label + ': <strong>' + esc(formatPercent(p.value)) + '</strong>' + deltaHtml + '</span>';
-      }).join(" → ");
+      }).join(arrowSeparator());
       journeyHtml = '<div class="insights-rank-movement">' +
         '<div class="insights-rank-movement__label">' + esc(t("INSIGHTS_DECARBONISATION_JOURNEY", "Decarbonisation Journey")) + '</div>' +
         '<div class="insights-rank-movement__items">' + items + '</div>' +
@@ -1411,6 +1438,14 @@ const insightsRenderNameSpace = (function () {
 
   // ---- shell states (loading / error / empty) ---------------------------------------
 
+  // #insightsStatus is a persistent (never replaced) sr-only aria-live region
+  // in enmonthly.html, sitting outside the swapped #insightsContent subtree -
+  // it's how screen-reader users learn the content changed (loading finished,
+  // failed, or came back empty) without the whole page being read out loud.
+  function announceStatus(text) {
+    $("#insightsStatus").text(text);
+  }
+
   function shell(bodyHtml) {
     return '<div id="insightsView">' +
       '<div id="insightsViewBody">' +
@@ -1424,6 +1459,7 @@ const insightsRenderNameSpace = (function () {
       '<p class="insights-no-prev"><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> ' +
       esc(t("INSIGHTS_LOADING", "Loading insights…")) + '</p>'
     ));
+    announceStatus(t("INSIGHTS_LOADING", "Loading insights…"));
   }
 
   function renderError() {
@@ -1431,12 +1467,14 @@ const insightsRenderNameSpace = (function () {
       '<p class="insights-no-prev"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> ' +
       esc(t("INSIGHTS_ERROR", "We couldn't load insights right now.")) + '</p>'
     ));
+    announceStatus(t("INSIGHTS_ERROR", "We couldn't load insights right now."));
   }
 
   function renderEmpty() {
     $("#insightsContent").html(shell(
       '<p class="insights-no-prev">' + esc(t("INSIGHTS_NO_DATA", "No data available to build insights for this selection.")) + '</p>'
     ));
+    announceStatus(t("INSIGHTS_NO_DATA", "No data available to build insights for this selection."));
   }
 
   // ---- top-level render ---------------------------------------------------------------
@@ -1499,6 +1537,10 @@ const insightsRenderNameSpace = (function () {
     if (typeof enableTooltips === "function") {
       try { enableTooltips(); } catch (e) {}
     }
+
+    announceStatus(formatTemplate(t("INSIGHTS_LOADED_STATUS", "Insights loaded for {country}, {month}."), {
+      country: geoLabel, month: monthLabel,
+    }));
   }
 
   function load() {
