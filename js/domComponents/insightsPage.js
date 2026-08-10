@@ -44,10 +44,18 @@ const insightsRenderNameSpace = (function () {
 
   function formatMonth(monthCode) {
     if (!monthCode) return "";
-    const parts = monthCode.split("-");
-    const monthIdx = parseInt(parts[1], 10) - 1;
-    const months = (Highcharts.getOptions().lang && Highcharts.getOptions().lang.months) || [];
-    return (months[monthIdx] || parts[1]) + " " + parts[0];
+    const match = /^(\d{4})-(0[1-9]|1[0-2])$/.exec(String(monthCode));
+    if (!match) {
+      console.warn("[insights] Invalid monthly reference period:", monthCode);
+      return t("INSIGHTS_INVALID_MONTH", "Invalid reference period");
+    }
+    const year = match[1];
+    const monthIdx = parseInt(match[2], 10) - 1;
+    const options = (typeof Highcharts !== "undefined" && Highcharts.getOptions)
+      ? Highcharts.getOptions()
+      : null;
+    const months = (options && options.lang && options.lang.months) || [];
+    return (months[monthIdx] || match[2]) + " " + year;
   }
 
   function formatNumber(value, decimals) {
@@ -466,7 +474,12 @@ const insightsRenderNameSpace = (function () {
 
   function renderEnergyTransitionSection(data) {
     const latest = data.latest;
-    const nonRenewables = latest.fossil + latest.other;
+    const denominator = data.renewableVsNonRenewable &&
+      typeof data.renewableVsNonRenewable.officialTotal === "number" &&
+      data.renewableVsNonRenewable.officialTotal > 0
+      ? data.renewableVsNonRenewable.officialTotal
+      : latest.total;
+    const nonRenewables = Math.max(0, denominator - latest.renewables);
     const climateTransitionIndicator = latest.fossil > 0 || latest.renewables > 0
       ? (latest.renewables / (latest.renewables + latest.fossil)) * 100
       : null;
@@ -479,7 +492,7 @@ const insightsRenderNameSpace = (function () {
     const legend = slices.map((s) => (
       '<div class="insights-donut-legend__item">' +
       '<span class="insights-donut-legend__badge"><span class="insights-donut-legend__dot" style="background:' + s.color + '"></span>' + esc(s.label) + '</span>' +
-      '<strong>' + esc(formatNumber((s.value / latest.total) * 100, 1)) + '%</strong>' +
+      '<strong>' + esc(formatNumber((s.value / denominator) * 100, 1)) + '%</strong>' +
       '</div>'
     )).join("");
 

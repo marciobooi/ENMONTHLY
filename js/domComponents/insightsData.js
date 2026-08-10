@@ -106,6 +106,44 @@ var insightsDataNameSpace = (function () {
     return b - a;
   }
 
+
+  // Eurostat monthly observations must use YYYY-MM. Annual labels such as
+  // "2026", malformed periods, and future months are rejected before any
+  // calculation can treat them as the latest observation.
+  function isMonthlyPeriod(period) {
+    return typeof period === "string" && /^\d{4}-(0[1-9]|1[0-2])$/.test(period);
+  }
+
+  function monthIndex(period) {
+    if (!isMonthlyPeriod(period)) return null;
+    const parts = period.split("-");
+    return parseInt(parts[0], 10) * 12 + parseInt(parts[1], 10) - 1;
+  }
+
+  function currentMonthIndex() {
+    const now = new Date();
+    return now.getUTCFullYear() * 12 + now.getUTCMonth();
+  }
+
+  function isUsableMonthlyPeriod(period) {
+    const idx = monthIndex(period);
+    return idx !== null && idx <= currentMonthIndex();
+  }
+
+  function sortMonthlyRows(rows) {
+    return (rows || [])
+      .filter((row) => row && isUsableMonthlyPeriod(row.month))
+      .sort((a, b) => monthIndex(a.month) - monthIndex(b.month));
+  }
+
+  function getLatestValidMonthlyRow(series, requiredFields) {
+    const fields = requiredFields || [];
+    const rows = sortMonthlyRows(series).filter((row) =>
+      fields.every((field) => isValid(row[field]))
+    );
+    return rows.length ? rows[rows.length - 1] : null;
+  }
+
   function getGeo() {
     const geo = REF.geos;
     if (Array.isArray(geo)) return geo[0] || "EU27_2020";
@@ -131,7 +169,7 @@ var insightsDataNameSpace = (function () {
   const FUEL_EXPLORER_EXTRA_SIECS = ["TOTAL", "CF", "X9900"];
 
   function buildElectricityMixUrl(geo) {
-    let url = baseUrl("nrg_cb_pem") + "&geo=" + geo + "&unit=GWH";
+    let url = baseUrl("nrg_cb_pem") + "&freq=M&geo=" + geo + "&unit=GWH";
     Nrw.forEach((siec) => { url += "&siec=" + siec; });
     rw.forEach((siec) => { url += "&siec=" + siec; });
     FUEL_EXPLORER_EXTRA_SIECS.forEach((siec) => { url += "&siec=" + siec; });
@@ -173,6 +211,7 @@ var insightsDataNameSpace = (function () {
     const rows = [];
 
     time.forEach((month, tIdx) => {
+      if (!isUsableMonthlyPeriod(month)) return;
       let renewables = 0, fossil = 0, other = 0;
       const bySiec = {};
       let reportedExpected = 0;
@@ -202,7 +241,7 @@ var insightsDataNameSpace = (function () {
       });
     });
 
-    return rows;
+    return sortMonthlyRows(rows);
   }
 
   function computeRecords(series) {
@@ -262,7 +301,7 @@ var insightsDataNameSpace = (function () {
 
   // nrg_cb_em: electricity imports/exports. EXP - IMP = trade balance.
   function buildElectricityTradeUrl(geo) {
-    return baseUrl("nrg_cb_em") + "&geo=" + geo + "&unit=GWH&siec=E7000&nrg_bal=IMP&nrg_bal=EXP";
+    return baseUrl("nrg_cb_em") + "&freq=M&geo=" + geo + "&unit=GWH&siec=E7000&nrg_bal=IMP&nrg_bal=EXP";
   }
 
   function buildElectricityTradeSeries(dataset) {
@@ -275,16 +314,17 @@ var insightsDataNameSpace = (function () {
 
     const rows = [];
     time.forEach((month, tIdx) => {
+      if (!isUsableMonthlyPeriod(month)) return;
       const imp = dataset.value[impIdx * time.length + tIdx];
       const exp = dataset.value[expIdx * time.length + tIdx];
       if (typeof imp !== "number" || typeof exp !== "number") return;
       rows.push({ month, imp, exp, balance: exp - imp });
     });
-    return rows;
+    return sortMonthlyRows(rows);
   }
 
   function getLatestTradeBalance(tradeSeries) {
-    return (tradeSeries && tradeSeries.length) ? tradeSeries[tradeSeries.length - 1] : null;
+    return getLatestValidMonthlyRow(tradeSeries, ["imp", "exp", "balance"]);
   }
 
   // Lowest/highest/average trade balance across the full recorded history -
@@ -304,8 +344,7 @@ var insightsDataNameSpace = (function () {
   // that has a usable dependency figure - shared by the KPI card and the
   // full Gas Market section so nrg_cb_gasm only needs fetching once.
   function getLatestGasDependency(gasSeries) {
-    const valid = (gasSeries || []).filter((r) => r.dependency !== null);
-    return valid.length ? valid[valid.length - 1] : null;
+    return getLatestValidMonthlyRow(gasSeries, ["dependency"]);
   }
 
   function buildKpiScorecard({ latest, previousMonth }, tradeSeries, gasSeries) {
@@ -740,7 +779,7 @@ var insightsDataNameSpace = (function () {
   // ---------------------------------------------------------------------
 
   function buildGasDetailUrl(geo) {
-    return baseUrl("nrg_cb_gasm") + "&geo=" + geo + "&unit=TJ_GCV&siec=G3000" +
+    return baseUrl("nrg_cb_gasm") + "&freq=M&geo=" + geo + "&unit=TJ_GCV&siec=G3000" +
       "&nrg_bal=IPRD&nrg_bal=IMP&nrg_bal=EXP&nrg_bal=IC_CAL_MG&nrg_bal=STK_CHG_MG";
   }
 
@@ -753,6 +792,7 @@ var insightsDataNameSpace = (function () {
 
     const rows = [];
     time.forEach((month, tIdx) => {
+      if (!isUsableMonthlyPeriod(month)) return;
       const get = (code) => {
         if (idx[code] === undefined) return null;
         const v = dataset.value[idx[code] * time.length + tIdx];
@@ -770,7 +810,7 @@ var insightsDataNameSpace = (function () {
       });
     });
 
-    return rows;
+    return sortMonthlyRows(rows);
   }
 
   // insights.md #11: compare gas consumption vs previous month, previous
@@ -818,7 +858,7 @@ var insightsDataNameSpace = (function () {
   const OILM_SIECS = ["O4640", "O4652", "O4661", "O4671", "O4630", "O4680"];
 
   function buildOilMarketUrl(geo) {
-    let url = baseUrl("nrg_cb_oilm") + "&geo=" + geo + "&unit=THS_T&nrg_bal=TO_RPI_RO&nrg_bal=IMP&nrg_bal=EXP";
+    let url = baseUrl("nrg_cb_oilm") + "&freq=M&geo=" + geo + "&unit=THS_T&nrg_bal=TO_RPI_RO&nrg_bal=IMP&nrg_bal=EXP";
     OILM_SIECS.forEach((siec) => { url += "&siec=" + siec; });
     return url;
   }
@@ -847,6 +887,7 @@ var insightsDataNameSpace = (function () {
 
     const rows = [];
     time.forEach((month, tIdx) => {
+      if (!isUsableMonthlyPeriod(month)) return;
       const production = sumFor("TO_RPI_RO", tIdx);
       const imports = sumFor("IMP", tIdx);
       const exports = sumFor("EXP", tIdx);
@@ -854,7 +895,7 @@ var insightsDataNameSpace = (function () {
       rows.push({ month, production, imports, exports });
     });
 
-    return rows;
+    return sortMonthlyRows(rows);
   }
 
   // nrg_cb_cosm: crude oil price (USD/barrel) and import volume (thousand
@@ -874,6 +915,7 @@ var insightsDataNameSpace = (function () {
 
     const rows = [];
     time.forEach((month, tIdx) => {
+      if (!isUsableMonthlyPeriod(month)) return;
       const price = priceIdx !== -1 ? dataset.value[priceIdx * time.length + tIdx] : null;
       const volume = volIdx !== -1 ? dataset.value[volIdx * time.length + tIdx] : null;
       if (typeof price !== "number" && typeof volume !== "number") return;
@@ -884,14 +926,14 @@ var insightsDataNameSpace = (function () {
       });
     });
 
-    return rows;
+    return sortMonthlyRows(rows);
   }
 
   // nrg_stk_oilm: oil stock levels. Its dimension is named "stk_flow" (not
   // "nrg_bal" as codesDataset lists it), with different codes; real unit is
   // THS_T, not GWH.
   function buildSecurityOfSupplyUrl(geo) {
-    return baseUrl("nrg_stk_oilm") + "&geo=" + geo + "&unit=THS_T&siec=O4000&stk_flow=STKCL_EUE&stk_flow=STKCL_NAT";
+    return baseUrl("nrg_stk_oilm") + "&freq=M&geo=" + geo + "&unit=THS_T&siec=O4000&stk_flow=STKCL_EUE&stk_flow=STKCL_NAT";
   }
 
   function buildSecurityOfSupplySeries(dataset) {
@@ -903,6 +945,7 @@ var insightsDataNameSpace = (function () {
 
     const rows = [];
     time.forEach((month, tIdx) => {
+      if (!isUsableMonthlyPeriod(month)) return;
       const eue = euIdx !== -1 ? dataset.value[euIdx * time.length + tIdx] : null;
       const nat = natIdx !== -1 ? dataset.value[natIdx * time.length + tIdx] : null;
       if (typeof eue !== "number" && typeof nat !== "number") return;
@@ -913,7 +956,7 @@ var insightsDataNameSpace = (function () {
       });
     });
 
-    return rows;
+    return sortMonthlyRows(rows);
   }
 
   // insights.md #18: "Stock Alerts" - detect major build-ups/drawdowns.
@@ -1080,8 +1123,10 @@ var insightsDataNameSpace = (function () {
       return { geo, hasData: false };
     }
 
-    const latest = series[series.length - 1];
-    const previousMonth = series.length > 1 ? series[series.length - 2] : null;
+    const latest = getLatestValidMonthlyRow(series, ["renewables", "fossil", "total", "renewableShare", "fossilShare"]);
+    if (!latest) return { geo, hasData: false };
+    const latestIdx = series.findIndex((row) => row.month === latest.month);
+    const previousMonth = latestIdx > 0 ? series[latestIdx - 1] : null;
     const records = computeRecords(series);
 
     const gasSeries = buildGasSeries(gasDataset);
@@ -1189,6 +1234,10 @@ var insightsDataNameSpace = (function () {
     isValid,
     percentChange,
     absoluteChange,
+    isMonthlyPeriod,
+    isUsableMonthlyPeriod,
+    monthIndex,
+    getLatestValidMonthlyRow,
     buildElectricityMixSeries,
     computeRecords,
     pickHeadline,
