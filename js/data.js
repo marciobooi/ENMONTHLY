@@ -82,3 +82,16 @@ const dataNameSpace = {
 };
 
 const REF = dataNameSpace.ref;
+
+// enmonthly.html?accessibility shows the accessibility statement instead of the tool
+function isAccessibilityMode() {
+  return new URLSearchParams(window.location.search).has("accessibility");
+}
+
+function showAccessibilityView() {
+  $('#page, #allContainer, #enmonthly, #insightsPage, #menu, #menuSwitch, .menuSwitch, #floatingMenu, #chartBtns, #loader').addClass('d-none');
+  $('#accessibilityView').removeClass('d-none');
+  $('.a11y-back-link').attr('href', `?language=${REF.language}`);
+  $('.ecl-skip-link').attr('href', '#a11y-statement-title');   // skip link must not point to a hidden chart
+  document.title = 'Accessibility statement - Energy Monthly - Eurostat';
+}

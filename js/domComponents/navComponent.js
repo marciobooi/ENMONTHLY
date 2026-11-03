@@ -21,7 +21,7 @@ class Navbar {
           <h1 id="header-title-label" class="es_app_title" data-i18n="TITLE"></h1>
         </div>
         <div id="lang-section">
-          <button id="toggleLanguageBtn" type="button" class="ecl-button ecl-button--secondary" aria-expanded="false" data-i18n-label="SELECTLANGUAGELABEL">
+          <button id="toggleLanguageBtn" type="button" class="ecl-button ecl-button--secondary" aria-expanded="false">
             <i class="fas fa-globe" focusable="false" aria-hidden="true"></i>
             <span id="lang-selection-text" class="btn-text">English</span>
           </button>

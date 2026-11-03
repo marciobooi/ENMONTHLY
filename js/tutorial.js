@@ -19,6 +19,7 @@ function getCookie(name) {
 }
 
 function checkAndShowTutorial() {
+    if (isAccessibilityMode()) return;
     const tutorialCookie = getCookie("tutorialShown");
     if (!tutorialCookie) {
         // If the cookie doesn't exist, show the tutorial and set the cookie
