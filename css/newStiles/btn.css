@@ -217,8 +217,9 @@ ul#floatingMenu {
 }
 
 .ecl-button--secondary:active, .ecl-button--secondary:hover, .ecl-button--secondary:focus {
-    background-color: #3e6cd5 !important;
-    border-color: #3e6cd5 !important;
+    /* #0e47cb on white text = 7.6:1 (WCAG AAA); #3e6cd5 was only 4.87:1 */
+    background-color: #0e47cb !important;
+    border-color: #0e47cb !important;
     color: #fff !important;
 }
 

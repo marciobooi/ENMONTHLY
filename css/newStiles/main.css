@@ -132,3 +132,18 @@ font-family: Arial, sans-serif;
 #chartBtns.insights-mode > li.insightsCloseContainer {
   display: block !important;
 }
+/* Cookie consent banner (injected by the EU webtools CCK): its buttons are white on #0046ff = 6.32:1.
+   Use #0e47cb (7.6:1 with white) to meet WCAG AAA enhanced contrast. */
+.wt-cck--banner .wt-cck--actions-button,
+.wt-cck--banner .wt-cck--actions-button:hover,
+.wt-cck--banner .wt-cck--actions-button:focus,
+.wt-cck--banner .wt-cck--actions-button:active {
+  background-color: #0e47cb !important;
+  border-color: #0e47cb !important;
+  color: #fff !important;
+}
+
+.wt-cck--banner .wt-cck--actions-button:hover {
+  background-color: #082b7a !important;
+  border-color: #082b7a !important;
+}
