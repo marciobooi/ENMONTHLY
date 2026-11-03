@@ -128,6 +128,8 @@ function tutorial() {
 		onPopoverRender: (popover) => {
 			// Localised accessible name for the "x" close button
 			popover.closeButton.setAttribute('aria-label', languageNameSpace.labels['CLOSE']);
+			// driver.js renders a <footer>, which would be a second "contentinfo" landmark next to the page footer
+			if (popover.footer) popover.footer.setAttribute('role', 'group');
 		},
 		onDestroyed: () => {
 			window.scrollTo(0, 0);
