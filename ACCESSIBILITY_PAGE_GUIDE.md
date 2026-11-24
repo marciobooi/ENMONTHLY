@@ -57,7 +57,7 @@ The tool must already load the ECL CSS (`ecl-reset.css`, `ecl-eu-default.css`, `
 
 ## 3. HTML: the view (put inside `<main>`)
 
-Statement title is an `h2` because the tool header already has the page `h1`. Sections are `h3`. `lang="en"` makes screen readers read English even if the tool is in DE/FR. Repeat the `<section>` block for each of the six sections.
+Statement title is an `h1` (class `ecl-page-header__title`, text "Accessibility"), as on the Eurostat accessibility pages. Sections are `h2`. `lang="en"` makes screen readers read English even if the tool is in DE/FR. Repeat the `<section>` block for each of the six sections.
 
 ```html
 <div id="accessibilityView" class="d-none" lang="en" role="region" aria-labelledby="a11y-statement-title">
@@ -70,7 +70,9 @@ Statement title is an `h2` because the tool header already has the page `h1`. Se
       </a>
     </div>
 
-    <h2 class="ecl-u-type-heading-1" id="a11y-statement-title" tabindex="-1">Accessibility statement</h2>
+    <div class="ecl-page-header__info">
+      <h1 class="ecl-page-header__title ecl-u-mt-none ecl-u-mb-l" id="a11y-statement-title" tabindex="-1">Accessibility</h1>
+    </div>
 
     <!-- Intro: scope, "you should be able to", standard -->
     <div class="a11y-intro">
@@ -88,32 +90,18 @@ Statement title is an `h2` because the tool header already has the page `h1`. Se
       <!-- paragraph with the EN 301 549 / WCAG links (target="_blank" links need the sr-only "(opens in new tab)" span) -->
     </div>
 
-    <!-- "On this page" index (bluish box, see CSS) -->
-    <nav class="a11y-toc ecl-u-mt-l" aria-labelledby="a11y-toc-title">
-      <h3 class="ecl-u-type-heading-3" id="a11y-toc-title">On this page</h3>
-      <ul class="ecl-unordered-list">
-        <li class="ecl-unordered-list__item"><a class="ecl-link" href="#a11y-compliance-status">Compliance status</a></li>
-        <li class="ecl-unordered-list__item"><a class="ecl-link" href="#a11y-preparation-of-this-statement">Preparation of this statement</a></li>
-        <li class="ecl-unordered-list__item"><a class="ecl-link" href="#a11y-feedback">Feedback</a></li>
-        <li class="ecl-unordered-list__item"><a class="ecl-link" href="#a11y-compatibility-with-browsers-and-assistive-technology">Compatibility with browsers and assistive technology</a></li>
-        <li class="ecl-unordered-list__item"><a class="ecl-link" href="#a11y-technical-specifications">Technical specifications</a></li>
-        <li class="ecl-unordered-list__item"><a class="ecl-link" href="#a11y-non-accessible-content">Non-accessible content</a></li>
-      </ul>
-    </nav>
-
     <div class="a11y-sections">
-      <!-- One block per section. The divider is the ECL border utilities, in colour #cfdaf5 (blue-20), BEFORE the title -->
-      <section class="ecl-u-border-top ecl-u-border-color-blue-20 ecl-u-mt-xl ecl-u-pt-l" id="a11y-compliance-status" aria-labelledby="a11y-compliance-status-title">
-        <h3 class="ecl-u-type-heading-2" id="a11y-compliance-status-title">Compliance status</h3>
+      <!-- Same flow as the Eurostat accessibility pages: plain <h2> + paragraphs/lists, NO <section> wrappers and NO divider lines -->
+        <h2 class="ecl-u-type-heading-2" id="a11y-compliance-status-title">Compliance status</h2>
         <p class="ecl-u-type-paragraph">This interactive tool is <span class="ecl-u-type-bold">partially compliant</span> with ... See “<a class="ecl-link" href="#a11y-non-accessible-content">Non-accessible content</a>” for more details.</p>
         <p class="ecl-u-type-paragraph">The interactive tool was last tested on <<D Month YYYY>>.</p>
-      </section>
 
       <!-- Preparation of this statement  (id a11y-preparation-of-this-statement) -->
       <!-- Feedback  (phone as tel: link, e-mail as mailto:...?subject=Accessibility, contact form link) -->
       <!-- Compatibility with browsers and assistive technology -->
       <!-- Technical specifications  (HTML, WAI-ARIA, CSS, JavaScript) -->
       <!-- Non-accessible content  (id a11y-non-accessible-content) -->
+      <!-- Related links: <h2 class="ecl-u-type-heading-2 ecl-u-type-align-left" id="a11y-related-links-title">Related links</h2> followed by ONE link box (div.block-link-item > div.block-link-item-icon + div.estat-title > a "Eurostat website: accessibility statement" -> https://ec.europa.eu/eurostat/help/accessibility). Copy the exact markup from ENBAL/enbal.html; CSS is at the end of accessibilityView.css. Last section; no "On this page" index, same as the Eurostat pages. Standard links (EN 301 549, WCAG) use <a class="ecl-link ecl-link--icon"><span class="ecl-link__label">text + external-icon svg</span></a> -->
     </div>
 
     <!-- Back button (bottom): same markup as the top one -->
@@ -179,25 +167,6 @@ Link it after the other tool styles: `<link href="css/newStiles/accessibilityVie
   margin-bottom: 1rem;
 }
 
-/* "On this page" box: bluish background + blue left border */
-#accessibilityView .a11y-toc {
-  background: #f7f9fd;
-  border-left: 4px solid #0e47cb;
-  border-radius: 0 4px 4px 0;
-  padding: 1rem 1.5rem;
-}
-
-#accessibilityView .a11y-toc .ecl-u-type-heading-3 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-}
-
-#accessibilityView .a11y-toc .ecl-unordered-list {
-  margin: 0;
-}
-
 /* Bullets in the primary blue */
 #accessibilityView .ecl-unordered-list__item::marker {
   color: #0e47cb;
@@ -206,7 +175,7 @@ Link it after the other tool styles: `<link href="css/newStiles/accessibilityVie
 
 Design decisions (what was asked for, so don't undo them):
 - Plain bulleted ECL lists. No `ecl-unordered-list--divider` and no accordion.
-- Dividers go **between sections, before each title**, using `ecl-u-border-top ecl-u-border-color-blue-20` (= `rgb(207, 218, 245)` / `#cfdaf5`).
+- No dividers and no `<section>` wrappers: sections are plain `<h2>` blocks, like the Eurostat accessibility pages.
 - Bullets are `#0e47cb`. `::marker` only supports colour and font, so a "4px solid" border isn't possible on a native bullet.
 - The inline-link override matters. The tool's footer CSS gives every `.ecl-link` `padding: .75rem; min-height: 44px; display: inline-flex`, which stretches the lines in the text.
 
