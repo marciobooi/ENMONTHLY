@@ -90,6 +90,7 @@ barMean.push(values);
     subtitle: null,
     xAxis: { categories: auxBarCateg },
     yAxisFormat: "{value:,.0f}",
+    yAxisTitle: languageNameSpace.labels[REF.unit],
     tooltipFormatter: tooltipFormatter,
     creditsText: credits(),
     creditsHref: "",
